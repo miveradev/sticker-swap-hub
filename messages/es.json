@@ -1,0 +1,10 @@
+{
+  "app": {
+    "name": "Sticker Swap Hub"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "profile": "Perfil",
+    "collection": "Colección"
+  }
+}

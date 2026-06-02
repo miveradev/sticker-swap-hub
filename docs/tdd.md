@@ -134,11 +134,11 @@ Si quantity = 0 → no existe fila en DB
 ## Interpretación
 
 | quantity | significado |
-| --- | --- |
-| 0 | no existe |
-| 1 | pegado |
-| 2 | 1 repetido |
-| 3 | 2 repetidos |
+| -------- | ----------- |
+| 0        | no existe   |
+| 1        | pegado      |
+| 2        | 1 repetido  |
+| 3        | 2 repetidos |
 
 ---
 
@@ -147,7 +147,7 @@ Si quantity = 0 → no existe fila en DB
 ## updateStickerQuantity
 
 ```tsx
-updateStickerQuantity(userId,stickerId,delta)
+updateStickerQuantity(userId, stickerId, delta);
 ```
 
 ### lógica:
@@ -418,7 +418,7 @@ Ejemplo:
 
 ```json
 {
-  "album.title":"My Album"
+  "album.title": "My Album"
 }
 ```
 

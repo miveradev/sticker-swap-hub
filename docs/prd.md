@@ -89,7 +89,7 @@ Validaciones:
 - Único
 - Min 3 caracteres
 - Max 20 caracteres
-- Solo letras, números y "_"
+- Solo letras, números y "\_"
 
 Ejemplos válidos:
 

@@ -3,7 +3,6 @@ import { headers } from "next/headers"
 import { getTranslations } from "next-intl/server"
 import { LayoutGrid } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ProfileHeader } from "@/components/profile/ProfileHeader"
 import { ProfileStats } from "@/components/profile/ProfileStats"
 import { ShareButton } from "@/components/profile/ShareButton"
@@ -11,6 +10,8 @@ import { TopDuplicates } from "@/components/profile/TopDuplicates"
 import { ProfileNav } from "@/components/profile/ProfileNav"
 import { ProfileGuestCTA } from "@/components/profile/ProfileGuestCTA"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
+import { UserMenu } from "@/components/profile/UserMenu"
+import { LogOutButton } from "@/components/profile/LogOutButton"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
 import { getProfileData } from "@/lib/profile/getProfileData"
 import { auth } from "@/lib/auth"
@@ -40,8 +41,15 @@ export default async function ProfilePage({
         .map((n) => n[0]?.toUpperCase() ?? "")
         .join("")
     : "?"
-  const viewerImage =
-    viewer ? ((viewer as Record<string, unknown>).image as string | null ?? null) : null
+  const viewerImage = viewer
+    ? ((viewer as Record<string, unknown>).image as string | null ?? null)
+    : null
+  const viewerEmail = viewer
+    ? ((viewer as Record<string, unknown>).email as string ?? "")
+    : ""
+  const viewerUsername = viewer
+    ? ((viewer as Record<string, unknown>).username as string | null ?? null)
+    : null
 
   return (
     <div className="min-h-screen flex flex-col pb-24">
@@ -57,10 +65,13 @@ export default async function ProfilePage({
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
             {viewer ? (
-              <Avatar className="w-8 h-8 border border-border">
-                {viewerImage && <AvatarImage src={viewerImage} alt="Your avatar" />}
-                <AvatarFallback className="text-[10px] font-semibold">{viewerInitials}</AvatarFallback>
-              </Avatar>
+              <UserMenu
+                name={viewer.name}
+                email={viewerEmail}
+                image={viewerImage}
+                initials={viewerInitials}
+                username={viewerUsername}
+              />
             ) : (
               <HeaderLoginButton />
             )}
@@ -81,13 +92,14 @@ export default async function ProfilePage({
             <ProfileStats stats={stats} />
             <ShareButton username={user.username} />
             <TopDuplicates duplicates={topDuplicates} />
-            <div className="pb-8 pt-2">
+            <div className="flex flex-col gap-3 pb-8 pt-2">
               <Button
                 variant="outline"
                 className="w-full rounded-lg py-3 px-4 text-xs font-medium tracking-wide h-auto"
               >
                 {t("viewFullAlbum")}
               </Button>
+              <LogOutButton />
             </div>
           </>
         ) : (

@@ -12,9 +12,10 @@ interface StickerCardProps {
   onAdd: () => void
   onRemove: () => void
   onReset: () => void
+  interactive?: boolean
 }
 
-export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset }: StickerCardProps) {
+export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, interactive = true }: StickerCardProps) {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const didLongPress = useRef(false)
 
@@ -48,8 +49,11 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset }: 
   if (quantity === 0) {
     return (
       <div
-        onClick={onAdd}
-        className="aspect-square bg-background border border-border/30 rounded-lg flex flex-col items-center justify-center opacity-40 cursor-pointer py-1 transition-all duration-200 hover:opacity-70 hover:border-border hover:scale-105 select-none"
+        onClick={interactive ? onAdd : undefined}
+        className={[
+          "aspect-square bg-background border border-border/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-1 transition-all duration-200 hover:opacity-70 hover:border-border hover:scale-105 select-none",
+          interactive ? "cursor-pointer" : "cursor-default",
+        ].join(" ")}
       >
         <span className="max-[430px]:text-[9px] text-[11px] sm:text-[14px] md:text-[13px] font-bold text-muted-foreground tracking-widest uppercase leading-none">
           {code}

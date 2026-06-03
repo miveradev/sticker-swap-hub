@@ -94,7 +94,8 @@
     },
     "topDuplicates": {
       "title": "Repetidas Destacadas",
-      "viewAll": "Ver Todas las Repetidas"
+      "viewAll": "Ver Todas las Repetidas",
+      "empty": "Este usuario no tiene figuritas repetidas."
     },
     "guest": {
       "title": "Compara tu colección con {username}",

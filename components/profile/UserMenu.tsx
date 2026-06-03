@@ -28,7 +28,7 @@ export function UserMenu({ name, email, image, initials, username }: UserMenuPro
 
   async function handleLogout() {
     await authClient.signOut()
-    router.push(`/${locale}`)
+    window.location.href = `/${locale}`
   }
 
   return (

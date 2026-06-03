@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { getLocale } from "next-intl/server"
 import { Toaster } from "sonner"
+import { RouteProgressBar } from "@/components/navigation/RouteProgressBar"
 import "./globals.css"
 
 const inter = Inter({
@@ -32,6 +33,7 @@ export default async function RootLayout({
       className={`${inter.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">
+        <RouteProgressBar />
         {children}
         <Toaster position="bottom-center" theme="dark" />
       </body>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useTranslations, useLocale } from "next-intl"
 import { LayoutGrid } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -23,23 +23,14 @@ function getInitials(name: string): string {
     .join("")
 }
 
-export function Header() {
+interface HeaderProps {
+  initialViewer?: Viewer | null
+}
+
+export function Header({ initialViewer = null }: HeaderProps) {
   const t = useTranslations("landing.header")
   const locale = useLocale()
-  const [viewer, setViewer] = useState<Viewer | null>(null)
-
-  useEffect(() => {
-    authClient.getSession().then(({ data }) => {
-      if (!data?.user) return
-      const u = data.user as Record<string, unknown>
-      setViewer({
-        name: data.user.name,
-        email: (u.email as string) ?? "",
-        image: (u.image as string | null) ?? null,
-        username: (u.username as string | null) ?? null,
-      })
-    })
-  }, [])
+  const [viewer] = useState<Viewer | null>(initialViewer)
 
   async function handleLogin() {
     await authClient.signIn.social({

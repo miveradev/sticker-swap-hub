@@ -1,13 +1,15 @@
-import { getTranslations } from "next-intl/server"
+"use client"
+
+import { useTranslations } from "next-intl"
 
 interface AlbumProgressCardProps {
   owned: number
   total: number
 }
 
-export async function AlbumProgressCard({ owned, total }: AlbumProgressCardProps) {
-  const t = await getTranslations("album.progress")
-  const percentage = Math.round((owned / total) * 100)
+export function AlbumProgressCard({ owned, total }: AlbumProgressCardProps) {
+  const t = useTranslations("album.progress")
+  const percentage = total > 0 ? Math.round((owned / total) * 100) : 0
   const remaining = total - owned
 
   return (
@@ -21,10 +23,9 @@ export async function AlbumProgressCard({ owned, total }: AlbumProgressCardProps
         </span>
       </div>
 
-      {/* Custom progress bar */}
       <div className="w-full bg-muted h-2 rounded-full overflow-hidden mb-6">
         <div
-          className="bg-foreground h-full rounded-full transition-all duration-1000 ease-out"
+          className="bg-foreground h-full rounded-full transition-all duration-700 ease-out"
           style={{ width: `${percentage}%` }}
         />
       </div>

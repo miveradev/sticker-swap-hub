@@ -20,6 +20,7 @@ export type AlbumData = {
   name: string
   slug: string
   totalStickers: number
+  ownedStickers: number
   sections: SectionData[]
 }
 
@@ -145,12 +146,14 @@ export async function getAlbum(userId?: string): Promise<AlbumData> {
   }))
 
   const totalStickers = sections.reduce((sum, s) => sum + s.stickers.length, 0)
+  const ownedStickers = quantityMap.size
 
   return {
     id: album.id,
     name: album.name,
     slug: album.slug,
     totalStickers,
+    ownedStickers,
     sections,
   }
 }

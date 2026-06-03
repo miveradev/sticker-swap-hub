@@ -72,6 +72,22 @@
       "tagline": "Registra. Compara. Intercambia."
     }
   },
+  "album": {
+    "title": "FIFA World Cup 2026",
+    "progress": {
+      "label": "Progreso total",
+      "of": "de",
+      "stickersCollected": "figuritas coleccionadas.",
+      "youNeed": "Te faltan",
+      "moreToComplete": "para completar el álbum."
+    },
+    "nav": {
+      "album": "Álbum",
+      "sections": "Secciones",
+      "trade": "Intercambios",
+      "stats": "Estadísticas"
+    }
+  },
   "profile": {
     "brand": "Sticker Swap Hub",
     "activeAlbum": "Álbum Activo",

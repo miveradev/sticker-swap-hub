@@ -11,14 +11,14 @@ import { getAlbum } from "@/lib/albums/getAlbum"
 import { auth } from "@/lib/auth"
 
 export default async function AlbumPage() {
-  const [t, h, album] = await Promise.all([
-    getTranslations("album"),
-    headers(),
-    getAlbum(),
-  ])
+  const [t, h] = await Promise.all([getTranslations("album"), headers()])
 
   const session = await auth.api.getSession({ headers: h as unknown as Headers })
   const viewer = session?.user ?? null
+  const viewerId = viewer?.id
+
+  const album = await getAlbum(viewerId)
+
   const viewerInitials = viewer?.name
     ? viewer.name
         .split(" ")

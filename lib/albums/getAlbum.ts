@@ -98,33 +98,39 @@ function resolveCountryCode(name: string, slug: string): string | undefined {
   )
 }
 
-export async function getAlbum(): Promise<AlbumData> {
-  const album = await prisma.album.findFirst({
-    where: { isActive: true },
-    select: {
-      id: true,
-      name: true,
-      slug: true,
-      sections: {
-        orderBy: { sortOrder: "asc" },
-        select: {
-          id: true,
-          name: true,
-          slug: true,
-          stickers: {
-            orderBy: { position: "asc" },
-            select: {
-              id: true,
-              code: true,
-              name: true,
+export async function getAlbum(userId?: string): Promise<AlbumData> {
+  const [album, userStickers] = await Promise.all([
+    prisma.album.findFirst({
+      where: { isActive: true },
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        sections: {
+          orderBy: { sortOrder: "asc" },
+          select: {
+            id: true,
+            name: true,
+            slug: true,
+            stickers: {
+              orderBy: { position: "asc" },
+              select: { id: true, code: true, name: true },
             },
           },
         },
       },
-    },
-  })
+    }),
+    userId
+      ? prisma.userSticker.findMany({
+          where: { userId },
+          select: { stickerId: true, quantity: true },
+        })
+      : Promise.resolve([] as Array<{ stickerId: string; quantity: number }>),
+  ])
 
   if (!album) notFound()
+
+  const quantityMap = new Map(userStickers.map((us) => [us.stickerId, us.quantity]))
 
   const sections: SectionData[] = album.sections.map((section) => ({
     id: section.id,
@@ -134,7 +140,7 @@ export async function getAlbum(): Promise<AlbumData> {
       id: sticker.id,
       code: sticker.code,
       name: sticker.name,
-      quantity: 0,
+      quantity: quantityMap.get(sticker.id) ?? 0,
     })),
   }))
 

@@ -87,6 +87,7 @@
       "trade": "Trade",
       "stats": "Stats"
     },
+    "errorUpdate": "Failed to update sticker.",
     "guest": {
       "title": "Track your progress",
       "description": "Sign in to save your collection, track your stickers and unlock your statistics.",

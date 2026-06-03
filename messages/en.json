@@ -72,6 +72,22 @@
       "tagline": "Track. Compare. Trade."
     }
   },
+  "album": {
+    "title": "FIFA World Cup 2026",
+    "progress": {
+      "label": "Total Progress",
+      "of": "of",
+      "stickersCollected": "stickers collected.",
+      "youNeed": "You need",
+      "moreToComplete": "more to complete the album."
+    },
+    "nav": {
+      "album": "Album",
+      "sections": "Sections",
+      "trade": "Trade",
+      "stats": "Stats"
+    }
+  },
   "profile": {
     "brand": "Sticker Swap Hub",
     "activeAlbum": "Active Album",

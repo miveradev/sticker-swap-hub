@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sticker Swap Hub - Album</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#494643",
+                        "surface-tint": "#c6c6c7",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c5ca",
+                        "secondary-fixed": "#e4e1e6",
+                        "on-surface": "#e2e1eb",
+                        "inverse-on-surface": "#2f3037",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "on-primary-container": "#636565",
+                        "inverse-surface": "#e2e1eb",
+                        "on-error": "#690005",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e7e1dd",
+                        "on-primary": "#2f3131",
+                        "tertiary": "#ffffff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#b6b4b8",
+                        "tertiary-fixed-dim": "#cbc6c1",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "secondary-container": "#47464a",
+                        "on-secondary": "#303033",
+                        "on-primary-fixed": "#1a1c1c",
+                        "surface-container-high": "#282a31",
+                        "surface-variant": "#33343c",
+                        "surface-container-highest": "#33343c",
+                        "primary-container": "#e2e2e2",
+                        "surface-container": "#1e1f26",
+                        "outline-variant": "#444748",
+                        "surface-container-lowest": "#0c0e14",
+                        "secondary": "#c8c5ca",
+                        "outline": "#8e9192",
+                        "on-primary-fixed-variant": "#454747",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-background": "#e2e1eb",
+                        "tertiary-container": "#e7e1dd",
+                        "on-tertiary-container": "#676460",
+                        "background": "#12131a",
+                        "surface-container-low": "#1a1b22",
+                        "surface-bright": "#383940",
+                        "on-surface-variant": "#c4c7c8",
+                        "error-container": "#93000a",
+                        "surface": "#12131a",
+                        "on-tertiary": "#32302d",
+                        "primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "surface-dim": "#12131a",
+                        "inverse-primary": "#5d5f5f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin-desktop": "32px",
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "3xl": "64px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "base": "4px",
+                        "sm": "8px",
+                        "2xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #18181B;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3F3F46;
+            border-radius: 10px;
+        }
+
+        .sticker-card {
+            aspect-ratio: 1 / 1;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+    <!-- Top Bar Component (Mapping from JSON) -->
+    <header
+        class="flex justify-between items-center px-margin-mobile h-16 w-full z-40 fixed top-0 bg-background border-b border-outline-variant">
+        <div class="font-headline-md text-headline-md font-bold text-primary">Sticker Swap Hub</div>
+        <div class="flex items-center gap-md">
+            <div
+                class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant active:scale-95 duration-150 cursor-pointer">
+                <img alt="User Profile" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIDLjZkaDOmctJrjtw-o_Sbjhnykqe3jQiLK0PuLFk8MNPqjxCcqTGAEdG3qCLdnTCYi3S3Fn_tDatl9SGJN8DKvJQ7i1hgTDsEjRL7mnIVeBj6v3T5P-hQ0g7tL4YgBYLg8SIXfMFE6diQHKMZXvgcJ1PnCI_7u0aJMVJ1GFGRAEgSokHBsuGxUGWkFF_uEfN0zlodvE72PxJrgk2IbQ5ZEfda_Q2bugH1sNODQoAwSeMtT17Di7Ut6bIiWJ9JTiCveiy7qc9JkM">
+            </div>
+        </div>
+    </header>
+    <main class="pt-24 pb-32 px-margin-mobile max-w-lg mx-auto">
+        <!-- Title Section -->
+        <section class="mb-lg">
+            <h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">FIFA World Cup 2026</h1>
+        </section>
+        <!-- Collection Progress Card -->
+        <section class="mb-3xl">
+            <div class="bg-[#18181B] border border-[#27272A] rounded-xl p-lg shadow-sm">
+                <div class="flex justify-between items-end mb-md">
+                    <span class="font-label-caps text-on-surface-variant uppercase tracking-widest text-label-md">Total
+                        Collection Progress</span>
+                    <span class="text-primary font-label-caps text-label-md uppercase tracking-widest">68%</span>
+                </div>
+                <div class="w-full bg-[#27272A] h-2 rounded-full overflow-hidden mb-lg">
+                    <div class="bg-primary h-full w-[68%] transition-all duration-1000 ease-out" style="width: 68%;">
+                    </div>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><span
+                        class="font-bold text-primary">667</span> of <span class="font-bold text-primary">980</span>
+                    stickers collected. You need <span class="text-primary font-medium">313 more</span> to complete the
+                    album.</p>
+            </div>
+        </section>
+        <!-- Album Sections: Spain -->
+        <section class="mb-3xl">
+            <div class="flex justify-between items-center mb-md border-b border-outline-variant pb-base">
+                <h2 class="font-headline-md text-headline-md text-primary flex items-center gap-xs"><span
+                        class="text-[20px] mr-xs">🇪🇸</span> Spain</h2>
+                <span
+                    class="font-label-md text-label-md text-on-surface-variant bg-surface-container-high border border-outline-variant px-3 py-1 rounded-full">12
+                    / 20</span>
+            </div>
+            <div class="grid grid-cols-4 gap-sm">
+                <!-- Missing Sticker -->
+                <div
+                    class="sticker-card bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-xs">
+                    <span class="font-label-caps text-[11px] font-bold text-on-surface-variant">ESP 1</span>
+                    <span
+                        class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Unai
+                        Simón</span>
+                </div>
+                <!-- Owned Sticker (1) -->
+                <div
+                    class="sticker-card bg-[#18181B] border border-[#3F3F46] rounded-lg relative group overflow-hidden flex flex-col">
+                    <div
+                        class="absolute top-0.5 right-0.5 bg-primary text-background font-label-caps text-[8px] px-1 py-0 rounded-full z-10 font-bold">
+                        1</div>
+                    <div class="flex-1 p-0.5 flex flex-col items-center justify-center">
+                        <span class="font-headline-md text-[14px] text-primary font-bold">ESP 2</span>
+                        <span
+                            class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Lamine
+                            Yamal</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between px-0.5 py-0.5 bg-surface-container-high border-t border-outline-variant/10">
+                        <button
+                            class="material-symbols-outlined text-[12px] hover:text-primary transition-colors">remove</button>
+                        <span class="font-label-caps text-[9px] font-bold">1</span>
+                        <button
+                            class="material-symbols-outlined text-[12px] hover:text-primary transition-colors">add</button>
+                    </div>
+                </div>
+                <!-- Duplicate Sticker (4) -->
+                <div
+                    class="sticker-card bg-[#18181B] border border-primary/50 rounded-lg relative group overflow-hidden flex flex-col shadow-[0_0_10px_rgba(255,255,255,0.05)]">
+                    <div
+                        class="absolute top-0.5 right-0.5 bg-primary text-background font-label-caps text-[8px] px-1 py-0 rounded-full z-10 font-bold">
+                        4</div>
+                    <div class="flex-1 p-0.5 flex flex-col items-center justify-center">
+                        <span class="font-headline-md text-[14px] text-primary font-bold">ESP 3</span>
+                        <span
+                            class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Pau
+                            Cubarsí</span>
+                    </div>
+                    <div class="flex items-center justify-between px-0.5 py-0.5 bg-primary text-background">
+                        <button class="material-symbols-outlined text-[12px] font-bold">remove</button>
+                        <span class="font-label-caps text-[9px] font-bold">4</span>
+                        <button class="material-symbols-outlined text-[12px] font-bold">add</button>
+                    </div>
+                </div>
+                <!-- Missing Sticker -->
+                <div
+                    class="sticker-card bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-xs">
+                    <span class="font-label-caps text-[11px] font-bold text-on-surface-variant">ESP 4</span>
+                    <span
+                        class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">David
+                        Raya</span>
+                </div>
+            </div>
+        </section>
+        <!-- Album Sections: Argentina -->
+        <section class="mb-3xl">
+            <div class="flex justify-between items-center mb-md border-b border-outline-variant pb-base">
+                <h2 class="font-headline-md text-headline-md text-primary flex items-center gap-xs"><span
+                        class="text-[20px] mr-xs">🇦🇷</span> Argentina</h2>
+                <span
+                    class="font-label-md text-label-md text-on-surface-variant bg-surface-container-high border border-outline-variant px-3 py-1 rounded-full">18
+                    / 20</span>
+            </div>
+            <div class="grid grid-cols-4 gap-sm">
+                <!-- Owned 1 -->
+                <div
+                    class="sticker-card bg-[#18181B] border border-[#27272A] rounded-lg relative overflow-hidden flex flex-col">
+                    <div
+                        class="absolute top-0.5 right-0.5 bg-primary text-background font-label-caps text-[8px] px-1 py-0 rounded-full z-10 font-bold">
+                        1</div>
+                    <div class="flex-1 p-0.5 flex flex-col items-center justify-center">
+                        <span class="font-headline-md text-[14px] text-primary font-bold">ARG 1</span>
+                        <span
+                            class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Lionel
+                            Messi</span>
+                    </div>
+                    <div class="flex items-center justify-between px-0.5 py-0.5 bg-surface-container-high">
+                        <button class="material-symbols-outlined text-[12px]">remove</button>
+                        <span class="font-label-caps text-[9px] font-bold">1</span>
+                        <button class="material-symbols-outlined text-[12px]">add</button>
+                    </div>
+                </div>
+                <div
+                    class="sticker-card bg-[#18181B] border border-[#27272A] rounded-lg relative overflow-hidden flex flex-col">
+                    <div
+                        class="absolute top-0.5 right-0.5 bg-primary text-background font-label-caps text-[8px] px-1 py-0 rounded-full z-10 font-bold">
+                        2</div>
+                    <div class="flex-1 p-0.5 flex flex-col items-center justify-center">
+                        <span class="font-headline-md text-[14px] text-primary font-bold">ARG 2</span>
+                        <span
+                            class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">L.
+                            Martinez</span>
+                    </div>
+                    <div class="flex items-center justify-between px-0.5 py-0.5 bg-surface-container-high">
+                        <button class="material-symbols-outlined text-[12px]">remove</button>
+                        <span class="font-label-caps text-[9px] font-bold">2</span>
+                        <button class="material-symbols-outlined text-[12px]">add</button>
+                    </div>
+                </div>
+                <div
+                    class="sticker-card bg-[#18181B] border border-[#27272A] rounded-lg relative overflow-hidden flex flex-col">
+                    <div
+                        class="absolute top-0.5 right-0.5 bg-primary text-background font-label-caps text-[8px] px-1 py-0 rounded-full z-10 font-bold">
+                        1</div>
+                    <div class="flex-1 p-0.5 flex flex-col items-center justify-center">
+                        <span class="font-headline-md text-[14px] text-primary font-bold">ARG 3</span>
+                        <span
+                            class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">E.
+                            Fernandez</span>
+                    </div>
+                    <div class="flex items-center justify-between px-0.5 py-0.5 bg-surface-container-high">
+                        <button class="material-symbols-outlined text-[12px]">remove</button>
+                        <span class="font-label-caps text-[9px] font-bold">1</span>
+                        <button class="material-symbols-outlined text-[12px]">add</button>
+                    </div>
+                </div>
+                <div
+                    class="sticker-card bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-xs">
+                    <span class="font-label-caps text-[11px] font-bold text-on-surface-variant">ARG 4</span>
+                    <span
+                        class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">De
+                        Paul</span>
+                </div>
+            </div>
+        </section>
+        <!-- Album Sections: Brazil -->
+        <section class="mb-3xl">
+            <div class="flex justify-between items-center mb-md border-b border-outline-variant pb-base">
+                <h2 class="font-headline-md text-headline-md text-primary flex items-center gap-xs"><span
+                        class="text-[20px] mr-xs">🇧🇷</span> Brazil</h2>
+                <span
+                    class="font-label-md text-label-md text-on-surface-variant bg-surface-container-high border border-outline-variant px-3 py-1 rounded-full">4
+                    / 20</span>
+            </div>
+            <div class="grid grid-cols-4 gap-sm">
+                <div
+                    class="sticker-card bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-xs">
+                    <span class="font-label-caps text-[11px] font-bold text-on-surface-variant">BRA 1</span><span
+                        class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Ederson</span>
+                </div>
+                <div
+                    class="sticker-card bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-xs">
+                    <span class="font-label-caps text-[11px] font-bold text-on-surface-variant">BRA 2</span><span
+                        class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Alisson</span>
+                </div>
+                <div
+                    class="sticker-card bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-xs">
+                    <span class="font-label-caps text-[11px] font-bold text-on-surface-variant">BRA 3</span><span
+                        class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Marquinhos</span>
+                </div>
+                <div
+                    class="sticker-card bg-[#18181B] border border-[#27272A] rounded-lg relative overflow-hidden flex flex-col">
+                    <div
+                        class="absolute top-0.5 right-0.5 bg-primary text-background font-label-caps text-[8px] px-1 py-0 rounded-full z-10 font-bold">
+                        1</div>
+                    <div class="flex-1 p-0.5 flex flex-col items-center justify-center"><span
+                            class="font-headline-md text-[14px] text-primary font-bold">BRA 4</span><span
+                            class="font-label-caps text-on-surface-variant mt-0.5 text-[8px] leading-tight text-center px-xs truncate w-full">Vinicius
+                            Jr.</span></div>
+                    <div class="flex items-center justify-between px-0.5 py-0.5 bg-surface-container-high">
+                        <button class="material-symbols-outlined text-[12px]">remove</button>
+                        <span class="font-label-caps text-[9px] font-bold">1</span>
+                        <button class="material-symbols-outlined text-[12px]">add</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bottom Nav Bar Component (Mapping from JSON) -->
+    <nav
+        class="fixed bottom-0 left-0 w-full h-16 flex justify-around items-center px-4 bg-surface-container border-t border-outline-variant z-50">
+        <a class="flex flex-col items-center justify-center text-primary font-bold" href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+            <span class="font-label-md text-label-md">Album</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="font-label-md text-label-md">Sections</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined">swap_horiz</span>
+            <span class="font-label-md text-label-md">Trade</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined">leaderboard</span>
+            <span class="font-label-md text-label-md">Stats</span>
+        </a>
+    </nav>
+    <script>
+        // Micro-interaction for sticker cards
+        document.querySelectorAll('.sticker-card').forEach(card => {
+            card.addEventListener('click', function () {
+                if (!this.classList.contains('opacity-40')) {
+                    this.classList.add('scale-105');
+                    setTimeout(() => this.classList.remove('scale-105'), 150);
+                }
+            });
+        });
+
+        // Simple mock for progress bar animation on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const bar = document.querySelector('.bg-primary.h-full');
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = '68%';
+            }, 300);
+        });
+    </script>
+
+
+</body>
+
+</html>

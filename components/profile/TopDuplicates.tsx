@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import { Card } from "@/components/ui/card"
 
 const duplicates = [
@@ -7,16 +8,18 @@ const duplicates = [
   { code: "GER2", player: "J. Musiala", count: 2 },
 ] as const
 
-export function TopDuplicates() {
+export async function TopDuplicates() {
+  const t = await getTranslations("profile.topDuplicates")
+
   return (
     <section className="flex flex-col gap-4">
       <div className="flex justify-between items-end">
-        <h2 className="text-lg font-medium tracking-tight text-foreground">Top Duplicates</h2>
+        <h2 className="text-lg font-medium tracking-tight text-foreground">{t("title")}</h2>
         <a
           href="#"
           className="text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
-          View All
+          {t("viewAll")}
         </a>
       </div>
       <div className="grid grid-cols-2 gap-3">

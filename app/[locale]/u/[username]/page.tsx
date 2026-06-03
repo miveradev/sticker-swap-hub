@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { headers } from "next/headers"
+import { getTranslations } from "next-intl/server"
 import { LayoutGrid } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -8,6 +9,9 @@ import { ProfileStats } from "@/components/profile/ProfileStats"
 import { ShareButton } from "@/components/profile/ShareButton"
 import { TopDuplicates } from "@/components/profile/TopDuplicates"
 import { ProfileNav } from "@/components/profile/ProfileNav"
+import { ProfileGuestCTA } from "@/components/profile/ProfileGuestCTA"
+import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
 import { prisma } from "@/lib/prisma"
 import { auth } from "@/lib/auth"
 
@@ -18,6 +22,7 @@ export default async function ProfilePage({
 }) {
   const { username } = await params
   const h = await headers()
+  const t = await getTranslations("profile")
 
   const user = await prisma.user.findUnique({
     where: { username },
@@ -46,13 +51,20 @@ export default async function ProfilePage({
           <div className="flex items-center gap-2">
             <LayoutGrid className="w-5 h-5 text-foreground" />
             <span className="text-lg font-bold tracking-tighter text-foreground">
-              Sticker Swap Hub
+              {t("brand")}
             </span>
           </div>
-          <Avatar className="w-8 h-8 border border-border">
-            {viewerImage && <AvatarImage src={viewerImage} alt="Your avatar" />}
-            <AvatarFallback className="text-[10px] font-semibold">{viewerInitials}</AvatarFallback>
-          </Avatar>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
+            {viewer ? (
+              <Avatar className="w-8 h-8 border border-border">
+                {viewerImage && <AvatarImage src={viewerImage} alt="Your avatar" />}
+                <AvatarFallback className="text-[10px] font-semibold">{viewerInitials}</AvatarFallback>
+              </Avatar>
+            ) : (
+              <HeaderLoginButton />
+            )}
+          </div>
         </div>
       </header>
 
@@ -62,18 +74,27 @@ export default async function ProfilePage({
           username={user.username!}
           name={user.name}
           image={user.image ?? null}
+          showAlbum={!!viewer}
         />
-        <ProfileStats />
-        <ShareButton username={user.username!} />
-        <TopDuplicates />
-        <div className="pb-8 pt-2">
-          <Button
-            variant="outline"
-            className="w-full rounded-lg py-3 px-4 text-xs font-medium tracking-wide h-auto"
-          >
-            View Full Album
-          </Button>
-        </div>
+        {viewer ? (
+          <>
+            <ProfileStats />
+            <ShareButton username={user.username!} />
+            <TopDuplicates />
+            <div className="pb-8 pt-2">
+              <Button
+                variant="outline"
+                className="w-full rounded-lg py-3 px-4 text-xs font-medium tracking-wide h-auto"
+              >
+                {t("viewFullAlbum")}
+              </Button>
+            </div>
+          </>
+        ) : (
+          <div className="pb-8">
+            <ProfileGuestCTA username={user.username!} />
+          </div>
+        )}
       </main>
 
       <ProfileNav />

@@ -37,7 +37,7 @@
       "subtitle": "Olvídate de las fotos de WhatsApp y los papelitos. Sticker Swap Hub ofrece una interfaz limpia y precisa para gestionar tu inventario y encontrar coincidencias exactas al instante.",
       "track": {
         "title": "Registra tu colección",
-        "description": "Marca tus figuritas como tenidas, faltantes o repetidas con atajos de teclado y acciones en bloque."
+        "description": "Marca tus figuritas como obtenidas, faltantes o repetidas con atajos de teclado y acciones en bloque."
       },
       "share": {
         "title": "Comparte tu progreso",
@@ -71,6 +71,35 @@
       },
       "copyright": "© 2026 Sticker Swap Hub.",
       "tagline": "Registra. Compara. Intercambia."
+    }
+  },
+  "profile": {
+    "brand": "Sticker Swap Hub",
+    "activeAlbum": "Álbum Activo",
+    "viewFullAlbum": "Ver Álbum Completo",
+    "nav": {
+      "album": "Álbum",
+      "trade": "Intercambios",
+      "social": "Social",
+      "profile": "Perfil"
+    },
+    "stats": {
+      "completion": "Completado",
+      "owned": "Obtenidas",
+      "duplicates": "Repetidas"
+    },
+    "share": {
+      "button": "Compartir mi colección",
+      "copied": "¡Enlace copiado!"
+    },
+    "topDuplicates": {
+      "title": "Repetidas Destacadas",
+      "viewAll": "Ver Todas las Repetidas"
+    },
+    "guest": {
+      "title": "Compara tu colección con {username}",
+      "description": "Inicia sesión para ver su álbum, revisar repetidas y descubrir posibles intercambios de figuritas.",
+      "signIn": "Iniciar sesión con Google"
     }
   }
 }

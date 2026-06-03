@@ -72,5 +72,34 @@
       "copyright": "© 2026 Sticker Swap Hub.",
       "tagline": "Track. Compare. Trade."
     }
+  },
+  "profile": {
+    "brand": "Sticker Swap Hub",
+    "activeAlbum": "Active Album",
+    "viewFullAlbum": "View Full Album",
+    "nav": {
+      "album": "Album",
+      "trade": "Trade",
+      "social": "Social",
+      "profile": "Profile"
+    },
+    "stats": {
+      "completion": "Completion",
+      "owned": "Owned",
+      "duplicates": "Duplicates"
+    },
+    "share": {
+      "button": "Share my collection",
+      "copied": "Link copied!"
+    },
+    "topDuplicates": {
+      "title": "Top Duplicates",
+      "viewAll": "View All Duplicates"
+    },
+    "guest": {
+      "title": "Compare your collection with {username}",
+      "description": "Sign in to see their album, check duplicates and discover potential sticker swaps.",
+      "signIn": "Sign in with Google"
+    }
   }
 }

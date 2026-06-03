@@ -1,8 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import { toast } from "sonner"
+import { useTranslations } from "next-intl"
 import ReactCountryFlag from "react-country-flag"
 import { StickerCard } from "@/components/album/StickerCard"
+import { updateStickerQuantity } from "@/app/actions/stickers"
 import type { SectionData } from "@/lib/albums/getAlbum"
 
 interface AlbumSectionProps {
@@ -11,20 +14,36 @@ interface AlbumSectionProps {
 }
 
 export function AlbumSection({ section, isGuest = false }: AlbumSectionProps) {
+  const t = useTranslations("album")
   const [quantities, setQuantities] = useState<Record<string, number>>(
     () => Object.fromEntries(section.stickers.map((s) => [s.code, s.quantity]))
   )
 
-  function handleAdd(code: string) {
-    setQuantities((prev) => ({ ...prev, [code]: prev[code] + 1 }))
+  async function persist(stickerId: string, code: string, newQty: number) {
+    const prevQty = quantities[code] ?? 0
+
+    // Optimistic update — instant UI response
+    setQuantities((prev) => ({ ...prev, [code]: newQty }))
+
+    const result = await updateStickerQuantity(stickerId, newQty)
+
+    if ("error" in result) {
+      // Rollback on failure
+      setQuantities((prev) => ({ ...prev, [code]: prevQty }))
+      toast.error(t("errorUpdate"))
+    }
   }
 
-  function handleRemove(code: string) {
-    setQuantities((prev) => ({ ...prev, [code]: Math.max(0, prev[code] - 1) }))
+  function handleAdd(stickerId: string, code: string) {
+    void persist(stickerId, code, (quantities[code] ?? 0) + 1)
   }
 
-  function handleReset(code: string) {
-    setQuantities((prev) => ({ ...prev, [code]: 0 }))
+  function handleRemove(stickerId: string, code: string) {
+    void persist(stickerId, code, Math.max(0, (quantities[code] ?? 0) - 1))
+  }
+
+  function handleReset(stickerId: string, code: string) {
+    void persist(stickerId, code, 0)
   }
 
   const ownedCount = isGuest ? 0 : Object.values(quantities).filter((q) => q > 0).length
@@ -54,9 +73,9 @@ export function AlbumSection({ section, isGuest = false }: AlbumSectionProps) {
             code={sticker.code}
             name={sticker.name}
             quantity={isGuest ? 0 : quantities[sticker.code]}
-            onAdd={() => handleAdd(sticker.code)}
-            onRemove={() => handleRemove(sticker.code)}
-            onReset={() => handleReset(sticker.code)}
+            onAdd={() => handleAdd(sticker.id, sticker.code)}
+            onRemove={() => handleRemove(sticker.id, sticker.code)}
+            onReset={() => handleReset(sticker.id, sticker.code)}
             interactive={!isGuest}
           />
         ))}

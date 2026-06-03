@@ -9,7 +9,8 @@ const navItems = [
 
 export function ProfileNav() {
   return (
-    <nav className="bg-card border-t border-border fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-[env(safe-area-inset-bottom)] shadow-xl">
+    <nav className="bg-card border-t border-border fixed bottom-0 w-full z-50 pb-[env(safe-area-inset-bottom)] shadow-xl">
+      <div className="lg:max-w-md lg:mx-auto flex justify-around items-center h-20 px-2">
       {navItems.map(({ icon: Icon, label, href, active }) => (
         <a
           key={label}
@@ -25,6 +26,7 @@ export function ProfileNav() {
           <span className="text-[10px] font-semibold tracking-widest">{label}</span>
         </a>
       ))}
+      </div>
     </nav>
   )
 }

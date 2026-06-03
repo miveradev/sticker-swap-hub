@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import { ChevronsUpDown } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
@@ -5,6 +6,7 @@ interface ProfileHeaderProps {
   username: string
   name: string
   image: string | null
+  showAlbum?: boolean
 }
 
 function getInitials(name: string): string {
@@ -15,7 +17,8 @@ function getInitials(name: string): string {
     .join("")
 }
 
-export function ProfileHeader({ username, name, image }: ProfileHeaderProps) {
+export async function ProfileHeader({ username, name, image, showAlbum = true }: ProfileHeaderProps) {
+  const t = await getTranslations("profile")
   const initials = getInitials(name)
 
   return (
@@ -37,15 +40,15 @@ export function ProfileHeader({ username, name, image }: ProfileHeaderProps) {
       </section>
 
       {/* Active Album */}
-      <section className="mb-4">
+      {showAlbum && <section className="mb-4">
         <label className="text-[10px] font-semibold tracking-widest uppercase text-muted-foreground mb-2 block">
-          Active Album
+          {t("activeAlbum")}
         </label>
         <div className="bg-card border border-border rounded-lg px-4 py-3 flex items-center justify-between">
           <span className="text-base font-semibold text-foreground">FIFA World Cup 2026</span>
           <ChevronsUpDown className="w-4 h-4 text-muted-foreground" />
         </div>
-      </section>
+      </section>}
     </>
   )
 }

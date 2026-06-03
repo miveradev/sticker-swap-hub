@@ -2,18 +2,16 @@
 
 import { authClient } from "@/lib/auth-client"
 import { useTranslations, useLocale } from "next-intl"
-import { useRouter } from "next/navigation"
 import { LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function LogOutButton() {
   const t = useTranslations("profile.userMenu")
   const locale = useLocale()
-  const router = useRouter()
 
   async function handleLogout() {
     await authClient.signOut()
-    router.push(`/${locale}`)
+    window.location.href = `/${locale}`
   }
 
   return (

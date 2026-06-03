@@ -13,10 +13,9 @@
       "nav": {
         "album": "Album",
         "features": "Features",
-        "compare": "Compare Collections",
-        "signIn": "Sign In"
+        "compare": "Compare Collections"
       },
-      "cta": "Get Started"
+      "cta": "Log In"
     },
     "hero": {
       "title": "Compare your FIFA World Cup 2026 collections in seconds.",
@@ -96,6 +95,9 @@
       "title": "Top Duplicates",
       "viewAll": "View All Duplicates",
       "empty": "This user has no duplicate stickers."
+    },
+    "userMenu": {
+      "logOut": "Log Out"
     },
     "guest": {
       "title": "Compare your collection with {username}",

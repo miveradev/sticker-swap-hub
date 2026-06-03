@@ -13,10 +13,9 @@
       "nav": {
         "album": "Álbum",
         "features": "Funciones",
-        "compare": "Comparar Colecciones",
-        "signIn": "Iniciar Sesión"
+        "compare": "Comparar Colecciones"
       },
-      "cta": "Comenzar"
+      "cta": "Iniciar sesión"
     },
     "hero": {
       "title": "Compara tus colecciones del Mundial FIFA 2026 en segundos.",
@@ -96,6 +95,9 @@
       "title": "Repetidas Destacadas",
       "viewAll": "Ver Todas las Repetidas",
       "empty": "Este usuario no tiene figuritas repetidas."
+    },
+    "userMenu": {
+      "logOut": "Cerrar sesión"
     },
     "guest": {
       "title": "Compara tu colección con {username}",

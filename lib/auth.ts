@@ -15,4 +15,13 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     },
   },
+  user: {
+    additionalFields: {
+      username: {
+        type: "string",
+        required: false,
+        defaultValue: null,
+      },
+    },
+  },
 })

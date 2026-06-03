@@ -1,6 +1,7 @@
 import { headers } from "next/headers"
 import { getTranslations } from "next-intl/server"
 import { AlbumProgressCard } from "@/components/album/AlbumProgressCard"
+import { AlbumGuestCTA } from "@/components/album/AlbumGuestCTA"
 import { AlbumSection } from "@/components/album/AlbumSection"
 import { ProfileNav } from "@/components/profile/ProfileNav"
 import { UserMenu } from "@/components/profile/UserMenu"
@@ -65,14 +66,18 @@ export default async function AlbumPage() {
         </section>
 
         <section className="mb-16">
-          <AlbumProgressCard
-            owned={albumMockData.ownedStickers}
-            total={albumMockData.totalStickers}
-          />
+          {viewer ? (
+            <AlbumProgressCard
+              owned={albumMockData.ownedStickers}
+              total={albumMockData.totalStickers}
+            />
+          ) : (
+            <AlbumGuestCTA />
+          )}
         </section>
 
         {albumMockData.sections.map((section) => (
-          <AlbumSection key={section.id} section={section} />
+          <AlbumSection key={section.id} section={section} isGuest={!viewer} />
         ))}
       </main>
 

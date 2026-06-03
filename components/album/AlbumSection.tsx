@@ -7,9 +7,10 @@ import type { SectionData } from "@/lib/mock/album"
 
 interface AlbumSectionProps {
   section: SectionData
+  isGuest?: boolean
 }
 
-export function AlbumSection({ section }: AlbumSectionProps) {
+export function AlbumSection({ section, isGuest = false }: AlbumSectionProps) {
   const [quantities, setQuantities] = useState<Record<string, number>>(
     () => Object.fromEntries(section.stickers.map((s) => [s.code, s.quantity]))
   )
@@ -26,7 +27,7 @@ export function AlbumSection({ section }: AlbumSectionProps) {
     setQuantities((prev) => ({ ...prev, [code]: 0 }))
   }
 
-  const ownedCount = Object.values(quantities).filter((q) => q > 0).length
+  const ownedCount = isGuest ? 0 : Object.values(quantities).filter((q) => q > 0).length
   const total = section.stickers.length
 
   return (
@@ -50,10 +51,11 @@ export function AlbumSection({ section }: AlbumSectionProps) {
             key={sticker.code}
             code={sticker.code}
             name={sticker.name}
-            quantity={quantities[sticker.code]}
+            quantity={isGuest ? 0 : quantities[sticker.code]}
             onAdd={() => handleAdd(sticker.code)}
             onRemove={() => handleRemove(sticker.code)}
             onReset={() => handleReset(sticker.code)}
+            interactive={!isGuest}
           />
         ))}
       </div>

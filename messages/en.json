@@ -86,6 +86,11 @@
       "sections": "Sections",
       "trade": "Trade",
       "stats": "Stats"
+    },
+    "guest": {
+      "title": "Track your progress",
+      "description": "Sign in to save your collection, track your stickers and unlock your statistics.",
+      "signIn": "Sign in with Google"
     }
   },
   "profile": {

@@ -86,6 +86,11 @@
       "sections": "Secciones",
       "trade": "Intercambios",
       "stats": "Estadísticas"
+    },
+    "guest": {
+      "title": "Registra tu progreso",
+      "description": "Inicia sesión para guardar tu colección, registrar tus figuritas y ver tus estadísticas.",
+      "signIn": "Iniciar sesión con Google"
     }
   },
   "profile": {

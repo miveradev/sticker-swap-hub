@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import { headers } from "next/headers"
 import { getTranslations } from "next-intl/server"
+import Link from "next/link"
 import { LayoutGrid } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ProfileHeader } from "@/components/profile/ProfileHeader"
@@ -21,7 +22,7 @@ export default async function ProfilePage({
 }: {
   params: Promise<{ locale: string; username: string }>
 }) {
-  const { username } = await params
+  const { username, locale } = await params
   const h = await headers()
 
   const [profileData, session, t] = await Promise.all([
@@ -96,6 +97,8 @@ export default async function ProfilePage({
               <Button
                 variant="outline"
                 className="w-full rounded-lg py-3 px-4 text-xs font-medium tracking-wide h-auto"
+                render={<Link href={`/${locale}/album`} />}
+                nativeButton={false}
               >
                 {t("viewFullAlbum")}
               </Button>

@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { toast } from "sonner"
 import { useTranslations } from "next-intl"
 import ReactCountryFlag from "react-country-flag"
@@ -10,26 +9,23 @@ import type { SectionData } from "@/lib/albums/getAlbum"
 
 interface AlbumSectionProps {
   section: SectionData
+  quantities: Record<string, number>
+  onQuantityChange: (code: string, qty: number) => void
   isGuest?: boolean
 }
 
-export function AlbumSection({ section, isGuest = false }: AlbumSectionProps) {
+export function AlbumSection({ section, quantities, onQuantityChange, isGuest = false }: AlbumSectionProps) {
   const t = useTranslations("album")
-  const [quantities, setQuantities] = useState<Record<string, number>>(
-    () => Object.fromEntries(section.stickers.map((s) => [s.code, s.quantity]))
-  )
 
   async function persist(stickerId: string, code: string, newQty: number) {
     const prevQty = quantities[code] ?? 0
 
-    // Optimistic update — instant UI response
-    setQuantities((prev) => ({ ...prev, [code]: newQty }))
+    onQuantityChange(code, newQty) // optimistic — instant UI update
 
     const result = await updateStickerQuantity(stickerId, newQty)
 
     if ("error" in result) {
-      // Rollback on failure
-      setQuantities((prev) => ({ ...prev, [code]: prevQty }))
+      onQuantityChange(code, prevQty) // rollback
       toast.error(t("errorUpdate"))
     }
   }
@@ -72,7 +68,7 @@ export function AlbumSection({ section, isGuest = false }: AlbumSectionProps) {
             key={sticker.code}
             code={sticker.code}
             name={sticker.name}
-            quantity={isGuest ? 0 : quantities[sticker.code]}
+            quantity={isGuest ? 0 : quantities[sticker.code] ?? 0}
             onAdd={() => handleAdd(sticker.id, sticker.code)}
             onRemove={() => handleRemove(sticker.id, sticker.code)}
             onReset={() => handleReset(sticker.id, sticker.code)}

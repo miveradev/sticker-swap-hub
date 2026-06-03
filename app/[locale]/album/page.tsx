@@ -1,8 +1,6 @@
 import { headers } from "next/headers"
 import { getTranslations } from "next-intl/server"
-import { AlbumProgressCard } from "@/components/album/AlbumProgressCard"
-import { AlbumGuestCTA } from "@/components/album/AlbumGuestCTA"
-import { AlbumSection } from "@/components/album/AlbumSection"
+import { AlbumContent } from "@/components/album/AlbumContent"
 import { ProfileNav } from "@/components/profile/ProfileNav"
 import { UserMenu } from "@/components/profile/UserMenu"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
@@ -69,17 +67,11 @@ export default async function AlbumPage() {
           </h1>
         </section>
 
-        <section className="mb-16">
-          {viewer ? (
-            <AlbumProgressCard owned={0} total={album.totalStickers} />
-          ) : (
-            <AlbumGuestCTA />
-          )}
-        </section>
-
-        {album.sections.map((section) => (
-          <AlbumSection key={section.id} section={section} isGuest={!viewer} />
-        ))}
+        <AlbumContent
+          sections={album.sections}
+          totalStickers={album.totalStickers}
+          isGuest={!viewer}
+        />
       </main>
 
       <ProfileNav />

@@ -58,7 +58,7 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
         <span className="max-[430px]:text-[9px] text-[11px] sm:text-[14px] md:text-[13px] font-bold text-muted-foreground tracking-widest uppercase leading-none">
           {code}
         </span>
-        <span className="max-[430px]:text-[7px] text-[8px] sm:text-[12px] md:text-[12px] text-muted-foreground mt-0.5 text-center px-1 truncate w-full leading-tight">
+        <span className="max-[430px]:text-[7px] text-[8px] sm:text-[12px] md:text-[12px] text-muted-foreground mt-0.5 text-center px-1 break-words w-full leading-tight">
           {name}
         </span>
       </div>
@@ -99,7 +99,7 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
         {/* Sticker info */}
         <div className="flex-1 p-0.5 flex flex-col items-center justify-center">
           <span className="max-[430px]:text-[9px] text-[14px] sm:text-[16px] md:text-[17px] text-foreground font-bold leading-none">{code}</span>
-          <span className="max-[430px]:text-[5px] text-[8px] sm:text-[12px] md:text-[12px] text-muted-foreground mt-0.5 text-center px-1 truncate w-full leading-tight">
+          <span className="max-[430px]:text-[5px] text-[8px] sm:text-[12px] md:text-[12px] text-muted-foreground mt-0.5 text-center px-1 break-words w-full leading-tight">
             {name}
           </span>
         </div>

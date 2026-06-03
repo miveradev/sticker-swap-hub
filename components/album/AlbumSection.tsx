@@ -3,7 +3,7 @@
 import { useState } from "react"
 import ReactCountryFlag from "react-country-flag"
 import { StickerCard } from "@/components/album/StickerCard"
-import type { SectionData } from "@/lib/mock/album"
+import type { SectionData } from "@/lib/albums/getAlbum"
 
 interface AlbumSectionProps {
   section: SectionData
@@ -34,11 +34,13 @@ export function AlbumSection({ section, isGuest = false }: AlbumSectionProps) {
     <section className="mb-16">
       <div className="flex justify-between items-center mb-4 border-b border-border pb-1">
         <h2 className="text-lg font-semibold text-foreground flex items-center gap-2">
-          <ReactCountryFlag
-            countryCode={section.countryCode}
-            svg
-            style={{ width: "1.4em", height: "1.4em" }}
-          />
+          {section.countryCode && (
+            <ReactCountryFlag
+              countryCode={section.countryCode}
+              svg
+              style={{ width: "1.4em", height: "1.4em" }}
+            />
+          )}
           {section.name}
         </h2>
         <span className="text-xs text-muted-foreground bg-card border border-border px-3 py-1 rounded-full tabular-nums">

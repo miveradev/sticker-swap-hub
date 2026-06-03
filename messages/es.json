@@ -6,5 +6,71 @@
     "home": "Inicio",
     "profile": "Perfil",
     "collection": "Colección"
+  },
+  "landing": {
+    "header": {
+      "brand": "Sticker Swap Hub",
+      "nav": {
+        "album": "Álbum",
+        "features": "Funciones",
+        "compare": "Comparar Colecciones",
+        "signIn": "Iniciar Sesión"
+      },
+      "cta": "Comenzar"
+    },
+    "hero": {
+      "title": "Compara tus colecciones del Mundial FIFA 2026 en segundos.",
+      "subtitle": "Lleva el control de las figuritas que tienes, marca las que te faltan y compara al instante tu colección con amigos para encontrar posibles intercambios.",
+      "ctaPrimary": "Empezar a Registrar",
+      "ctaSecondary": "Ver Álbum"
+    },
+    "comparison": {
+      "missing": "Faltantes",
+      "duplicates": "Repetidas",
+      "possibleTrades": "Intercambios Posibles ({count})",
+      "collectorName": "Colección de {name}",
+      "gives": "{name} da",
+      "gets": "{name} recibe"
+    },
+    "features": {
+      "title": "Deja de comparar listas manualmente.",
+      "subtitle": "Olvídate de las fotos de WhatsApp y los papelitos. Sticker Swap Hub ofrece una interfaz limpia y precisa para gestionar tu inventario y encontrar coincidencias exactas al instante.",
+      "track": {
+        "title": "Registra tu colección",
+        "description": "Marca tus figuritas como tenidas, faltantes o repetidas con atajos de teclado y acciones en bloque."
+      },
+      "share": {
+        "title": "Comparte tu progreso",
+        "description": "Genera un enlace público único para mostrarle a tus amigos exactamente lo que necesitas, sin que ellos necesiten una cuenta."
+      },
+      "compare": {
+        "title": "Compara al instante",
+        "description": "Pega el enlace de un amigo y ve exactamente qué figuritas pueden intercambiarse en un formato visual y ordenado."
+      }
+    },
+    "stats": {
+      "title": "Diseñado específicamente para el Mundial FIFA 2026.",
+      "subtitle": "Cada equipo, cada figurita especial, pre-cargados y listos para registrar.",
+      "stickers": "Figuritas",
+      "teams": "Selecciones",
+      "sections": "Secciones Especiales"
+    },
+    "cta": {
+      "title": "Diseñado para coleccionistas.",
+      "subtitle": "Sticker Swap Hub se enfoca en una sola cosa: hacer que la gestión de la colección y la preparación de intercambios sea lo más simple posible.",
+      "button": "Empezar a Registrar mi Colección"
+    },
+    "footer": {
+      "brand": "Sticker Swap Hub",
+      "nav": {
+        "album": "Álbum",
+        "features": "Funciones",
+        "compare": "Comparar Colecciones",
+        "privacy": "Privacidad",
+        "terms": "Términos"
+      },
+      "copyright": "© 2026 Sticker Swap Hub.",
+      "tagline": "Registra. Compara. Intercambia."
+    }
   }
 }

@@ -3,8 +3,8 @@ import { Header } from "@/components/landing/Header"
 import { Hero } from "@/components/landing/Hero"
 import { Features } from "@/components/landing/Features"
 import { Stats } from "@/components/landing/Stats"
+import { Cta } from "@/components/landing/Cta"
 import { Footer } from "@/components/landing/Footer"
-import { Button } from "@/components/ui/button"
 
 export default async function HomePage({
   params,
@@ -21,18 +21,7 @@ export default async function HomePage({
         <Hero />
         <Features />
         <Stats />
-        <section className="max-w-3xl mx-auto px-8 flex flex-col items-center text-center gap-6">
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-            Designed for collectors.
-          </h2>
-          <p className="text-base text-muted-foreground">
-            Sticker Swap Hub focuses on one thing: making collection management and trading
-            preparation as simple as possible.
-          </p>
-          <Button size="lg" className="mt-4">
-            Start Tracking Your Collection
-          </Button>
-        </section>
+        <Cta />
       </main>
       <Footer />
     </>

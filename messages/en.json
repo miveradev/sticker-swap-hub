@@ -6,5 +6,71 @@
     "home": "Home",
     "profile": "Profile",
     "collection": "Collection"
+  },
+  "landing": {
+    "header": {
+      "brand": "Sticker Swap Hub",
+      "nav": {
+        "album": "Album",
+        "features": "Features",
+        "compare": "Compare Collections",
+        "signIn": "Sign In"
+      },
+      "cta": "Get Started"
+    },
+    "hero": {
+      "title": "Compare your FIFA World Cup 2026 collections in seconds.",
+      "subtitle": "Track the stickers you have, mark the ones you need, and instantly compare your collection with friends to see possible trades.",
+      "ctaPrimary": "Start Tracking",
+      "ctaSecondary": "View Album"
+    },
+    "comparison": {
+      "missing": "Missing",
+      "duplicates": "Duplicates",
+      "possibleTrades": "Possible Trades ({count})",
+      "collectorName": "{name}'s Collection",
+      "gives": "{name} gives",
+      "gets": "{name} gets"
+    },
+    "features": {
+      "title": "Stop comparing lists manually.",
+      "subtitle": "Ditch the WhatsApp photos and scribbled notes. Sticker Swap Hub provides a clean, precise interface to manage your inventory and find exact matches instantly.",
+      "track": {
+        "title": "Track your collection",
+        "description": "Quickly mark stickers as owned, needed, or duplicate with keyboard shortcuts and bulk actions."
+      },
+      "share": {
+        "title": "Share your progress",
+        "description": "Generate a unique public link to show friends exactly what you need without them needing an account."
+      },
+      "compare": {
+        "title": "Compare instantly",
+        "description": "Paste a friend's link and see exactly which stickers you can swap in a clean, visual format."
+      }
+    },
+    "stats": {
+      "title": "Built specifically for FIFA World Cup 2026.",
+      "subtitle": "Every team, every special sticker, pre-loaded and ready to track.",
+      "stickers": "Stickers",
+      "teams": "National Teams",
+      "sections": "Special Sections"
+    },
+    "cta": {
+      "title": "Designed for collectors.",
+      "subtitle": "Sticker Swap Hub focuses on one thing: making collection management and trading preparation as simple as possible.",
+      "button": "Start Tracking Your Collection"
+    },
+    "footer": {
+      "brand": "Sticker Swap Hub",
+      "nav": {
+        "album": "Album",
+        "features": "Features",
+        "compare": "Compare Collections",
+        "privacy": "Privacy",
+        "terms": "Terms"
+      },
+      "copyright": "© 2026 Sticker Swap Hub.",
+      "tagline": "Track. Compare. Trade."
+    }
   }
 }

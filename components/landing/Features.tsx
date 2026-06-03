@@ -1,3 +1,6 @@
+"use client"
+
+import { useTranslations } from "next-intl"
 import { ListChecks, Share2, ArrowLeftRight } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
@@ -20,32 +23,29 @@ function FeatureCard({
 }
 
 export function Features() {
+  const t = useTranslations("landing.features")
+
   return (
     <section className="max-w-7xl mx-auto px-8 flex flex-col gap-8 w-full">
       <div className="flex flex-col gap-2 max-w-2xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-          Stop comparing lists manually.
-        </h2>
-        <p className="text-base text-muted-foreground">
-          Ditch the WhatsApp photos and scribbled notes. Sticker Swap Hub provides a clean, precise
-          interface to manage your inventory and find exact matches instantly.
-        </p>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">{t("title")}</h2>
+        <p className="text-base text-muted-foreground">{t("subtitle")}</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <FeatureCard
           icon={ListChecks}
-          title="Track your collection"
-          description="Quickly mark stickers as owned, needed, or duplicate with keyboard shortcuts and bulk actions."
+          title={t("track.title")}
+          description={t("track.description")}
         />
         <FeatureCard
           icon={Share2}
-          title="Share your progress"
-          description="Generate a unique public link to show friends exactly what you need without them needing an account."
+          title={t("share.title")}
+          description={t("share.description")}
         />
         <FeatureCard
           icon={ArrowLeftRight}
-          title="Compare instantly"
-          description="Paste a friend's link and see exactly which stickers you can swap in a clean, visual format."
+          title={t("compare.title")}
+          description={t("compare.description")}
         />
       </div>
     </section>

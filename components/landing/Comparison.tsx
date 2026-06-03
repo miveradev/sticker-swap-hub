@@ -1,3 +1,6 @@
+"use client"
+
+import { useTranslations } from "next-intl"
 import { ArrowLeftRight } from "lucide-react"
 
 function StickerChip({
@@ -26,11 +29,15 @@ function CollectorColumn({
   name,
   missing,
   duplicates,
+  missingLabel,
+  duplicatesLabel,
 }: {
   initial: string
   name: string
   missing: string[]
   duplicates: string[]
+  missingLabel: string
+  duplicatesLabel: string
 }) {
   return (
     <div className="flex flex-col gap-4">
@@ -43,7 +50,7 @@ function CollectorColumn({
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-2">
           <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-            Missing
+            {missingLabel}
           </span>
           <div className="flex flex-wrap gap-1">
             {missing.map((code) => (
@@ -53,7 +60,7 @@ function CollectorColumn({
         </div>
         <div className="flex flex-col gap-2">
           <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-            Duplicates
+            {duplicatesLabel}
           </span>
           <div className="flex flex-wrap gap-1">
             {duplicates.map((code) => (
@@ -91,35 +98,43 @@ function TradeRow({
 }
 
 export function Comparison() {
+  const t = useTranslations("landing.comparison")
+
   return (
     <div className="w-full max-w-5xl mt-12 bg-card border border-border rounded-lg p-8 flex flex-col gap-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <CollectorColumn
           initial="M"
-          name="Mike's Collection"
+          name={t("collectorName", { name: "Mike" })}
           missing={["ESP 5", "ESP 9", "BRA 11"]}
           duplicates={["GER 12", "POR 4"]}
+          missingLabel={t("missing")}
+          duplicatesLabel={t("duplicates")}
         />
         <CollectorColumn
           initial="A"
-          name="Alex's Collection"
+          name={t("collectorName", { name: "Alex" })}
           missing={["GER 12", "POR 4"]}
           duplicates={["ESP 5", "BRA 11"]}
+          missingLabel={t("missing")}
+          duplicatesLabel={t("duplicates")}
         />
       </div>
       <div className="border-t border-muted pt-8 flex flex-col gap-4">
-        <span className="text-lg font-medium tracking-tight text-foreground">Possible Trades (4)</span>
+        <span className="text-lg font-medium tracking-tight text-foreground">
+          {t("possibleTrades", { count: 4 })}
+        </span>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <TradeRow
-            leftLabel="Mike gives"
+            leftLabel={t("gives", { name: "Mike" })}
             leftCode="GER 12"
-            rightLabel="Alex gets"
+            rightLabel={t("gets", { name: "Alex" })}
             rightCode="GER 12"
           />
           <TradeRow
-            leftLabel="Mike gets"
+            leftLabel={t("gets", { name: "Mike" })}
             leftCode="ESP 5"
-            rightLabel="Alex gives"
+            rightLabel={t("gives", { name: "Alex" })}
             rightCode="ESP 5"
           />
         </div>

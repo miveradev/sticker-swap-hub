@@ -12,7 +12,7 @@ import { ProfileNav } from "@/components/profile/ProfileNav"
 import { ProfileGuestCTA } from "@/components/profile/ProfileGuestCTA"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
-import { prisma } from "@/lib/prisma"
+import { getProfileData } from "@/lib/profile/getProfileData"
 import { auth } from "@/lib/auth"
 
 export default async function ProfilePage({
@@ -22,16 +22,16 @@ export default async function ProfilePage({
 }) {
   const { username } = await params
   const h = await headers()
-  const t = await getTranslations("profile")
 
-  const user = await prisma.user.findUnique({
-    where: { username },
-    select: { name: true, image: true, username: true },
-  })
+  const [profileData, session, t] = await Promise.all([
+    getProfileData(username),
+    auth.api.getSession({ headers: h as unknown as Headers }),
+    getTranslations("profile"),
+  ])
 
-  if (!user) notFound()
+  if (!profileData) notFound()
 
-  const session = await auth.api.getSession({ headers: h as unknown as Headers })
+  const { user, stats, topDuplicates } = profileData
   const viewer = session?.user ?? null
   const viewerInitials = viewer?.name
     ? viewer.name
@@ -71,16 +71,16 @@ export default async function ProfilePage({
       {/* Main Content — centered on lg+ */}
       <main className="flex-grow pt-24 px-4 flex flex-col gap-8 lg:max-w-md lg:mx-auto lg:w-full">
         <ProfileHeader
-          username={user.username!}
+          username={user.username}
           name={user.name}
-          image={user.image ?? null}
+          image={user.image}
           showAlbum={!!viewer}
         />
         {viewer ? (
           <>
-            <ProfileStats />
-            <ShareButton username={user.username!} />
-            <TopDuplicates />
+            <ProfileStats stats={stats} />
+            <ShareButton username={user.username} />
+            <TopDuplicates duplicates={topDuplicates} />
             <div className="pb-8 pt-2">
               <Button
                 variant="outline"
@@ -92,7 +92,7 @@ export default async function ProfilePage({
           </>
         ) : (
           <div className="pb-8">
-            <ProfileGuestCTA username={user.username!} />
+            <ProfileGuestCTA username={user.username} />
           </div>
         )}
       </main>

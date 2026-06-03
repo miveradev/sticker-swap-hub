@@ -1,18 +1,23 @@
 import { getTranslations } from "next-intl/server"
 import { Card } from "@/components/ui/card"
+import type { ProfileStats as ProfileStatsData } from "@/lib/profile/getProfileData"
 
-export async function ProfileStats() {
+interface ProfileStatsProps {
+  stats: ProfileStatsData
+}
+
+export async function ProfileStats({ stats }: ProfileStatsProps) {
   const t = await getTranslations("profile.stats")
 
-  const stats = [
-    { value: "85%", label: t("completion") },
-    { value: "833", label: t("owned") },
-    { value: "142", label: t("duplicates") },
+  const items = [
+    { value: `${stats.completion}%`, label: t("completion") },
+    { value: String(stats.owned), label: t("owned") },
+    { value: String(stats.duplicates), label: t("duplicates") },
   ]
 
   return (
     <section className="grid grid-cols-3 gap-3">
-      {stats.map((stat) => (
+      {items.map((stat) => (
         <Card
           key={stat.label}
           className="py-0 gap-0 ring-0 border border-border rounded-xl items-center justify-center text-center p-4"

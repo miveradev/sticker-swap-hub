@@ -94,7 +94,8 @@
     },
     "topDuplicates": {
       "title": "Top Duplicates",
-      "viewAll": "View All Duplicates"
+      "viewAll": "View All Duplicates",
+      "empty": "This user has no duplicate stickers."
     },
     "guest": {
       "title": "Compare your collection with {username}",

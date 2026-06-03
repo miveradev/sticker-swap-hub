@@ -7,11 +7,15 @@ import { ProfileNav } from "@/components/profile/ProfileNav"
 import { UserMenu } from "@/components/profile/UserMenu"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
-import { albumMockData } from "@/lib/mock/album"
+import { getAlbum } from "@/lib/albums/getAlbum"
 import { auth } from "@/lib/auth"
 
 export default async function AlbumPage() {
-  const [t, h] = await Promise.all([getTranslations("album"), headers()])
+  const [t, h, album] = await Promise.all([
+    getTranslations("album"),
+    headers(),
+    getAlbum(),
+  ])
 
   const session = await auth.api.getSession({ headers: h as unknown as Headers })
   const viewer = session?.user ?? null
@@ -61,22 +65,19 @@ export default async function AlbumPage() {
       <main className="flex-grow pt-24 pb-8 px-4 max-w-2xl mx-auto w-full flex flex-col">
         <section className="mb-6">
           <h1 className="text-3xl font-semibold tracking-tight text-foreground">
-            {t("title")}
+            {album.name}
           </h1>
         </section>
 
         <section className="mb-16">
           {viewer ? (
-            <AlbumProgressCard
-              owned={albumMockData.ownedStickers}
-              total={albumMockData.totalStickers}
-            />
+            <AlbumProgressCard owned={0} total={album.totalStickers} />
           ) : (
             <AlbumGuestCTA />
           )}
         </section>
 
-        {albumMockData.sections.map((section) => (
+        {album.sections.map((section) => (
           <AlbumSection key={section.id} section={section} isGuest={!viewer} />
         ))}
       </main>

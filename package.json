@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "seed": "tsx scripts/seed-album.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -42,6 +43,7 @@
     "prettier": "^3.8.3",
     "prisma": "^7.8.0",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "^5"
   },
   "overrides": {
@@ -52,6 +54,9 @@
     "msw@2.14.6": true,
     "prisma@7.8.0": true,
     "sharp@0.34.5": true,
-    "unrs-resolver@1.12.2": true
+    "unrs-resolver@1.12.2": true,
+    "@parcel/watcher@2.5.6": true,
+    "esbuild@0.28.0": true,
+    "@swc/core@1.15.40": true
   }
 }

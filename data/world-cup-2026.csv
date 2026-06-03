@@ -1,0 +1,981 @@
+position,code,name,section,section_name
+1,00,Logo Panini,wc2026_fwc_pre,FWC Pre
+2,FWC 1,Official Emblem 1/2,wc2026_fwc_pre,FWC Pre
+3,FWC 2,Official Emblem 2/2,wc2026_fwc_pre,FWC Pre
+4,FWC 3,Official Mascots,wc2026_fwc_pre,FWC Pre
+5,FWC 4,Official Badge,wc2026_fwc_pre,FWC Pre
+6,FWC 5,Official Ball,wc2026_fwc_pre,FWC Pre
+7,FWC 6,Host Country Emblem CAN,wc2026_fwc_pre,FWC Pre
+8,FWC 7,Host Country Emblem MEX,wc2026_fwc_pre,FWC Pre
+9,FWC 8,Host Country Emblem USA,wc2026_fwc_pre,FWC Pre
+10,MEX 1,Mexico Badge,wc2026_mex,Mexico
+11,MEX 2,Luis Malagón,wc2026_mex,Mexico
+12,MEX 3,Johan Vásquez,wc2026_mex,Mexico
+13,MEX 4,Jorge Sánchez,wc2026_mex,Mexico
+14,MEX 5,César Montes,wc2026_mex,Mexico
+15,MEX 6,Jesús Gallardo,wc2026_mex,Mexico
+16,MEX 7,Israel Reyes,wc2026_mex,Mexico
+17,MEX 8,Diego Lainez,wc2026_mex,Mexico
+18,MEX 9,Carlos Rodríguez,wc2026_mex,Mexico
+19,MEX 10,Edson Álvarez,wc2026_mex,Mexico
+20,MEX 11,Orbelín Pineda,wc2026_mex,Mexico
+21,MEX 12,Marcel Ruiz,wc2026_mex,Mexico
+22,MEX 13,Mexico Team,wc2026_mex,Mexico
+23,MEX 14,Érick Sánchez,wc2026_mex,Mexico
+24,MEX 15,Hirving Lozano,wc2026_mex,Mexico
+25,MEX 16,Santiago Giménez,wc2026_mex,Mexico
+26,MEX 17,Raúl Jiménez,wc2026_mex,Mexico
+27,MEX 18,Alexis Vega,wc2026_mex,Mexico
+28,MEX 19,Roberto Alvarado,wc2026_mex,Mexico
+29,MEX 20,César Huerta,wc2026_mex,Mexico
+30,RSA 1,South Africa Badge,wc2026_rsa,South Africa
+31,RSA 2,Ronwen Williams,wc2026_rsa,South Africa
+32,RSA 3,Sipho Chaine,wc2026_rsa,South Africa
+33,RSA 4,Aubrey Modiba,wc2026_rsa,South Africa
+34,RSA 5,Samukele Kabini,wc2026_rsa,South Africa
+35,RSA 6,Mbekezeli Mbokazi,wc2026_rsa,South Africa
+36,RSA 7,Khulumani Ndamane,wc2026_rsa,South Africa
+37,RSA 8,Siyabonga Ngezana,wc2026_rsa,South Africa
+38,RSA 9,Khuliso Mudau,wc2026_rsa,South Africa
+39,RSA 10,Nkosinathi Sibisi,wc2026_rsa,South Africa
+40,RSA 11,Teboho Mokoena,wc2026_rsa,South Africa
+41,RSA 12,Thalente Mbatha,wc2026_rsa,South Africa
+42,RSA 13,South Africa Team,wc2026_rsa,South Africa
+43,RSA 14,Bathusi Aubaas,wc2026_rsa,South Africa
+44,RSA 15,Yaya Sithole,wc2026_rsa,South Africa
+45,RSA 16,Sipho Mbule,wc2026_rsa,South Africa
+46,RSA 17,Lyle Foster,wc2026_rsa,South Africa
+47,RSA 18,Iqraam Rayners,wc2026_rsa,South Africa
+48,RSA 19,Mohau Nkota,wc2026_rsa,South Africa
+49,RSA 20,Oswin Appollis,wc2026_rsa,South Africa
+50,KOR 1,South Korea Badge,wc2026_kor,South Korea
+51,KOR 2,Hyeonwoo Jo,wc2026_kor,South Korea
+52,KOR 3,Seunggyu Kim,wc2026_kor,South Korea
+53,KOR 4,Minjae Kim,wc2026_kor,South Korea
+54,KOR 5,Yumin Cho,wc2026_kor,South Korea
+55,KOR 6,Youngwoo Seol,wc2026_kor,South Korea
+56,KOR 7,Hanbeom Lee,wc2026_kor,South Korea
+57,KOR 8,Taeseok Lee,wc2026_kor,South Korea
+58,KOR 9,Myungjae Lee,wc2026_kor,South Korea
+59,KOR 10,Jaesung Lee,wc2026_kor,South Korea
+60,KOR 11,Inbeom Hwang,wc2026_kor,South Korea
+61,KOR 12,Kangin Lee,wc2026_kor,South Korea
+62,KOR 13,South Korea Team,wc2026_kor,South Korea
+63,KOR 14,Seungho Paik,wc2026_kor,South Korea
+64,KOR 15,Jens Castrop,wc2026_kor,South Korea
+65,KOR 16,Donggyeong Lee,wc2026_kor,South Korea
+66,KOR 17,Guesung Cho,wc2026_kor,South Korea
+67,KOR 18,Heungmin Son,wc2026_kor,South Korea
+68,KOR 19,Heechan Hwang,wc2026_kor,South Korea
+69,KOR 20,Hyeongyu Oh,wc2026_kor,South Korea
+70,CZE 1,Czechia Badge,wc2026_cze,Chechia
+71,CZE 2,Matej Kovar,wc2026_cze,Chechia
+72,CZE 3,Jindrich Stanek,wc2026_cze,Chechia
+73,CZE 4,Ladislav Krejci,wc2026_cze,Chechia
+74,CZE 5,Vladimir Coufal,wc2026_cze,Chechia
+75,CZE 6,Jaroslav Zeleny,wc2026_cze,Chechia
+76,CZE 7,Tomas Holes,wc2026_cze,Chechia
+77,CZE 8,David Zima,wc2026_cze,Chechia
+78,CZE 9,Michal Sadilek,wc2026_cze,Chechia
+79,CZE 10,Lukas Provod,wc2026_cze,Chechia
+80,CZE 11,Lukas Cerv,wc2026_cze,Chechia
+81,CZE 12,Toimas Soucek,wc2026_cze,Chechia
+82,CZE 13,Czechia Team,wc2026_cze,Chechia
+83,CZE 14,Pavel Sulc,wc2026_cze,Chechia
+84,CZE 15,Matej Vydra,wc2026_cze,Chechia
+85,CZE 16,Vasil Kusej,wc2026_cze,Chechia
+86,CZE 17,Tomas Chory,wc2026_cze,Chechia
+87,CZE 18,Vaclav Cerny,wc2026_cze,Chechia
+88,CZE 19,Adam Hlozek,wc2026_cze,Chechia
+89,CZE 20,Patrick Schick,wc2026_cze,Chechia
+90,CAN 1,Canada Badge,wc2026_can,Canada
+91,CAN 2,Dayne St.Clair,wc2026_can,Canada
+92,CAN 3,Alphonso Davies,wc2026_can,Canada
+93,CAN 4,Alistair Johnston,wc2026_can,Canada
+94,CAN 5,Samuel Adekugbe,wc2026_can,Canada
+95,CAN 6,Richie Laryea,wc2026_can,Canada
+96,CAN 7,Derek Cornelius,wc2026_can,Canada
+97,CAN 8,Moïse Bombito,wc2026_can,Canada
+98,CAN 9,Kamal Miller,wc2026_can,Canada
+99,CAN 10,Stephen Eustáquio,wc2026_can,Canada
+100,CAN 11,Ismaël Koné,wc2026_can,Canada
+101,CAN 12,Jonathan Osorio,wc2026_can,Canada
+102,CAN 13,Canada Team,wc2026_can,Canada
+103,CAN 14,Jacob Shaffelburg,wc2026_can,Canada
+104,CAN 15,Mathieu Choinière,wc2026_can,Canada
+105,CAN 16,Niko Sigur,wc2026_can,Canada
+106,CAN 17,Tajon Buchanan,wc2026_can,Canada
+107,CAN 18,Liam Millar,wc2026_can,Canada
+108,CAN 19,Cyle Larin,wc2026_can,Canada
+109,CAN 20,Jonathan David,wc2026_can,Canada
+110,BIH 1,Bosnia-Herzegovina Badge,wc2026_bih,Bosnia-Herzegovina
+111,BIH 2,Nikola Vasilj,wc2026_bih,Bosnia-Herzegovina
+112,BIH 3,Amar Dedic,wc2026_bih,Bosnia-Herzegovina
+113,BIH 4,Sead Kolasinac,wc2026_bih,Bosnia-Herzegovina
+114,BIH 5,Tarik Muharemovic,wc2026_bih,Bosnia-Herzegovina
+115,BIH 6,Nihad Mujakic,wc2026_bih,Bosnia-Herzegovina
+116,BIH 7,Nikola Katic,wc2026_bih,Bosnia-Herzegovina
+117,BIH 8,Amir Hadziahmetovic,wc2026_bih,Bosnia-Herzegovina
+118,BIH 9,Benjamin Tahirovic,wc2026_bih,Bosnia-Herzegovina
+119,BIH 10,Armin Gigovic,wc2026_bih,Bosnia-Herzegovina
+120,BIH 11,Ivan Sunjic,wc2026_bih,Bosnia-Herzegovina
+121,BIH 12,Ivan Basic,wc2026_bih,Bosnia-Herzegovina
+122,BIH 13,Bosnia-Herzegovina Team,wc2026_bih,Bosnia-Herzegovina
+123,BIH 14,Dzenis Burnic,wc2026_bih,Bosnia-Herzegovina
+124,BIH 15,Esmir Bajraktarevic,wc2026_bih,Bosnia-Herzegovina
+125,BIH 16,Amar Memic,wc2026_bih,Bosnia-Herzegovina
+126,BIH 17,Ermedin Demirovic,wc2026_bih,Bosnia-Herzegovina
+127,BIH 18,Edin Dzeko,wc2026_bih,Bosnia-Herzegovina
+128,BIH 19,Samed Bazdar,wc2026_bih,Bosnia-Herzegovina
+129,BIH 20,Haris Tabakovic,wc2026_bih,Bosnia-Herzegovina
+130,QAT 1,Qatar Badge,wc2026_qat,Qatar
+131,QAT 2,Meshaal Barsham,wc2026_qat,Qatar
+132,QAT 3,Sultan Albrake,wc2026_qat,Qatar
+133,QAT 4,Lucas Mendes,wc2026_qat,Qatar
+134,QAT 5,Homam Ahmed,wc2026_qat,Qatar
+135,QAT 6,Boualem Khoukhi,wc2026_qat,Qatar
+136,QAT 7,Pedro Miguel,wc2026_qat,Qatar
+137,QAT 8,Tarek Salman,wc2026_qat,Qatar
+138,QAT 9,Mohammed Mannai,wc2026_qat,Qatar
+139,QAT 10,Karim Boudiaf,wc2026_qat,Qatar
+140,QAT 11,Assim Madibo,wc2026_qat,Qatar
+141,QAT 12,Hamed Fatehi,wc2026_qat,Qatar
+142,QAT 13,Qatar Team,wc2026_qat,Qatar
+143,QAT 14,Mohammed Waad,wc2026_qat,Qatar
+144,QAT 15,Abdulaziz Hatem,wc2026_qat,Qatar
+145,QAT 16,Hassan Al-Haydos,wc2026_qat,Qatar
+146,QAT 17,Edmílson Junior,wc2026_qat,Qatar
+147,QAT 18,Akram Hassan Afif,wc2026_qat,Qatar
+148,QAT 19,Ahmed Al-Ganehi,wc2026_qat,Qatar
+149,QAT 20,Almoez Ali,wc2026_qat,Qatar
+150,SUI 1,Switzerland Badge,wc2026_sui,Switzerland
+151,SUI 2,Gregor Kobel,wc2026_sui,Switzerland
+152,SUI 3,Yvon Mvogo,wc2026_sui,Switzerland
+153,SUI 4,Manuel Akanji,wc2026_sui,Switzerland
+154,SUI 5,Ricardo Rodríguez,wc2026_sui,Switzerland
+155,SUI 6,Nico Elvedi,wc2026_sui,Switzerland
+156,SUI 7,Aurèle Amenda,wc2026_sui,Switzerland
+157,SUI 8,Silvan Widmer,wc2026_sui,Switzerland
+158,SUI 9,Granit Xhaka,wc2026_sui,Switzerland
+159,SUI 10,Denis Zakaria,wc2026_sui,Switzerland
+160,SUI 11,Remo Freuler,wc2026_sui,Switzerland
+161,SUI 12,Fabian Rieder,wc2026_sui,Switzerland
+162,SUI 13,Switzerland Team,wc2026_sui,Switzerland
+163,SUI 14,Ardon Jashari,wc2026_sui,Switzerland
+164,SUI 15,Johan Manzambi,wc2026_sui,Switzerland
+165,SUI 16,Michel Aebischer,wc2026_sui,Switzerland
+166,SUI 17,Breel Embolo,wc2026_sui,Switzerland
+167,SUI 18,Rubén Vargas,wc2026_sui,Switzerland
+168,SUI 19,Dan Ndoye,wc2026_sui,Switzerland
+169,SUI 20,Zeki Amdouni,wc2026_sui,Switzerland
+170,BRA 1,Brazil Badge,wc2026_bra,Brazil
+171,BRA 2,Alisson,wc2026_bra,Brazil
+172,BRA 3,Bento,wc2026_bra,Brazil
+173,BRA 4,Marquinhos,wc2026_bra,Brazil
+174,BRA 5,Éder Militao,wc2026_bra,Brazil
+175,BRA 6,Gabriel Magalhaes,wc2026_bra,Brazil
+176,BRA 7,Danilo,wc2026_bra,Brazil
+177,BRA 8,Wesley,wc2026_bra,Brazil
+178,BRA 9,Lucas Paquetá,wc2026_bra,Brazil
+179,BRA 10,Casemiro,wc2026_bra,Brazil
+180,BRA 11,Bruno Guimaraes,wc2026_bra,Brazil
+181,BRA 12,Luiz Henrique,wc2026_bra,Brazil
+182,BRA 13,Brazil Team,wc2026_bra,Brazil
+183,BRA 14,Vinícius Júnior,wc2026_bra,Brazil
+184,BRA 15,Rodrygo,wc2026_bra,Brazil
+185,BRA 16,Joao Pedro,wc2026_bra,Brazil
+186,BRA 17,Matheus Cunha,wc2026_bra,Brazil
+187,BRA 18,Gabriel Martinelli,wc2026_bra,Brazil
+188,BRA 19,Raphinha,wc2026_bra,Brazil
+189,BRA 20,Estêvao,wc2026_bra,Brazil
+190,MAR 1,Morocco Badge,wc2026_mar,Morocco
+191,MAR 2,Yassine Bounou,wc2026_mar,Morocco
+192,MAR 3,Munir El Kajoui,wc2026_mar,Morocco
+193,MAR 4,Achraf Hakimi,wc2026_mar,Morocco
+194,MAR 5,Noussair Mazraoui,wc2026_mar,Morocco
+195,MAR 6,Nayef Aguerd,wc2026_mar,Morocco
+196,MAR 7,Romain Saïss,wc2026_mar,Morocco
+197,MAR 8,Jawad El Yamiq,wc2026_mar,Morocco
+198,MAR 9,Adam Masina,wc2026_mar,Morocco
+199,MAR 10,Sofyan Amrabat,wc2026_mar,Morocco
+200,MAR 11,Azzedine Ounahi,wc2026_mar,Morocco
+201,MAR 12,Eliesse Ben Seghir,wc2026_mar,Morocco
+202,MAR 13,Morocco Team,wc2026_mar,Morocco
+203,MAR 14,Bilal El Khannouss,wc2026_mar,Morocco
+204,MAR 15,Ismael Saibari,wc2026_mar,Morocco
+205,MAR 16,Youssef En-Nesyri,wc2026_mar,Morocco
+206,MAR 17,Abde Ezzalzouli,wc2026_mar,Morocco
+207,MAR 18,Soufiane Rahimi,wc2026_mar,Morocco
+208,MAR 19,Brahim Díaz,wc2026_mar,Morocco
+209,MAR 20,Ayoub El Kaabi,wc2026_mar,Morocco
+210,HAI 1,Haiti Badge,wc2026_hai,Haiti
+211,HAI 2,Johny Placide,wc2026_hai,Haiti
+212,HAI 3,Carlens Arcus,wc2026_hai,Haiti
+213,HAI 4,Martin Expérience,wc2026_hai,Haiti
+214,HAI 5,Jean-Kévin Duverne,wc2026_hai,Haiti
+215,HAI 6,Ricardo Adé,wc2026_hai,Haiti
+216,HAI 7,Duke Lacroix,wc2026_hai,Haiti
+217,HAI 8,Garvern Metusala,wc2026_hai,Haiti
+218,HAI 9,Hannes Delcroix,wc2026_hai,Haiti
+219,HAI 10,Leverton Pierre,wc2026_hai,Haiti
+220,HAI 11,Danley Jean Jacques,wc2026_hai,Haiti
+221,HAI 12,Jean-Ricner Bellegarde,wc2026_hai,Haiti
+222,HAI 13,Haiti Team,wc2026_hai,Haiti
+223,HAI 14,Christopher Attys,wc2026_hai,Haiti
+224,HAI 15,Derrick Etienne Jr.,wc2026_hai,Haiti
+225,HAI 16,Josué Casimir,wc2026_hai,Haiti
+226,HAI 17,Ruben Providence,wc2026_hai,Haiti
+227,HAI 18,Duckens Nazon,wc2026_hai,Haiti
+228,HAI 19,Louicius Deedson,wc2026_hai,Haiti
+229,HAI 20,Frantzdy Pierrot,wc2026_hai,Haiti
+230,SCO 1,Scotland Badge,wc2026_sco,Scotland
+231,SCO 2,Angus Gunn,wc2026_sco,Scotland
+232,SCO 3,Jack Hendry,wc2026_sco,Scotland
+233,SCO 4,Kieran Tierney,wc2026_sco,Scotland
+234,SCO 5,Aaron Hickey,wc2026_sco,Scotland
+235,SCO 6,Andrew Robertson,wc2026_sco,Scotland
+236,SCO 7,Scott McKenna,wc2026_sco,Scotland
+237,SCO 8,John Souttar,wc2026_sco,Scotland
+238,SCO 9,Anthony Ralston,wc2026_sco,Scotland
+239,SCO 10,Grant Hanley,wc2026_sco,Scotland
+240,SCO 11,Scott McTominay,wc2026_sco,Scotland
+241,SCO 12,Billy Gilmour,wc2026_sco,Scotland
+242,SCO 13,Scotland Team,wc2026_sco,Scotland
+243,SCO 14,Lewis Ferguson,wc2026_sco,Scotland
+244,SCO 15,Ryan Christie,wc2026_sco,Scotland
+245,SCO 16,Kenny McLean,wc2026_sco,Scotland
+246,SCO 17,John McGinn,wc2026_sco,Scotland
+247,SCO 18,Lyndon Dykes,wc2026_sco,Scotland
+248,SCO 19,Ché Adams,wc2026_sco,Scotland
+249,SCO 20,Ben Gannon-Doak,wc2026_sco,Scotland
+250,USA 1,USA Badge,wc2026_usa,USA
+251,USA 2,Matt Freese,wc2026_usa,USA
+252,USA 3,Chris Richards,wc2026_usa,USA
+253,USA 4,Tim Ream,wc2026_usa,USA
+254,USA 5,Mark McKenzie,wc2026_usa,USA
+255,USA 6,Alex Freeman,wc2026_usa,USA
+256,USA 7,Antonee Robinson,wc2026_usa,USA
+257,USA 8,Tyler Adams,wc2026_usa,USA
+258,USA 9,Tanner Tessmann,wc2026_usa,USA
+259,USA 10,Weston McKennie,wc2026_usa,USA
+260,USA 11,Cristian Roldan,wc2026_usa,USA
+261,USA 12,Timothy Weah,wc2026_usa,USA
+262,USA 13,USA Team,wc2026_usa,USA
+263,USA 14,Diego Luna,wc2026_usa,USA
+264,USA 15,Malik Tillman,wc2026_usa,USA
+265,USA 16,Christian Pulisic,wc2026_usa,USA
+266,USA 17,Brenden Aaronson,wc2026_usa,USA
+267,USA 18,Ricardo Pepi,wc2026_usa,USA
+268,USA 19,Haji Wright,wc2026_usa,USA
+269,USA 20,Folarin Balogun,wc2026_usa,USA
+270,PAR 1,Paraguay Badge,wc2026_par,Paraguay
+271,PAR 2,Roberto Fernández,wc2026_par,Paraguay
+272,PAR 3,Orlando Gill,wc2026_par,Paraguay
+273,PAR 4,Gustavo Gómez,wc2026_par,Paraguay
+274,PAR 5,Fabián Balbuena,wc2026_par,Paraguay
+275,PAR 6,Juan José Cáceres,wc2026_par,Paraguay
+276,PAR 7,Omar Alderete,wc2026_par,Paraguay
+277,PAR 8,Júnior Alonso,wc2026_par,Paraguay
+278,PAR 9,Mathías Villasanti,wc2026_par,Paraguay
+279,PAR 10,Diego Gómez,wc2026_par,Paraguay
+280,PAR 11,Damián Bobadilla,wc2026_par,Paraguay
+281,PAR 12,Andrés Cubas,wc2026_par,Paraguay
+282,PAR 13,Paraguay Team,wc2026_par,Paraguay
+283,PAR 14,Matías Galarza Fonda,wc2026_par,Paraguay
+284,PAR 15,Julio Enciso,wc2026_par,Paraguay
+285,PAR 16,Alejandro Romero Gamarra,wc2026_par,Paraguay
+286,PAR 17,Miguel Almirón,wc2026_par,Paraguay
+287,PAR 18,Ramón Sosa,wc2026_par,Paraguay
+288,PAR 19,Ángel Romero,wc2026_par,Paraguay
+289,PAR 20,Antonio Sanabria,wc2026_par,Paraguay
+290,AUS 1,Australia Badge,wc2026_aus,Australia
+291,AUS 2,Mathiew Ryan,wc2026_aus,Australia
+292,AUS 3,Joe Gauci,wc2026_aus,Australia
+293,AUS 4,Harry Souttar,wc2026_aus,Australia
+294,AUS 5,Alessandro Circati,wc2026_aus,Australia
+295,AUS 6,Jordan Bos,wc2026_aus,Australia
+296,AUS 7,Aziz Behich,wc2026_aus,Australia
+297,AUS 8,Cameron Burgess,wc2026_aus,Australia
+298,AUS 9,Lewis Miller,wc2026_aus,Australia
+299,AUS 10,Milos Degenek,wc2026_aus,Australia
+300,AUS 11,Jackson Irvine,wc2026_aus,Australia
+301,AUS 12,Riley McGree,wc2026_aus,Australia
+302,AUS 13,Australia Team,wc2026_aus,Australia
+303,AUS 14,Aiden O'Neill,wc2026_aus,Australia
+304,AUS 15,Connor Metcalfe,wc2026_aus,Australia
+305,AUS 16,Patrick Yazbek,wc2026_aus,Australia
+306,AUS 17,Craig Goodwin,wc2026_aus,Australia
+307,AUS 18,Kusini Yengi,wc2026_aus,Australia
+308,AUS 19,Nestory Irankunda,wc2026_aus,Australia
+309,AUS 20,Mohamed Touré,wc2026_aus,Australia
+310,TUR 1,Türkiye Badge,wc2026_tur,Türkiye
+311,TUR 2,Ugurcan Cakir,wc2026_tur,Türkiye
+312,TUR 3,Mert Müldür,wc2026_tur,Türkiye
+313,TUR 4,Zeki Celík,wc2026_tur,Türkiye
+314,TUR 5,Abdülkerím Bardakci,wc2026_tur,Türkiye
+315,TUR 6,Caglar Söyüncü,wc2026_tur,Türkiye
+316,TUR 7,Meríh Demíral,wc2026_tur,Türkiye
+317,TUR 8,Ferdi Kadioglu,wc2026_tur,Türkiye
+318,TUR 9,Kaan Ayhan,wc2026_tur,Türkiye
+319,TUR 10,Ismaíl Yüksek,wc2026_tur,Türkiye
+320,TUR 11,Hakan Calhanoglu,wc2026_tur,Türkiye
+321,TUR 12,Orkun Kökcü,wc2026_tur,Türkiye
+322,TUR 13,Türkiye Team,wc2026_tur,Türkiye
+323,TUR 14,Arda Güller,wc2026_tur,Türkiye
+324,TUR 15,Írfan Can Kahveci,wc2026_tur,Türkiye
+325,TUR 16,Yunus Akgün,wc2026_tur,Türkiye
+326,TUR 17,Can Uzun,wc2026_tur,Türkiye
+327,TUR 18,Baris Alper Yilmaz,wc2026_tur,Türkiye
+328,TUR 19,Kerem Aktürkoglu,wc2026_tur,Türkiye
+329,TUR 20,Kenan Yildiz,wc2026_tur,Türkiye
+330,GER 1,Germany Badge,wc2026_ger,Germany
+331,GER 2,Marc-André Ter Stegen,wc2026_ger,Germany
+332,GER 3,Jonathan Tah,wc2026_ger,Germany
+333,GER 4,David Raum,wc2026_ger,Germany
+334,GER 5,Nico Schlotterbeck,wc2026_ger,Germany
+335,GER 6,Antonio Rüdiger,wc2026_ger,Germany
+336,GER 7,Waldermar Anton,wc2026_ger,Germany
+337,GER 8,Ridle Baku,wc2026_ger,Germany
+338,GER 9,Maximilian Mittlestädt,wc2026_ger,Germany
+339,GER 10,Joshua Kimmich,wc2026_ger,Germany
+340,GER 11,Florian Wirtz,wc2026_ger,Germany
+341,GER 12,Felix Nmecha,wc2026_ger,Germany
+342,GER 13,Germany Team,wc2026_ger,Germany
+343,GER 14,Leon Goretzka,wc2026_ger,Germany
+344,GER 15,Jamal Musiala,wc2026_ger,Germany
+345,GER 16,Serge Gnabry,wc2026_ger,Germany
+346,GER 17,Kai Havertz,wc2026_ger,Germany
+347,GER 18,Leroy Sané,wc2026_ger,Germany
+348,GER 19,Karim Adeyemi,wc2026_ger,Germany
+349,GER 20,Nick Woltemade,wc2026_ger,Germany
+350,CUW 1,Curaçao Badge,wc2026_cuw,Curaçao
+351,CUW 2,Eloy Room,wc2026_cuw,Curaçao
+352,CUW 3,Armando Obispo,wc2026_cuw,Curaçao
+353,CUW 4,Sherel Floranus,wc2026_cuw,Curaçao
+354,CUW 5,Jurién Gaari,wc2026_cuw,Curaçao
+355,CUW 6,Joshua Brenet,wc2026_cuw,Curaçao
+356,CUW 7,Roshon Van Eijma,wc2026_cuw,Curaçao
+357,CUW 8,Shurandy Sambo,wc2026_cuw,Curaçao
+358,CUW 9,Livano Comenencia,wc2026_cuw,Curaçao
+359,CUW 10,Godfried Roemeratoe,wc2026_cuw,Curaçao
+360,CUW 11,Juninho Bacuna,wc2026_cuw,Curaçao
+361,CUW 12,Leandro Bacuna,wc2026_cuw,Curaçao
+362,CUW 13,Curaçao Team,wc2026_cuw,Curaçao
+363,CUW 14,Tahith Chong,wc2026_cuw,Curaçao
+364,CUW 15,Kenji Gorré,wc2026_cuw,Curaçao
+365,CUW 16,Jearl Margaritha,wc2026_cuw,Curaçao
+366,CUW 17,Jürgen Locadia,wc2026_cuw,Curaçao
+367,CUW 18,Jeremy Antonisse,wc2026_cuw,Curaçao
+368,CUW 19,Gervane Kastaneer,wc2026_cuw,Curaçao
+369,CUW 20,Sontje Hansen,wc2026_cuw,Curaçao
+370,CIV 1,Côte d'Ivore Badge,wc2026_civ,Côte d'Ivore
+371,CIV 2,Yahia Fofana,wc2026_civ,Côte d'Ivore
+372,CIV 3,Ghislain Konan,wc2026_civ,Côte d'Ivore
+373,CIV 4,Wilfried Singo,wc2026_civ,Côte d'Ivore
+374,CIV 5,Odilon Kossounou,wc2026_civ,Côte d'Ivore
+375,CIV 6,Evan Ndicka,wc2026_civ,Côte d'Ivore
+376,CIV 7,Willy Boly,wc2026_civ,Côte d'Ivore
+377,CIV 8,Emmanuel Agbadou,wc2026_civ,Côte d'Ivore
+378,CIV 9,Ousmane Diomande,wc2026_civ,Côte d'Ivore
+379,CIV 10,Franick Kessié,wc2026_civ,Côte d'Ivore
+380,CIV 11,Seko Fofana,wc2026_civ,Côte d'Ivore
+381,CIV 12,Ibrahim Sangaré,wc2026_civ,Côte d'Ivore
+382,CIV 13,Côte d'Ivore Team,wc2026_civ,Côte d'Ivore
+383,CIV 14,Jean-Philippe Gbamin,wc2026_civ,Côte d'Ivore
+384,CIV 15,Amad Diallo,wc2026_civ,Côte d'Ivore
+385,CIV 16,Sébastien Haller,wc2026_civ,Côte d'Ivore
+386,CIV 17,Simon Adingra,wc2026_civ,Côte d'Ivore
+387,CIV 18,Yan Diomande,wc2026_civ,Côte d'Ivore
+388,CIV 19,Evann Guessand,wc2026_civ,Côte d'Ivore
+389,CIV 20,Oumar Diakité,wc2026_civ,Côte d'Ivore
+390,ECU 1,Ecuador Badge,wc2026_ecu,Ecuador
+391,ECU 2,Hernán Galíndez,wc2026_ecu,Ecuador
+392,ECU 3,Gonzalo Valle,wc2026_ecu,Ecuador
+393,ECU 4,Piero Hincapié,wc2026_ecu,Ecuador
+394,ECU 5,Pervis Estupiñán,wc2026_ecu,Ecuador
+395,ECU 6,Willian Pacho,wc2026_ecu,Ecuador
+396,ECU 7,Ángelo Preciado,wc2026_ecu,Ecuador
+397,ECU 8,Joel Ordóñez,wc2026_ecu,Ecuador
+398,ECU 9,Moisés Caicedo,wc2026_ecu,Ecuador
+399,ECU 10,Alan Franco,wc2026_ecu,Ecuador
+400,ECU 11,Kendry Páez,wc2026_ecu,Ecuador
+401,ECU 12,Pedro Vite,wc2026_ecu,Ecuador
+402,ECU 13,Ecuador Team,wc2026_ecu,Ecuador
+403,ECU 14,John Yeboah,wc2026_ecu,Ecuador
+404,ECU 15,Leonardo Campana,wc2026_ecu,Ecuador
+405,ECU 16,Gonzalo Plata,wc2026_ecu,Ecuador
+406,ECU 17,Nilson Angulo,wc2026_ecu,Ecuador
+407,ECU 18,Alan Minda,wc2026_ecu,Ecuador
+408,ECU 19,Kevin Rodríguez,wc2026_ecu,Ecuador
+409,ECU 20,Enner Valencia,wc2026_ecu,Ecuador
+410,NED 1,Netherlands Badge,wc2026_ned,Netherlands
+411,NED 2,Bart Verbruggen,wc2026_ned,Netherlands
+412,NED 3,Virgil Van Dijk,wc2026_ned,Netherlands
+413,NED 4,Micky Van de Ven,wc2026_ned,Netherlands
+414,NED 5,Jurrién Timber,wc2026_ned,Netherlands
+415,NED 6,Denzel Dumfries,wc2026_ned,Netherlands
+416,NED 7,Nathan Aké,wc2026_ned,Netherlands
+417,NED 8,Jeremie Frimpong,wc2026_ned,Netherlands
+418,NED 9,Jan Paul Van Hecke,wc2026_ned,Netherlands
+419,NED 10,Tijjai Reijnders,wc2026_ned,Netherlands
+420,NED 11,Ryan Gravenberch,wc2026_ned,Netherlands
+421,NED 12,Teun Koopmeiners,wc2026_ned,Netherlands
+422,NED 13,Netherlands Team,wc2026_ned,Netherlands
+423,NED 14,Frenkie De Jong,wc2026_ned,Netherlands
+424,NED 15,Xavi Simons,wc2026_ned,Netherlands
+425,NED 16,Justin Kluivert,wc2026_ned,Netherlands
+426,NED 17,Memphis Depay,wc2026_ned,Netherlands
+427,NED 18,Donyell Malen,wc2026_ned,Netherlands
+428,NED 19,Wout Weghorst,wc2026_ned,Netherlands
+429,NED 20,Cody Gakpo,wc2026_ned,Netherlands
+430,JPN 1,Japan Badge,wc2026_jpn,Japan
+431,JPN 2,Zion Suzuki,wc2026_jpn,Japan
+432,JPN 3,Henry Heroki Mochizuki,wc2026_jpn,Japan
+433,JPN 4,Ayumi Seko,wc2026_jpn,Japan
+434,JPN 5,Junnosuke Suzuki,wc2026_jpn,Japan
+435,JPN 6,Shogo Taniguchi,wc2026_jpn,Japan
+436,JPN 7,Tsuyoshi Watanabe,wc2026_jpn,Japan
+437,JPN 8,Kaishu Sano,wc2026_jpn,Japan
+438,JPN 9,Yuki Soma,wc2026_jpn,Japan
+439,JPN 10,Ao Tanaka,wc2026_jpn,Japan
+440,JPN 11,Daichi Kamada,wc2026_jpn,Japan
+441,JPN 12,Takefusa Kubo,wc2026_jpn,Japan
+442,JPN 13,Japan Team,wc2026_jpn,Japan
+443,JPN 14,Ritsu Doan,wc2026_jpn,Japan
+444,JPN 15,Keito Nakamura,wc2026_jpn,Japan
+445,JPN 16,Takumi Minamino,wc2026_jpn,Japan
+446,JPN 17,Shuto Machino,wc2026_jpn,Japan
+447,JPN 18,Junya Ito,wc2026_jpn,Japan
+448,JPN 19,Koki Ogawa,wc2026_jpn,Japan
+449,JPN 20,Ayase Ueda,wc2026_jpn,Japan
+450,SWE 1,Sweden Badge,wc2026_swe,Sweden
+451,SWE 2,Viktor Johansson,wc2026_swe,Sweden
+452,SWE 3,Isak Hien,wc2026_swe,Sweden
+453,SWE 4,Gabriel Gudmundsson,wc2026_swe,Sweden
+454,SWE 5,Emil Holm,wc2026_swe,Sweden
+455,SWE 6,Victor Nilsson Lindelöf,wc2026_swe,Sweden
+456,SWE 7,Gustaf Lagerbielke,wc2026_swe,Sweden
+457,SWE 8,Lucas Bergvall,wc2026_swe,Sweden
+458,SWE 9,Hugo Larsson,wc2026_swe,Sweden
+459,SWE 10,Jesper Karlström,wc2026_swe,Sweden
+460,SWE 11,Yasin Avari,wc2026_swe,Sweden
+461,SWE 12,Mattias Svanberg,wc2026_swe,Sweden
+462,SWE 13,Sweden Team,wc2026_swe,Sweden
+463,SWE 14,Daniel Svensson,wc2026_swe,Sweden
+464,SWE 15,Ken Sema,wc2026_swe,Sweden
+465,SWE 16,Roony Bardghji,wc2026_swe,Sweden
+466,SWE 17,Dejan Kulusevski,wc2026_swe,Sweden
+467,SWE 18,Anthony Elanga,wc2026_swe,Sweden
+468,SWE 19,Alexander Isak,wc2026_swe,Sweden
+469,SWE 20,Viktor Gyökeres,wc2026_swe,Sweden
+470,TUN 1,Tunisia Badge,wc2026_tun,Tunisia
+471,TUN 2,Bechir Ben Saïd,wc2026_tun,Tunisia
+472,TUN 3,Aymen Dahmen,wc2026_tun,Tunisia
+473,TUN 4,Yan Valery,wc2026_tun,Tunisia
+474,TUN 5,Montassar Talbi,wc2026_tun,Tunisia
+475,TUN 6,Yassine Meriah,wc2026_tun,Tunisia
+476,TUN 7,Ali Abdi,wc2026_tun,Tunisia
+477,TUN 8,Dylan Bronn,wc2026_tun,Tunisia
+478,TUN 9,Ellys Skhiri,wc2026_tun,Tunisia
+479,TUN 10,Aïssa Laïdouni,wc2026_tun,Tunisia
+480,TUN 11,Ferjani Sassi,wc2026_tun,Tunisia
+481,TUN 12,Mohamed Ali Ben Romdhane,wc2026_tun,Tunisia
+482,TUN 13,Tunisia Team,wc2026_tun,Tunisia
+483,TUN 14,Hannibal Mejbri,wc2026_tun,Tunisia
+484,TUN 15,Elias Achouri,wc2026_tun,Tunisia
+485,TUN 16,Elias Saad,wc2026_tun,Tunisia
+486,TUN 17,Hazem Mastouri,wc2026_tun,Tunisia
+487,TUN 18,Ismaël Gharbi,wc2026_tun,Tunisia
+488,TUN 19,Sayfallah Ltaief,wc2026_tun,Tunisia
+489,TUN 20,Naïm Sliti,wc2026_tun,Tunisia
+490,BEL 1,Belgium Badge,wc2026_bel,Belgium
+491,BEL 2,Thibaut Courtois,wc2026_bel,Belgium
+492,BEL 3,Arthur Theate,wc2026_bel,Belgium
+493,BEL 4,Timothy Castagne,wc2026_bel,Belgium
+494,BEL 5,Zeno Debast,wc2026_bel,Belgium
+495,BEL 6,Brandon Mechele,wc2026_bel,Belgium
+496,BEL 7,Maxim De Cuyper,wc2026_bel,Belgium
+497,BEL 8,Thomas Meunier,wc2026_bel,Belgium
+498,BEL 9,Youri Tielemans,wc2026_bel,Belgium
+499,BEL 10,Amadou Onana,wc2026_bel,Belgium
+500,BEL 11,Nicolas Raskin,wc2026_bel,Belgium
+501,BEL 12,Alexis Saelemaekers,wc2026_bel,Belgium
+502,BEL 13,Belgium Team,wc2026_bel,Belgium
+503,BEL 14,Hans Vanaken,wc2026_bel,Belgium
+504,BEL 15,Kevin De Bruyne,wc2026_bel,Belgium
+505,BEL 16,Jérémy Doku,wc2026_bel,Belgium
+506,BEL 17,Charles De Ketelaere,wc2026_bel,Belgium
+507,BEL 18,Leandro Trossard,wc2026_bel,Belgium
+508,BEL 19,Loïs Openda,wc2026_bel,Belgium
+509,BEL 20,Romelu Lukaku,wc2026_bel,Belgium
+510,EGY 1,Egypt Badge,wc2026_egy,Egypt
+511,EGY 2,Mohamed Elshenawy,wc2026_egy,Egypt
+512,EGY 3,Mohamed Hany,wc2026_egy,Egypt
+513,EGY 4,Mohamed Hamdy,wc2026_egy,Egypt
+514,EGY 5,Yasser Ibrahim,wc2026_egy,Egypt
+515,EGY 6,Khaled Sobhi,wc2026_egy,Egypt
+516,EGY 7,Ramy Rabia,wc2026_egy,Egypt
+517,EGY 8,Houssam Abdelmaguid,wc2026_egy,Egypt
+518,EGY 9,Ahmed Fatouh,wc2026_egy,Egypt
+519,EGY 10,Marwan Attia,wc2026_egy,Egypt
+520,EGY 11,Zizo,wc2026_egy,Egypt
+521,EGY 12,Hamdy Fathy,wc2026_egy,Egypt
+522,EGY 13,Egypt Team,wc2026_egy,Egypt
+523,EGY 14,Mohanad Lasheen,wc2026_egy,Egypt
+524,EGY 15,Emam Ashour,wc2026_egy,Egypt
+525,EGY 16,Osama Faisal,wc2026_egy,Egypt
+526,EGY 17,Mohamed Salah,wc2026_egy,Egypt
+527,EGY 18,Mostafa Mohamed,wc2026_egy,Egypt
+528,EGY 19,Trezeguet,wc2026_egy,Egypt
+529,EGY 20,Omar Marmoush,wc2026_egy,Egypt
+530,IRN 1,Iran Badge,wc2026_irn,Iran
+531,IRN 2,Aureza Beiranvand,wc2026_irn,Iran
+532,IRN 3,Morteza Pouraliganji,wc2026_irn,Iran
+533,IRN 4,Ehsan Hajsafi,wc2026_irn,Iran
+534,IRN 5,Milad Mohammadi,wc2026_irn,Iran
+535,IRN 6,Shojae Khalilzadeh,wc2026_irn,Iran
+536,IRN 7,Ramin Rezaeian,wc2026_irn,Iran
+537,IRN 8,Hossein Kanaani,wc2026_irn,Iran
+538,IRN 9,Sadegh Moharrami,wc2026_irn,Iran
+539,IRN 10,Saleh Hardani,wc2026_irn,Iran
+540,IRN 11,Saeed Ezatolahi,wc2026_irn,Iran
+541,IRN 12,Saman Ghoddos,wc2026_irn,Iran
+542,IRN 13,Iran Team,wc2026_irn,Iran
+543,IRN 14,Omid Noorafkan,wc2026_irn,Iran
+544,IRN 15,Roozbeh Cheshmi,wc2026_irn,Iran
+545,IRN 16,Mohammad Mohebi,wc2026_irn,Iran
+546,IRN 17,Sardar Azmoun,wc2026_irn,Iran
+547,IRN 18,Mehdi Taremi,wc2026_irn,Iran
+548,IRN 19,Alireza Jahanbakhsh,wc2026_irn,Iran
+549,IRN 20,Ali Gholizadeh,wc2026_irn,Iran
+550,NZL 1,New Zeland Badge,wc2026_nzl,New Zeland
+551,NZL 2,Max Crocombe,wc2026_nzl,New Zeland
+552,NZL 3,Alex Paulsen,wc2026_nzl,New Zeland
+553,NZL 4,Michael Boxall,wc2026_nzl,New Zeland
+554,NZL 5,Liberato Cacace,wc2026_nzl,New Zeland
+555,NZL 6,Tim Payne,wc2026_nzl,New Zeland
+556,NZL 7,Tyler Bindon,wc2026_nzl,New Zeland
+557,NZL 8,Francis De Vries,wc2026_nzl,New Zeland
+558,NZL 9,Finn Surman,wc2026_nzl,New Zeland
+559,NZL 10,Joe Bell,wc2026_nzl,New Zeland
+560,NZL 11,Sarprett Singh,wc2026_nzl,New Zeland
+561,NZL 12,Ryan Thomas,wc2026_nzl,New Zeland
+562,NZL 13,New Zeland Team,wc2026_nzl,New Zeland
+563,NZL 14,Matthew Garbett,wc2026_nzl,New Zeland
+564,NZL 15,Marko Stamenic,wc2026_nzl,New Zeland
+565,NZL 16,Ben Old,wc2026_nzl,New Zeland
+566,NZL 17,Chris Wood,wc2026_nzl,New Zeland
+567,NZL 18,Elijah Just,wc2026_nzl,New Zeland
+568,NZL 19,Callum McCowatt,wc2026_nzl,New Zeland
+569,NZL 20,Kosta Barbarouses,wc2026_nzl,New Zeland
+570,ESP 1,Spain Badge,wc2026_esp,Spain
+571,ESP 2,Unai Simón,wc2026_esp,Spain
+572,ESP 3,Romin Le Normand,wc2026_esp,Spain
+573,ESP 4,Aymeric Laporte,wc2026_esp,Spain
+574,ESP 5,Dean Huijsen,wc2026_esp,Spain
+575,ESP 6,Pedro Porro,wc2026_esp,Spain
+576,ESP 7,Dani Carvajal,wc2026_esp,Spain
+577,ESP 8,Marc Cucurella,wc2026_esp,Spain
+578,ESP 9,Martín Zubimendi,wc2026_esp,Spain
+579,ESP 10,Rodri,wc2026_esp,Spain
+580,ESP 11,Pedri,wc2026_esp,Spain
+581,ESP 12,Fabián Ruiz,wc2026_esp,Spain
+582,ESP 13,Spain Team,wc2026_esp,Spain
+583,ESP 14,Mikel Merino,wc2026_esp,Spain
+584,ESP 15,Lamine Yamal,wc2026_esp,Spain
+585,ESP 16,Dani Olmo,wc2026_esp,Spain
+586,ESP 17,Nico Williams,wc2026_esp,Spain
+587,ESP 18,Ferran Torres,wc2026_esp,Spain
+588,ESP 19,Álvaro Morata,wc2026_esp,Spain
+589,ESP 20,Mikel Oyarzabal,wc2026_esp,Spain
+590,CPV 1,Cabo Verde Badge,wc2026_cpv,Cabo Verde
+591,CPV 2,Vozinha,wc2026_cpv,Cabo Verde
+592,CPV 3,Logan Costa,wc2026_cpv,Cabo Verde
+593,CPV 4,Pico,wc2026_cpv,Cabo Verde
+594,CPV 5,Diney,wc2026_cpv,Cabo Verde
+595,CPV 6,Steven Moreira,wc2026_cpv,Cabo Verde
+596,CPV 7,Wagner Pina,wc2026_cpv,Cabo Verde
+597,CPV 8,Joao Paulo,wc2026_cpv,Cabo Verde
+598,CPV 9,Yannick Semedo,wc2026_cpv,Cabo Verde
+599,CPV 10,Kevin Pina,wc2026_cpv,Cabo Verde
+600,CPV 11,Patrick Andrade,wc2026_cpv,Cabo Verde
+601,CPV 12,Jamiro Monteiro,wc2026_cpv,Cabo Verde
+602,CPV 13,Cabo Verde Team,wc2026_cpv,Cabo Verde
+603,CPV 14,Deroy Duarte,wc2026_cpv,Cabo Verde
+604,CPV 15,Garry Rodrigues,wc2026_cpv,Cabo Verde
+605,CPV 16,Jovane Cabral,wc2026_cpv,Cabo Verde
+606,CPV 17,Ryan Mendes,wc2026_cpv,Cabo Verde
+607,CPV 18,Dailon Livramento,wc2026_cpv,Cabo Verde
+608,CPV 19,Willy Semedo,wc2026_cpv,Cabo Verde
+609,CPV 20,Bebé,wc2026_cpv,Cabo Verde
+610,KSA 1,Saudi Arabia Badge,wc2026_ksa,Saudi Arabia
+611,KSA 2,Nawaf Alaqidi,wc2026_ksa,Saudi Arabia
+612,KSA 3,Abdulrahman Alsanbi,wc2026_ksa,Saudi Arabia
+613,KSA 4,Saud Abdulhamid,wc2026_ksa,Saudi Arabia
+614,KSA 5,Nawaf Buwashl,wc2026_ksa,Saudi Arabia
+615,KSA 6,Jehad Thikri,wc2026_ksa,Saudi Arabia
+616,KSA 7,Moteb Alharbi,wc2026_ksa,Saudi Arabia
+617,KSA 8,Hassan Altambakti,wc2026_ksa,Saudi Arabia
+618,KSA 9,Musab Aljuwayr,wc2026_ksa,Saudi Arabia
+619,KSA 10,Ziyad Aljohani,wc2026_ksa,Saudi Arabia
+620,KSA 11,Abdullah Alkhaibari,wc2026_ksa,Saudi Arabia
+621,KSA 12,Nasser Aldawsari,wc2026_ksa,Saudi Arabia
+622,KSA 13,Saudi Arabia Team,wc2026_ksa,Saudi Arabia
+623,KSA 14,Saleh Abu Alshamat,wc2026_ksa,Saudi Arabia
+624,KSA 15,Marwan Alsahafi,wc2026_ksa,Saudi Arabia
+625,KSA 16,Salem Aldawsari,wc2026_ksa,Saudi Arabia
+626,KSA 17,Abdulrahman Alobud,wc2026_ksa,Saudi Arabia
+627,KSA 18,Feras Albrikan,wc2026_ksa,Saudi Arabia
+628,KSA 19,Saleh Alshehri,wc2026_ksa,Saudi Arabia
+629,KSA 20,Abdullah Alhamdan,wc2026_ksa,Saudi Arabia
+630,URU 1,Uruguay Badge,wc2026_uru,Uruguay
+631,URU 2,Sergio Rochet,wc2026_uru,Uruguay
+632,URU 3,Santiago Mele,wc2026_uru,Uruguay
+633,URU 4,Ronald Araújo,wc2026_uru,Uruguay
+634,URU 5,José María Giménez,wc2026_uru,Uruguay
+635,URU 6,Sebastián Cáceres,wc2026_uru,Uruguay
+636,URU 7,Mathías Olivera,wc2026_uru,Uruguay
+637,URU 8,Guillermo Varela,wc2026_uru,Uruguay
+638,URU 9,Nahitan Nández,wc2026_uru,Uruguay
+639,URU 10,Federico Valverde,wc2026_uru,Uruguay
+640,URU 11,Giorgian De Arrascaeta,wc2026_uru,Uruguay
+641,URU 12,Rodrigo Bentancur,wc2026_uru,Uruguay
+642,URU 13,Uruguay Team,wc2026_uru,Uruguay
+643,URU 14,Manuel Ugarte,wc2026_uru,Uruguay
+644,URU 15,Nicolás De La Cruz,wc2026_uru,Uruguay
+645,URU 16,Maxi Araújo,wc2026_uru,Uruguay
+646,URU 17,Darwin Núñez,wc2026_uru,Uruguay
+647,URU 18,Federico Viñas,wc2026_uru,Uruguay
+648,URU 19,Rodrigo Aguirre,wc2026_uru,Uruguay
+649,URU 20,Facundo Pellistri,wc2026_uru,Uruguay
+650,FRA 1,France Badge,wc2026_fra,France
+651,FRA 2,Mike Maignan,wc2026_fra,France
+652,FRA 3,Théo Hernández,wc2026_fra,France
+653,FRA 4,William Saliba,wc2026_fra,France
+654,FRA 5,Jules Koundé,wc2026_fra,France
+655,FRA 6,Ibrahim Konaté,wc2026_fra,France
+656,FRA 7,Dayot Upamecano,wc2026_fra,France
+657,FRA 8,Lucas Digne,wc2026_fra,France
+658,FRA 9,Aurélie Tchouaméni,wc2026_fra,France
+659,FRA 10,Eduardo Camavinga,wc2026_fra,France
+660,FRA 11,Manu Koné,wc2026_fra,France
+661,FRA 12,Adrien Rabiot,wc2026_fra,France
+662,FRA 13,France Team,wc2026_fra,France
+663,FRA 14,Michael Olise,wc2026_fra,France
+664,FRA 15,Ousmanne Dembélé,wc2026_fra,France
+665,FRA 16,Bradley Barcola,wc2026_fra,France
+666,FRA 17,Désiré Doué,wc2026_fra,France
+667,FRA 18,Kingsley Coman,wc2026_fra,France
+668,FRA 19,Hugo Ekitiké,wc2026_fra,France
+669,FRA 20,Kylian Mbappé,wc2026_fra,France
+670,SEN 1,Senegal Badge,wc2026_sen,Senegal
+671,SEN 2,Édouard Mendy,wc2026_sen,Senegal
+672,SEN 3,Yehvann Diouf,wc2026_sen,Senegal
+673,SEN 4,Moussa Niakhaté,wc2026_sen,Senegal
+674,SEN 5,Abdoulaye Seck,wc2026_sen,Senegal
+675,SEN 6,Ismail Jakobs,wc2026_sen,Senegal
+676,SEN 7,El Hadji Malick Diouf,wc2026_sen,Senegal
+677,SEN 8,Kalidou Koulibaly,wc2026_sen,Senegal
+678,SEN 9,Idrissa Gana Gueye,wc2026_sen,Senegal
+679,SEN 10,Pape Matar Sarr,wc2026_sen,Senegal
+680,SEN 11,Pape Gueye,wc2026_sen,Senegal
+681,SEN 12,Habib Diarra,wc2026_sen,Senegal
+682,SEN 13,Senegal Team,wc2026_sen,Senegal
+683,SEN 14,Lamine Gamara,wc2026_sen,Senegal
+684,SEN 15,Sadio Mané,wc2026_sen,Senegal
+685,SEN 16,Ismaïla Sarr,wc2026_sen,Senegal
+686,SEN 17,Boulaye Dia,wc2026_sen,Senegal
+687,SEN 18,Iliman Ndiaye,wc2026_sen,Senegal
+688,SEN 19,Nicolas Jackson,wc2026_sen,Senegal
+689,SEN 20,Krépin Diatta,wc2026_sen,Senegal
+690,IRQ 1,Iraq Badge,wc2026_irq,Iraq
+691,IRQ 2,Jalal Hassan,wc2026_irq,Iraq
+692,IRQ 3,Rebin Sulaka,wc2026_irq,Iraq
+693,IRQ 4,Hussein Ali,wc2026_irq,Iraq
+694,IRQ 5,Akam Hashem,wc2026_irq,Iraq
+695,IRQ 6,Merchas Doski,wc2026_irq,Iraq
+696,IRQ 7,Zaid Tahseen,wc2026_irq,Iraq
+697,IRQ 8,Manaf Younis,wc2026_irq,Iraq
+698,IRQ 9,Zidane Kobal,wc2026_irq,Iraq
+699,IRQ 10,Amir Al-Ammari,wc2026_irq,Iraq
+700,IRQ 11,Ibrahim Bayesh,wc2026_irq,Iraq
+701,IRQ 12,Ali Jasim,wc2026_irq,Iraq
+702,IRQ 13,Iraq Team,wc2026_irq,Iraq
+703,IRQ 14,Youssef Amyn,wc2026_irq,Iraq
+704,IRQ 15,Aimar Sher,wc2026_irq,Iraq
+705,IRQ 16,Marko Farji,wc2026_irq,Iraq
+706,IRQ 17,Osama Rashid,wc2026_irq,Iraq
+707,IRQ 18,Ali Al-Hamadi,wc2026_irq,Iraq
+708,IRQ 19,Aymen Hussein,wc2026_irq,Iraq
+709,IRQ 20,Mohanad Ali,wc2026_irq,Iraq
+710,NOR 1,Norway Badge,wc2026_nor,Norway
+711,NOR 2,Orjan Nyland,wc2026_nor,Norway
+712,NOR 3,Julian Ryerson,wc2026_nor,Norway
+713,NOR 4,Leo Ostigard,wc2026_nor,Norway
+714,NOR 5,Kristoffer Vassbakk Ajer,wc2026_nor,Norway
+715,NOR 6,Marcus Holmgren Pedersen,wc2026_nor,Norway
+716,NOR 7,David Moller Wolfe,wc2026_nor,Norway
+717,NOR 8,Torbjorn Haggem,wc2026_nor,Norway
+718,NOR 9,Morten Thorsby,wc2026_nor,Norway
+719,NOR 10,Martin Odegaard,wc2026_nor,Norway
+720,NOR 11,Sander Berge,wc2026_nor,Norway
+721,NOR 12,Andreas Schjelderup,wc2026_nor,Norway
+722,NOR 13,Norway Team,wc2026_nor,Norway
+723,NOR 14,Patrick Berg,wc2026_nor,Norway
+724,NOR 15,Erling Haaland,wc2026_nor,Norway
+725,NOR 16,Alexander Sorloth,wc2026_nor,Norway
+726,NOR 17,Aron Donnum,wc2026_nor,Norway
+727,NOR 18,Jorgen Strand Larsen,wc2026_nor,Norway
+728,NOR 19,Antonio Nusa,wc2026_nor,Norway
+729,NOR 20,Oscar Bobb,wc2026_nor,Norway
+730,ARG 1,Argentina Badge,wc2026_arg,Argentina
+731,ARG 2,Emiliano Martínez,wc2026_arg,Argentina
+732,ARG 3,Nahuel Molina,wc2026_arg,Argentina
+733,ARG 4,Christian Romero,wc2026_arg,Argentina
+734,ARG 5,Nicolás Otamendi,wc2026_arg,Argentina
+735,ARG 6,Nicolás Tagliafico,wc2026_arg,Argentina
+736,ARG 7,Leonardo Balerdi,wc2026_arg,Argentina
+737,ARG 8,Enzo Fernández,wc2026_arg,Argentina
+738,ARG 9,Alexis Mac Allister,wc2026_arg,Argentina
+739,ARG 10,Rodrigo De Paul,wc2026_arg,Argentina
+740,ARG 11,Exequiel Palacios,wc2026_arg,Argentina
+741,ARG 12,Leandro Paredes,wc2026_arg,Argentina
+742,ARG 13,Argentina Team,wc2026_arg,Argentina
+743,ARG 14,Nico Paz,wc2026_arg,Argentina
+744,ARG 15,Franco Mastantuono,wc2026_arg,Argentina
+745,ARG 16,Nico González,wc2026_arg,Argentina
+746,ARG 17,Lionel Messi,wc2026_arg,Argentina
+747,ARG 18,Lautaro Martínez,wc2026_arg,Argentina
+748,ARG 19,Julián Alvarez,wc2026_arg,Argentina
+749,ARG 20,Giuliano Simeone,wc2026_arg,Argentina
+750,ALG 1,Algeria Badge,wc2026_alg,Algeria
+751,ALG 2,Alexis Guendouz,wc2026_alg,Algeria
+752,ALG 3,Ramy Bensebaini,wc2026_alg,Algeria
+753,ALG 4,Youcef Atal,wc2026_alg,Algeria
+754,ALG 5,Rayan Aït-Nouri,wc2026_alg,Algeria
+755,ALG 6,Mohamed Amine Tougai,wc2026_alg,Algeria
+756,ALG 7,Aïssa Mandi,wc2026_alg,Algeria
+757,ALG 8,Ismaël Bennacer,wc2026_alg,Algeria
+758,ALG 9,Houssem Aouar,wc2026_alg,Algeria
+759,ALG 10,Hicham Boudaoui,wc2026_alg,Algeria
+760,ALG 11,Ramiz Zerrouki,wc2026_alg,Algeria
+761,ALG 12,Nabil Bentaleb,wc2026_alg,Algeria
+762,ALG 13,Algeria Team,wc2026_alg,Algeria
+763,ALG 14,Farès Chaïbi,wc2026_alg,Algeria
+764,ALG 15,Riyad Mahrez,wc2026_alg,Algeria
+765,ALG 16,Saïd Benrahma,wc2026_alg,Algeria
+766,ALG 17,Anis Hadj Moussa,wc2026_alg,Algeria
+767,ALG 18,Amine Gouiri,wc2026_alg,Algeria
+768,ALG 19,Baghdad Bounedjah,wc2026_alg,Algeria
+769,ALG 20,Mohammed Amoura,wc2026_alg,Algeria
+770,AUT 1,Austria Badge,wc2026_aut,Austria
+771,AUT 2,Alexander Schlager,wc2026_aut,Austria
+772,AUT 3,Patrick Pentz,wc2026_aut,Austria
+773,AUT 4,David Alaba,wc2026_aut,Austria
+774,AUT 5,Kevin Danso,wc2026_aut,Austria
+775,AUT 6,Philipp Lienhart,wc2026_aut,Austria
+776,AUT 7,Stefan Posch,wc2026_aut,Austria
+777,AUT 8,Philipp Mwene,wc2026_aut,Austria
+778,AUT 9,Alexander Prass,wc2026_aut,Austria
+779,AUT 10,Xavier Schlager,wc2026_aut,Austria
+780,AUT 11,Marcel Sabitzer,wc2026_aut,Austria
+781,AUT 12,Konrad Laimer,wc2026_aut,Austria
+782,AUT 13,Austria Team,wc2026_aut,Austria
+783,AUT 14,Florian Grillitsch,wc2026_aut,Austria
+784,AUT 15,Nicolas Seiwald,wc2026_aut,Austria
+785,AUT 16,Romano Schmid,wc2026_aut,Austria
+786,AUT 17,Patrick Wimmer,wc2026_aut,Austria
+787,AUT 18,Christoph Baumgartner,wc2026_aut,Austria
+788,AUT 19,Michael Gregoritsch,wc2026_aut,Austria
+789,AUT 20,Marko Arnautovic,wc2026_aut,Austria
+790,JOR 1,Jordan Badge,wc2026_jor,Jordan
+791,JOR 2,Yazeed Abulaila,wc2026_jor,Jordan
+792,JOR 3,Ihsan Haddad,wc2026_jor,Jordan
+793,JOR 4,Mohammad Abu Hashish,wc2026_jor,Jordan
+794,JOR 5,Yazn Al-Arab,wc2026_jor,Jordan
+795,JOR 6,Abdallah Nasib,wc2026_jor,Jordan
+796,JOR 7,Saleem Obaid,wc2026_jor,Jordan
+797,JOR 8,Mohammad Abualnadi,wc2026_jor,Jordan
+798,JOR 9,Ibrahim Saadeh,wc2026_jor,Jordan
+799,JOR 10,Nizar Al-Rashdan,wc2026_jor,Jordan
+800,JOR 11,Noor Al-Rawabdeh,wc2026_jor,Jordan
+801,JOR 12,Mohamnad Abu Taha,wc2026_jor,Jordan
+802,JOR 13,Jordan Team,wc2026_jor,Jordan
+803,JOR 14,Amer Jamous,wc2026_jor,Jordan
+804,JOR 15,Mousa Al-Taamari,wc2026_jor,Jordan
+805,JOR 16,Wazan Al-Naimat,wc2026_jor,Jordan
+806,JOR 17,Mahmoud Al-Mardi,wc2026_jor,Jordan
+807,JOR 18,Ali Olwan,wc2026_jor,Jordan
+808,JOR 19,Mohammad Abu Zrayq,wc2026_jor,Jordan
+809,JOR 20,Ibrahim Sabra,wc2026_jor,Jordan
+810,POR 1,Portugal Badge,wc2026_por,Portugal
+811,POR 2,Diogo Costa,wc2026_por,Portugal
+812,POR 3,José Sá,wc2026_por,Portugal
+813,POR 4,Rúben Dias,wc2026_por,Portugal
+814,POR 5,Joao Cancelo,wc2026_por,Portugal
+815,POR 6,Diogo Dalot,wc2026_por,Portugal
+816,POR 7,Nuno Mendes,wc2026_por,Portugal
+817,POR 8,Gonçalo Inácio,wc2026_por,Portugal
+818,POR 9,Bernardo Silva,wc2026_por,Portugal
+819,POR 10,Bruno Fernandes,wc2026_por,Portugal
+820,POR 11,Rúben Neves,wc2026_por,Portugal
+821,POR 12,Vitinha,wc2026_por,Portugal
+822,POR 13,Portugal Team,wc2026_por,Portugal
+823,POR 14,Joao Neves,wc2026_por,Portugal
+824,POR 15,Cristiano Ronaldo,wc2026_por,Portugal
+825,POR 16,Francisco Trincao,wc2026_por,Portugal
+826,POR 17,Joao Félix,wc2026_por,Portugal
+827,POR 18,Gonçalo Ramos,wc2026_por,Portugal
+828,POR 19,Pedro Neto,wc2026_por,Portugal
+829,POR 20,Rafael Leao,wc2026_por,Portugal
+830,COD 1,Congo DR Badge,wc2026_cod,Congo DR
+831,COD 2,Lionel Mpash,wc2026_cod,Congo DR
+832,COD 3,Aaron Wan-Bissaka,wc2026_cod,Congo DR
+833,COD 4,Axel Tuanzebe,wc2026_cod,Congo DR
+834,COD 5,Arthur Masuaku,wc2026_cod,Congo DR
+835,COD 6,Chancel Mbemba,wc2026_cod,Congo DR
+836,COD 7,Joris Kayembe,wc2026_cod,Congo DR
+837,COD 8,Charles Pickel,wc2026_cod,Congo DR
+838,COD 9,Ngal'ayel Mukau,wc2026_cod,Congo DR
+839,COD 10,Edo Kayembe,wc2026_cod,Congo DR
+840,COD 11,Samuel Moutoussamy,wc2026_cod,Congo DR
+841,COD 12,Noah Sadiki,wc2026_cod,Congo DR
+842,COD 13,Congo DR Team,wc2026_cod,Congo DR
+843,COD 14,Théo Bongonda,wc2026_cod,Congo DR
+844,COD 15,Meschack Elia,wc2026_cod,Congo DR
+845,COD 16,Yoane Wissa,wc2026_cod,Congo DR
+846,COD 17,Brian Cipenga,wc2026_cod,Congo DR
+847,COD 18,Fiston Mayele,wc2026_cod,Congo DR
+848,COD 19,Cédric Bakambu,wc2026_cod,Congo DR
+849,COD 20,Nathanaël Mbuku,wc2026_cod,Congo DR
+850,UZB 1,Uzbekistan Badge,wc2026_uzb,Uzbekistan
+851,UZB 2,Utkir Yusupov,wc2026_uzb,Uzbekistan
+852,UZB 3,Farrukh Sayfiev,wc2026_uzb,Uzbekistan
+853,UZB 4,Sherzod Nasrullaev,wc2026_uzb,Uzbekistan
+854,UZB 5,Umar Eshmurodov,wc2026_uzb,Uzbekistan
+855,UZB 6,Husniddin Aliqulov,wc2026_uzb,Uzbekistan
+856,UZB 7,Rustam Ashurmatov,wc2026_uzb,Uzbekistan
+857,UZB 8,Khojiakbar Alijonov,wc2026_uzb,Uzbekistan
+858,UZB 9,Abdukodir Khusanov,wc2026_uzb,Uzbekistan
+859,UZB 10,Odiljon Hamrobekov,wc2026_uzb,Uzbekistan
+860,UZB 11,Otabek Shukurov,wc2026_uzb,Uzbekistan
+861,UZB 12,Jamshid Iskanderov,wc2026_uzb,Uzbekistan
+862,UZB 13,Uzbekistan Team,wc2026_uzb,Uzbekistan
+863,UZB 14,Azizbek Turgunboev,wc2026_uzb,Uzbekistan
+864,UZB 15,Khojimat Erkinov,wc2026_uzb,Uzbekistan
+865,UZB 16,Eldor Shomurodov,wc2026_uzb,Uzbekistan
+866,UZB 17,Oston Urunov,wc2026_uzb,Uzbekistan
+867,UZB 18,Jaloliddin Masharipov,wc2026_uzb,Uzbekistan
+868,UZB 19,Igor Sergeev,wc2026_uzb,Uzbekistan
+869,UZB 20,Abbosbek Fayzullaev,wc2026_uzb,Uzbekistan
+870,COL 1,Colombia Badge,wc2026_col,Colombia
+871,COL 2,Camilo Vargas,wc2026_col,Colombia
+872,COL 3,David Ospina,wc2026_col,Colombia
+873,COL 4,Dávinson Sánchez,wc2026_col,Colombia
+874,COL 5,Yerry Mina,wc2026_col,Colombia
+875,COL 6,Daniel Muñoz,wc2026_col,Colombia
+876,COL 7,Johan Mojica,wc2026_col,Colombia
+877,COL 8,Jhon Lucumí,wc2026_col,Colombia
+878,COL 9,Santiago Arias,wc2026_col,Colombia
+879,COL 10,Jefferson Lerma,wc2026_col,Colombia
+880,COL 11,Kevin Castaño,wc2026_col,Colombia
+881,COL 12,Richard Ríos,wc2026_col,Colombia
+882,COL 13,Colombia Team,wc2026_col,Colombia
+883,COL 14,James Rodríguez,wc2026_col,Colombia
+884,COL 15,Juan Fernando Quintero,wc2026_col,Colombia
+885,COL 16,Jorge Carrascal,wc2026_col,Colombia
+886,COL 17,Jhon Arias,wc2026_col,Colombia
+887,COL 18,Jhon Córdoba,wc2026_col,Colombia
+888,COL 19,Luis Suárez,wc2026_col,Colombia
+889,COL 20,Luis Díaz,wc2026_col,Colombia
+890,ENG 1,England Badge,wc2026_eng,England
+891,ENG 2,Jordan Pickford,wc2026_eng,England
+892,ENG 3,John Stones,wc2026_eng,England
+893,ENG 4,Marc Guéhi,wc2026_eng,England
+894,ENG 5,Ezhi Konsa,wc2026_eng,England
+895,ENG 6,Trent Alexander-Arnold,wc2026_eng,England
+896,ENG 7,Reece James,wc2026_eng,England
+897,ENG 8,Dan Burn,wc2026_eng,England
+898,ENG 9,Jordan Henderson,wc2026_eng,England
+899,ENG 10,Declan Rice,wc2026_eng,England
+900,ENG 11,Jude Bellingham,wc2026_eng,England
+901,ENG 12,Cole Palmer,wc2026_eng,England
+902,ENG 13,England Team,wc2026_eng,England
+903,ENG 14,Morgan Rogers,wc2026_eng,England
+904,ENG 15,Anthony Gordon,wc2026_eng,England
+905,ENG 16,Phil Foden,wc2026_eng,England
+906,ENG 17,Bukayo Saka,wc2026_eng,England
+907,ENG 18,Harry Kane,wc2026_eng,England
+908,ENG 19,Marcus Rashford,wc2026_eng,England
+909,ENG 20,Ollie Watkins,wc2026_eng,England
+910,CRO 1,Croatia Badge,wc2026_cro,Croatia
+911,CRO 2,Dominik Livakovic,wc2026_cro,Croatia
+912,CRO 3,Duje Caleta-Car,wc2026_cro,Croatia
+913,CRO 4,Josko Gvardiol,wc2026_cro,Croatia
+914,CRO 5,Josip Stanisic,wc2026_cro,Croatia
+915,CRO 6,Luka Vuskovic,wc2026_cro,Croatia
+916,CRO 7,Josip Sutalo,wc2026_cro,Croatia
+917,CRO 8,Kristijan Jakic,wc2026_cro,Croatia
+918,CRO 9,Luka Modric,wc2026_cro,Croatia
+919,CRO 10,Mateo Kovacic,wc2026_cro,Croatia
+920,CRO 11,Martin Baturina,wc2026_cro,Croatia
+921,CRO 12,Lovro Majer,wc2026_cro,Croatia
+922,CRO 13,Croatia Team,wc2026_cro,Croatia
+923,CRO 14,Mario Pasalic,wc2026_cro,Croatia
+924,CRO 15,Petar Sucic,wc2026_cro,Croatia
+925,CRO 16,Ivan Perisic,wc2026_cro,Croatia
+926,CRO 17,Marco Pasalic,wc2026_cro,Croatia
+927,CRO 18,Ante Budimir,wc2026_cro,Croatia
+928,CRO 19,Andrej Kramaric,wc2026_cro,Croatia
+929,CRO 20,Franjo Ivanovic,wc2026_cro,Croatia
+930,GHA 1,Ghana Badge,wc2026_gha,Ghana
+931,GHA 2,Lawrence Ati Zigi,wc2026_gha,Ghana
+932,GHA 3,Tariq Lamptey,wc2026_gha,Ghana
+933,GHA 4,Mohammed Salisu,wc2026_gha,Ghana
+934,GHA 5,Alidu Seidu,wc2026_gha,Ghana
+935,GHA 6,Alexander Djiku,wc2026_gha,Ghana
+936,GHA 7,Gideon Mensah,wc2026_gha,Ghana
+937,GHA 8,Caleb Yirenkyi,wc2026_gha,Ghana
+938,GHA 9,Abdul Issahaku Fatawu,wc2026_gha,Ghana
+939,GHA 10,Thomas Partey,wc2026_gha,Ghana
+940,GHA 11,Salis Abdul Samed,wc2026_gha,Ghana
+941,GHA 12,Kamaldeen Sulemana,wc2026_gha,Ghana
+942,GHA 13,Ghana Team,wc2026_gha,Ghana
+943,GHA 14,Mohammed Kudus,wc2026_gha,Ghana
+944,GHA 15,Iñaki Williams,wc2026_gha,Ghana
+945,GHA 16,Jordan Ayew,wc2026_gha,Ghana
+946,GHA 17,André Ayew,wc2026_gha,Ghana
+947,GHA 18,Joseph Paintsil,wc2026_gha,Ghana
+948,GHA 19,Osman Bukari,wc2026_gha,Ghana
+949,GHA 20,Antoine Semenyo,wc2026_gha,Ghana
+950,PAN 1,Panama Badge,wc2026_pan,Panama
+951,PAN 2,Orlando Mosquera,wc2026_pan,Panama
+952,PAN 3,Luis Mejía,wc2026_pan,Panama
+953,PAN 4,Fidel Escobar,wc2026_pan,Panama
+954,PAN 5,Andrés Andrade,wc2026_pan,Panama
+955,PAN 6,Michael Amir Murillo,wc2026_pan,Panama
+956,PAN 7,Eric Davis,wc2026_pan,Panama
+957,PAN 8,José Córdoba,wc2026_pan,Panama
+958,PAN 9,César Blackman,wc2026_pan,Panama
+959,PAN 10,Cristian Martínez,wc2026_pan,Panama
+960,PAN 11,Aníbal Godoy,wc2026_pan,Panama
+961,PAN 12,Adalberto Carrasquilla,wc2026_pan,Panama
+962,PAN 13,Panama Team,wc2026_pan,Panama
+963,PAN 14,Édgar Bárcenas,wc2026_pan,Panama
+964,PAN 15,Carlos Harvey,wc2026_pan,Panama
+965,PAN 16,Ismael Díaz,wc2026_pan,Panama
+966,PAN 17,José Fajardo,wc2026_pan,Panama
+967,PAN 18,Cecilio Waterman,wc2026_pan,Panama
+968,PAN 19,José Luís Rodríguez,wc2026_pan,Panama
+969,PAN 20,Alberto Quintero,wc2026_pan,Panama
+970,FWC 9,World Cup Winner 1934,wc2026_fwc_post,FWC Post
+971,FWC 10,World Cup Winner 1950,wc2026_fwc_post,FWC Post
+972,FWC 11,World Cup Winner 1954,wc2026_fwc_post,FWC Post
+973,FWC 12,World Cup Winner 1962,wc2026_fwc_post,FWC Post
+974,FWC 13,World Cup Winner 1974,wc2026_fwc_post,FWC Post
+975,FWC 14,World Cup Winner 1986,wc2026_fwc_post,FWC Post
+976,FWC 15,World Cup Winner 1994,wc2026_fwc_post,FWC Post
+977,FWC 16,World Cup Winner 2002,wc2026_fwc_post,FWC Post
+978,FWC 17,World Cup Winner 2006,wc2026_fwc_post,FWC Post
+979,FWC 18,World Cup Winner 2014,wc2026_fwc_post,FWC Post
+980,FWC 19,World Cup Winner 2022,wc2026_fwc_post,FWC Post

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sticker Swap Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#636565",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "primary-container": "#e2e2e2",
+                        "background": "#09090B",
+                        "secondary-fixed": "#e4e1e6",
+                        "tertiary-fixed": "#e7e1dd",
+                        "error-container": "#93000a",
+                        "surface-dim": "#12131a",
+                        "outline": "#8e9192",
+                        "inverse-primary": "#5d5f5f",
+                        "surface": "#18181B",
+                        "on-secondary-container": "#b6b4b8",
+                        "inverse-surface": "#e2e1eb",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "primary-fixed": "#e2e2e2",
+                        "secondary": "#c8c5ca",
+                        "surface-variant": "#27272A",
+                        "inverse-on-surface": "#2f3037",
+                        "surface-container-highest": "#33343c",
+                        "on-secondary": "#303033",
+                        "on-error": "#690005",
+                        "on-surface": "#FAFAFA",
+                        "on-tertiary-fixed-variant": "#494643",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#e7e1dd",
+                        "primary": "#FAFAFA",
+                        "on-surface-variant": "#A1A1AA",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "surface-container-low": "#1a1b22",
+                        "on-tertiary-container": "#676460",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "tertiary": "#ffffff",
+                        "surface-bright": "#383940",
+                        "on-primary": "#09090B",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#32302d",
+                        "on-background": "#FAFAFA",
+                        "surface-container-lowest": "#0c0e14",
+                        "surface-container-high": "#282a31",
+                        "tertiary-fixed-dim": "#cbc6c1",
+                        "outline-variant": "#27272A",
+                        "surface-container": "#1e1f26",
+                        "secondary-container": "#47464a",
+                        "on-primary-fixed-variant": "#454747",
+                        "surface-tint": "#c6c6c7",
+                        "secondary-fixed-dim": "#c8c5ca",
+                        "on-primary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "gutter": "16px",
+                        "sm": "8px",
+                        "margin-mobile": "16px",
+                        "2xl": "48px",
+                        "margin-desktop": "32px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "3xl": "64px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-lg antialiased selection:bg-surface-variant selection:text-primary">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant h-16 flex items-center">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-margin-desktop w-full">
+            <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-primary text-2xl" data-icon="grid_view"
+                    style="font-variation-settings: 'FILL' 1;">grid_view</span>
+                <span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">Sticker Swap
+                    Hub</span>
+            </div>
+            <nav class="hidden md:flex gap-lg items-center">
+                <a class="font-body-sm text-body-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+                    href="#">Album</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+                    href="#">Features</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+                    href="#">Compare Collections</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+                    href="#">Sign In</a>
+            </nav>
+            <button
+                class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded hover:opacity-90 transition-opacity">
+                Get Started
+            </button>
+        </div>
+    </header>
+    <main class="pt-[120px] pb-3xl flex flex-col gap-[120px]">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-margin-desktop flex flex-col items-center text-center gap-xl">
+            <div class="max-w-3xl flex flex-col gap-md">
+                <h1 class="font-headline-xl text-headline-xl text-primary">Compare your FIFA World Cup 2026 collections
+                    in seconds.</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Track the stickers you have, mark the ones
+                    you need, and instantly compare your collection with friends to see possible trades.</p>
+            </div>
+            <div class="flex gap-md">
+                <button
+                    class="bg-primary text-on-primary font-label-md text-label-md px-lg py-md rounded hover:opacity-90 transition-opacity">Start
+                    Tracking</button>
+                <button
+                    class="border border-surface-variant text-primary font-label-md text-label-md px-lg py-md rounded hover:bg-surface-variant transition-colors">View
+                    Album</button>
+            </div>
+            <!-- Comparison Dashboard Visual -->
+            <div
+                class="w-full max-w-5xl mt-2xl bg-surface border border-outline-variant rounded-lg p-xl flex flex-col gap-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                    <!-- Collector 1 -->
+                    <div class="flex flex-col gap-md">
+                        <div class="flex items-center gap-sm border-b border-surface-variant pb-sm">
+                            <div
+                                class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center font-label-md text-label-md">
+                                M</div>
+                            <span class="font-headline-md text-headline-md text-primary">Mike's Collection</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="flex flex-col gap-sm">
+                                <span
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase">Missing</span>
+                                <div class="flex flex-wrap gap-xs">
+                                    <span
+                                        class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-sm py-xs rounded">ESP
+                                        5</span>
+                                    <span
+                                        class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-sm py-xs rounded">ESP
+                                        9</span>
+                                    <span
+                                        class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-sm py-xs rounded">BRA
+                                        11</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-sm">
+                                <span
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase">Duplicates</span>
+                                <div class="flex flex-wrap gap-xs">
+                                    <span
+                                        class="bg-surface-variant text-primary font-label-md text-label-md px-sm py-xs rounded border border-outline-variant">GER
+                                        12</span>
+                                    <span
+                                        class="bg-surface-variant text-primary font-label-md text-label-md px-sm py-xs rounded border border-outline-variant">POR
+                                        4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Collector 2 -->
+                    <div class="flex flex-col gap-md">
+                        <div class="flex items-center gap-sm border-b border-surface-variant pb-sm">
+                            <div
+                                class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center font-label-md text-label-md">
+                                A</div>
+                            <span class="font-headline-md text-headline-md text-primary">Alex's Collection</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="flex flex-col gap-sm">
+                                <span
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase">Missing</span>
+                                <div class="flex flex-wrap gap-xs">
+                                    <span
+                                        class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-sm py-xs rounded">GER
+                                        12</span>
+                                    <span
+                                        class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-sm py-xs rounded">POR
+                                        4</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-sm">
+                                <span
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase">Duplicates</span>
+                                <div class="flex flex-wrap gap-xs">
+                                    <span
+                                        class="bg-surface-variant text-primary font-label-md text-label-md px-sm py-xs rounded border border-outline-variant">ESP
+                                        5</span>
+                                    <span
+                                        class="bg-surface-variant text-primary font-label-md text-label-md px-sm py-xs rounded border border-outline-variant">BRA
+                                        11</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Possible Trades -->
+                <div class="border-t border-surface-variant pt-xl flex flex-col gap-md">
+                    <span class="font-headline-md text-headline-md text-primary">Possible Trades (4)</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                        <div
+                            class="bg-background border border-surface-variant rounded p-md flex items-center justify-between">
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Mike gives <span
+                                    class="text-primary font-medium">GER 12</span></span>
+                            <span class="material-symbols-outlined text-on-surface-variant"
+                                data-icon="sync_alt">sync_alt</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Alex gets <span
+                                    class="text-primary font-medium">GER 12</span></span>
+                        </div>
+                        <div
+                            class="bg-background border border-surface-variant rounded p-md flex items-center justify-between">
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Mike gets <span
+                                    class="text-primary font-medium">ESP 5</span></span>
+                            <span class="material-symbols-outlined text-on-surface-variant"
+                                data-icon="sync_alt">sync_alt</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Alex gives <span
+                                    class="text-primary font-medium">ESP 5</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: Features -->
+        <section class="max-w-7xl mx-auto px-margin-desktop flex flex-col gap-xl w-full">
+            <div class="flex flex-col gap-sm max-w-2xl">
+                <h2 class="font-headline-lg text-headline-lg text-primary">Stop comparing lists manually.</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Ditch the WhatsApp photos and scribbled
+                    notes. Sticker Swap Hub provides a clean, precise interface to manage your inventory and find exact
+                    matches instantly.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <div
+                    class="bg-surface border border-outline-variant p-xl rounded flex flex-col gap-md hover:bg-surface-bright transition-colors cursor-pointer">
+                    <span class="material-symbols-outlined text-primary text-[32px]"
+                        data-icon="checklist">checklist</span>
+                    <h3 class="font-headline-md text-headline-md text-primary">Track your collection</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Quickly mark stickers as owned, needed,
+                        or duplicate with keyboard shortcuts and bulk actions.</p>
+                </div>
+                <div
+                    class="bg-surface border border-outline-variant p-xl rounded flex flex-col gap-md hover:bg-surface-bright transition-colors cursor-pointer">
+                    <span class="material-symbols-outlined text-primary text-[32px]" data-icon="share">share</span>
+                    <h3 class="font-headline-md text-headline-md text-primary">Share your progress</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Generate a unique public link to show
+                        friends exactly what you need without them needing an account.</p>
+                </div>
+                <div
+                    class="bg-surface border border-outline-variant p-xl rounded flex flex-col gap-md hover:bg-surface-bright transition-colors cursor-pointer">
+                    <span class="material-symbols-outlined text-primary text-[32px]"
+                        data-icon="compare_arrows">compare_arrows</span>
+                    <h3 class="font-headline-md text-headline-md text-primary">Compare instantly</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Paste a friend's link and see exactly
+                        which stickers you can swap in a clean, visual format.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: Stats -->
+        <section class="max-w-7xl mx-auto px-margin-desktop flex flex-col gap-xl w-full">
+            <div class="flex flex-col gap-sm max-w-2xl">
+                <h2 class="font-headline-lg text-headline-lg text-primary">Built specifically for FIFA World Cup 2026.
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Every team, every special sticker,
+                    pre-loaded and ready to track.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-sm">
+                <div class="bg-surface border border-outline-variant p-lg rounded flex flex-col gap-xs">
+                    <span class="font-headline-xl text-headline-xl text-primary">980</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase">Stickers</span>
+                </div>
+                <div class="bg-surface border border-outline-variant p-lg rounded flex flex-col gap-xs">
+                    <span class="font-headline-xl text-headline-xl text-primary">48</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase">National Teams</span>
+                </div>
+                <div class="bg-surface border border-outline-variant p-lg rounded flex flex-col gap-xs">
+                    <span class="font-headline-xl text-headline-xl text-primary">8</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase">Special Sections</span>
+                </div>
+                <div
+                    class="bg-surface border border-outline-variant p-lg rounded flex flex-col gap-xs items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-[32px]"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="max-w-3xl mx-auto px-margin-desktop flex flex-col items-center text-center gap-lg">
+            <h2 class="font-headline-lg text-headline-lg text-primary">Designed for collectors.</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Sticker Swap Hub focuses on one thing: making
+                collection management and trading preparation as simple as possible.</p>
+            <button
+                class="bg-primary text-on-primary font-label-md text-label-md px-lg py-md rounded hover:opacity-90 transition-opacity mt-md">Start
+                Tracking Your Collection</button>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-3xl bg-background border-t border-outline-variant mt-auto">
+        <div
+            class="max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-lg md:text-center">
+            <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-primary text-2xl" data-icon="grid_view"
+                    style="font-variation-settings: 'FILL' 1;">grid_view</span>
+                <span class="font-headline-md text-headline-md font-bold text-primary">Sticker Swap Hub</span>
+            </div>
+            <nav class="flex gap-lg flex-wrap justify-center">
+                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Album</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Features</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Compare Collections</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Privacy</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Terms</a>
+            </nav>
+            <span class="font-body-sm text-body-sm text-on-surface-variant text-center">© 2026 Sticker Swap
+                Hub.<br>Track. Compare. Trade.</span>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

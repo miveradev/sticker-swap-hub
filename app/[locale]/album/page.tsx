@@ -6,6 +6,7 @@ import { UserMenu } from "@/components/profile/UserMenu"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
 import { LayoutGrid } from "lucide-react"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
+import { ScrollToTopButton } from "@/components/shared/ScrollToTopButton"
 import { getAlbum } from "@/lib/albums/getAlbum"
 import { auth } from "@/lib/auth"
 
@@ -66,7 +67,8 @@ export default async function AlbumPage() {
       {/* Main content */}
       <main className="flex-grow pt-24 pb-8 px-4 max-w-2xl mx-auto w-full flex flex-col">
         <section className="mb-6">
-          <h1 className="text-3xl font-semibold tracking-tight text-foreground">
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground flex items-center gap-3">
+            <img src="/wc2026_white.svg" alt="" aria-hidden="true" width={28} height={28} className="shrink-0" />
             {album.name}
           </h1>
         </section>
@@ -78,6 +80,7 @@ export default async function AlbumPage() {
         />
       </main>
 
+      <ScrollToTopButton />
       <ProfileNav username={viewerUsername} activePage="album" />
     </div>
   )

@@ -1,15 +1,16 @@
 import { headers } from "next/headers"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, getLocale } from "next-intl/server"
 import { AlbumContent } from "@/components/album/AlbumContent"
 import { ProfileNav } from "@/components/profile/ProfileNav"
 import { UserMenu } from "@/components/profile/UserMenu"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
+import { LayoutGrid } from "lucide-react"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
 import { getAlbum } from "@/lib/albums/getAlbum"
 import { auth } from "@/lib/auth"
 
 export default async function AlbumPage() {
-  const [t, h] = await Promise.all([getTranslations("album"), headers()])
+  const [t, h, locale] = await Promise.all([getTranslations("album"), headers(), getLocale()])
 
   const session = await auth.api.getSession({ headers: h as unknown as Headers })
   const viewer = session?.user ?? null
@@ -39,9 +40,12 @@ export default async function AlbumPage() {
       {/* Top bar */}
       <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
         <div className="h-full flex justify-between items-center px-4 max-w-2xl mx-auto">
-          <span className="text-lg font-bold tracking-tighter text-foreground">
-            Sticker Swap Hub
-          </span>
+          <a href={`/${locale}`} className="flex items-center gap-2">
+            <LayoutGrid className="w-6 h-6 text-foreground" />
+            <span className="text-lg font-bold tracking-tighter text-foreground">
+              Sticker Swap Hub
+            </span>
+          </a>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
             {viewer ? (
@@ -74,7 +78,7 @@ export default async function AlbumPage() {
         />
       </main>
 
-      <ProfileNav />
+      <ProfileNav username={viewerUsername} activePage="album" />
     </div>
   )
 }

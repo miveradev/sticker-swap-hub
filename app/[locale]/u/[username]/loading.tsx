@@ -1,11 +1,16 @@
+import { LayoutGrid } from "lucide-react"
+
 export default function ProfileLoading() {
   return (
     <div className="min-h-screen flex flex-col pb-24">
       <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
         <div className="h-full flex justify-between items-center px-4 lg:max-w-md lg:mx-auto">
-          <span className="text-lg font-bold tracking-tighter text-foreground">
-            Sticker Swap Hub
-          </span>
+          <div className="flex items-center gap-2">
+            <LayoutGrid className="w-6 h-6 text-foreground" />
+            <span className="text-lg font-bold tracking-tighter text-foreground">
+              Sticker Swap Hub
+            </span>
+          </div>
           <div className="w-8 h-8 rounded-full bg-muted animate-pulse" />
         </div>
       </header>

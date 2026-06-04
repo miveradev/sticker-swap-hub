@@ -26,7 +26,7 @@ export function Features() {
   const t = useTranslations("landing.features")
 
   return (
-    <section className="max-w-7xl mx-auto px-8 flex flex-col gap-8 w-full">
+    <section id="features" className="max-w-7xl mx-auto px-8 flex flex-col gap-8 w-full">
       <div className="flex flex-col gap-2 max-w-2xl">
         <h2 className="text-2xl font-semibold tracking-tight text-foreground">{t("title")}</h2>
         <p className="text-base text-muted-foreground">{t("subtitle")}</p>

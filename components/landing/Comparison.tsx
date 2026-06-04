@@ -101,7 +101,7 @@ export function Comparison() {
   const t = useTranslations("landing.comparison")
 
   return (
-    <div className="w-full max-w-5xl mt-12 bg-card border border-border rounded-lg p-8 flex flex-col gap-8">
+    <div id="comparison" className="w-full max-w-5xl mt-12 bg-card border border-border rounded-lg p-8 flex flex-col gap-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <CollectorColumn
           initial="M"

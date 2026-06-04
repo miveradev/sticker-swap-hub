@@ -18,6 +18,7 @@ export type ProfileData = {
     username: string
     name: string
     image: string | null
+    country: string | null
   }
   stats: ProfileStats
   topDuplicates: TopDuplicate[]
@@ -26,7 +27,7 @@ export type ProfileData = {
 export async function getProfileData(username: string): Promise<ProfileData | null> {
   const user = await prisma.user.findUnique({
     where: { username },
-    select: { id: true, name: true, image: true, username: true },
+    select: { id: true, name: true, image: true, username: true, country: true },
   })
 
   if (!user) return null
@@ -69,6 +70,7 @@ export async function getProfileData(username: string): Promise<ProfileData | nu
       username: user.username!,
       name: user.name,
       image: user.image ?? null,
+      country: user.country ?? null,
     },
     stats: { completion, owned, duplicates },
     topDuplicates,

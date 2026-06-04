@@ -2,7 +2,6 @@
 
 import { authClient } from "@/lib/auth-client"
 import { useTranslations, useLocale } from "next-intl"
-import { useRouter } from "next/navigation"
 import { LogOut } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
@@ -24,7 +23,6 @@ interface UserMenuProps {
 export function UserMenu({ name, email, image, initials, username }: UserMenuProps) {
   const t = useTranslations("profile.userMenu")
   const locale = useLocale()
-  const router = useRouter()
 
   async function handleLogout() {
     await authClient.signOut()
@@ -40,8 +38,8 @@ export function UserMenu({ name, email, image, initials, username }: UserMenuPro
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
-        <button
-          onClick={() => { if (username) router.push(`/${locale}/u/${username}`) }}
+        <a
+          href={username ? `/${locale}/u/${username}` : undefined}
           className="flex items-center gap-3 px-2 py-2 w-full rounded-md text-left transition-colors hover:bg-accent cursor-pointer"
         >
           <Avatar className="w-8 h-8 shrink-0 border border-border">
@@ -52,7 +50,7 @@ export function UserMenu({ name, email, image, initials, username }: UserMenuPro
             <span className="text-sm font-semibold truncate">{name}</span>
             <span className="text-xs text-muted-foreground truncate">{email}</span>
           </div>
-        </button>
+        </a>
         <DropdownMenuSeparator />
         <DropdownMenuItem variant="destructive" onClick={handleLogout} className="gap-2 cursor-pointer">
           <LogOut className="w-4 h-4" />

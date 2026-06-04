@@ -86,7 +86,10 @@ export default async function ProfilePage({
           username={user.username}
           name={user.name}
           image={user.image}
+          country={user.country}
           showAlbum={!!viewer}
+          isOwner={viewerUsername === user.username}
+          locale={locale}
         />
         {viewer ? (
           <>

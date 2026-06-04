@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import { ChevronsUpDown } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { AlbumSelector } from "@/components/profile/AlbumSelector"
 
 interface ProfileHeaderProps {
   username: string
@@ -44,10 +44,7 @@ export async function ProfileHeader({ username, name, image, showAlbum = true }:
         <label className="text-[10px] font-semibold tracking-widest uppercase text-muted-foreground mb-2 block">
           {t("activeAlbum")}
         </label>
-        <div className="bg-card border border-border rounded-lg px-4 py-3 flex items-center justify-between">
-          <span className="text-base font-semibold text-foreground">FIFA World Cup 2026</span>
-          <ChevronsUpDown className="w-4 h-4 text-muted-foreground" />
-        </div>
+        <AlbumSelector />
       </section>}
     </>
   )

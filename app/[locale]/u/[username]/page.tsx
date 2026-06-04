@@ -56,7 +56,7 @@ export default async function ProfilePage({
     <div className="min-h-screen flex flex-col pb-24">
       {/* TopAppBar — background spans full width, content is centered on lg+ */}
       <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
-        <div className="h-full flex justify-between items-center px-4 lg:max-w-md lg:mx-auto">
+        <div className="h-full flex justify-between items-center px-4 max-w-2xl mx-auto">
           <a href={`/${locale}`} className="flex items-center gap-2">
             <LayoutGrid className="w-6 h-6 text-foreground" />
             <span className="text-lg font-bold tracking-tighter text-foreground">
@@ -81,7 +81,7 @@ export default async function ProfilePage({
       </header>
 
       {/* Main Content — centered on lg+ */}
-      <main className="flex-grow pt-24 px-4 flex flex-col gap-8 lg:max-w-md lg:mx-auto lg:w-full">
+      <main className="flex-grow pt-24 px-4 flex flex-col gap-8 max-w-2xl mx-auto w-full">
         <ProfileHeader
           username={user.username}
           name={user.name}

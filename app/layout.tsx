@@ -30,7 +30,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${inter.variable} ${geistMono.variable} h-full antialiased dark scroll-smooth scroll-pt-24`}
     >
       <body className="min-h-full flex flex-col">
         <RouteProgressBar />

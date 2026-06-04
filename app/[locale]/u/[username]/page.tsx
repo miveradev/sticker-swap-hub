@@ -57,12 +57,12 @@ export default async function ProfilePage({
       {/* TopAppBar — background spans full width, content is centered on lg+ */}
       <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
         <div className="h-full flex justify-between items-center px-4 lg:max-w-md lg:mx-auto">
-          <div className="flex items-center gap-2">
-            <LayoutGrid className="w-5 h-5 text-foreground" />
+          <a href={`/${locale}`} className="flex items-center gap-2">
+            <LayoutGrid className="w-6 h-6 text-foreground" />
             <span className="text-lg font-bold tracking-tighter text-foreground">
               {t("brand")}
             </span>
-          </div>
+          </a>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
             {viewer ? (
@@ -112,7 +112,7 @@ export default async function ProfilePage({
         )}
       </main>
 
-      <ProfileNav />
+      <ProfileNav username={viewerUsername} activePage="profile" />
     </div>
   )
 }

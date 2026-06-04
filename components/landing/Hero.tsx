@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Comparison } from "./Comparison"
 import { authClient } from "@/lib/auth-client"
 
@@ -33,9 +33,9 @@ export function Hero() {
         <Button size="lg" onClick={handleStartTracking}>
           {t("ctaPrimary")}
         </Button>
-        <Button variant="outline" size="lg">
+        <a href={`/${locale}/album`} className={buttonVariants({ variant: "outline", size: "lg" })}>
           {t("ctaSecondary")}
-        </Button>
+        </a>
       </div>
       <Comparison />
     </section>

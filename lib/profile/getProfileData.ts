@@ -45,7 +45,7 @@ export async function getProfileData(username: string): Promise<ProfileData | nu
     prisma.userSticker.findMany({
       where: { userId: user.id, quantity: { gt: 1 } },
       orderBy: { quantity: "desc" },
-      take: 4,
+      take: 10,
       select: {
         quantity: true,
         sticker: { select: { code: true, name: true } },

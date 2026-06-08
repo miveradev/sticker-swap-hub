@@ -95,6 +95,13 @@
       "signIn": "Iniciar sesión con Google"
     }
   },
+  "social": {
+    "title": "Buscar coleccionistas",
+    "description": "Busca otros coleccionistas y consulta sus colecciones de figuritas.",
+    "placeholder": "Buscar por nombre de usuario...",
+    "empty": "Escribe para buscar un coleccionista.",
+    "noResults": "No se encontraron usuarios."
+  },
   "swap": {
     "title": "Oportunidades de swap",
     "description": "Compara colecciones y descubre los mejores intercambios posibles.",

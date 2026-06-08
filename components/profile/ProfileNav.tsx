@@ -14,7 +14,7 @@ export async function ProfileNav({
   const navItems = [
     { icon: BookOpen, labelKey: "album" as const, href: `/${locale}/album` },
     { icon: ArrowLeftRight, labelKey: "trade" as const, href: `/${locale}/swap` },
-    { icon: Users, labelKey: "social" as const, href: "#" },
+    { icon: Users, labelKey: "social" as const, href: `/${locale}/social` },
     { icon: User, labelKey: "profile" as const, href: username ? `/${locale}/u/${username}` : "#" },
   ]
 

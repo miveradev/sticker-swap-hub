@@ -95,6 +95,13 @@
       "signIn": "Sign in with Google"
     }
   },
+  "social": {
+    "title": "Find Collectors",
+    "description": "Search for other collectors and view their sticker collections.",
+    "placeholder": "Search by username...",
+    "empty": "Type to find a collector.",
+    "noResults": "No users found."
+  },
   "swap": {
     "title": "Swap Opportunities",
     "description": "Compare collections and discover the best possible sticker swaps.",

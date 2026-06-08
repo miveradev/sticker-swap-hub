@@ -114,9 +114,17 @@
       "copied": "¡Enlace copiado!"
     },
     "topDuplicates": {
-      "title": "Repetidas Destacadas",
+      "title": "Top Duplicates",
       "viewAll": "Ver Todas las Repetidas",
       "empty": "Este usuario no tiene figuritas repetidas."
+    },
+    "tradeOpportunities": {
+      "title": "Oportunidades de intercambio",
+      "description": "Comprueba cómo se compara tu colección con la de este coleccionista antes de iniciar un intercambio.",
+      "canReceive": "Puedes recibir",
+      "canGive": "Puedes dar",
+      "mutual": "Intercambios mutuos",
+      "cta": "Comparar colecciones"
     },
     "userMenu": {
       "logOut": "Cerrar sesión"

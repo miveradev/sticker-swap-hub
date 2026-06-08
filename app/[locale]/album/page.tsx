@@ -117,7 +117,7 @@ export default async function AlbumPage({
               </div>
               {readOnly && (
                 <a href={`/${locale}/album`} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  View my album
+                  {t("viewMyAlbum")}
                 </a>
               )}
             </div>

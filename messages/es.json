@@ -95,13 +95,44 @@
       "signIn": "Iniciar sesión con Google"
     }
   },
+  "swap": {
+    "title": "Oportunidades de swap",
+    "description": "Compara colecciones y descubre los mejores intercambios posibles.",
+    "currentUser": "Usuario actual",
+    "compareWith": "Comparar con",
+    "summary": {
+      "canReceive": "Puedes recibir",
+      "canGive": "Puedes dar",
+      "mutual": "Oportunidades mutuas",
+      "stickersYouNeed": "Figuritas que necesitas",
+      "stickersTheyNeed": "Figuritas que necesitan",
+      "twoWayExchanges": "Intercambios bidireccionales"
+    },
+    "insight": "Tienes <strong>{receive}</strong> figuritas disponibles para recibir y <strong>{give}</strong> figuritas disponibles para dar. Si te encuentras con este coleccionista, hay <strong>{mutual}</strong> intercambios mutuos posibles.",
+    "search": {
+      "title": "Comparar con...",
+      "placeholder": "Buscar por nombre de usuario...",
+      "empty": "Escribe para buscar un coleccionista.",
+      "noResults": "No se encontraron usuarios."
+    },
+    "sections": {
+      "receive": {
+        "title": "Puedes recibir",
+        "description": "Figuritas repetidas por <strong>{username}</strong> que tú aún necesitas."
+      },
+      "give": {
+        "title": "Puedes dar",
+        "description": "Figuritas repetidas por ti que <strong>{username}</strong> aún necesita."
+      }
+    }
+  },
   "profile": {
     "brand": "Sticker Swap Hub",
     "activeAlbum": "Álbum Activo",
     "viewFullAlbum": "Ver Álbum Completo",
     "nav": {
       "album": "Álbum",
-      "trade": "Intercambios",
+      "trade": "Swap",
       "social": "Social",
       "profile": "Perfil"
     },

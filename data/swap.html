@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sticker Swap Hub - Trade Opportunities</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1a1b22",
+                        "on-primary-container": "#636565",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#676460",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "on-tertiary-fixed-variant": "#494643",
+                        "secondary-fixed": "#e4e1e6",
+                        "primary-container": "#e2e2e2",
+                        "on-primary": "#2f3131",
+                        "inverse-on-surface": "#2f3037",
+                        "tertiary": "#ffffff",
+                        "surface-container": "#1e1f26",
+                        "on-surface-variant": "#c4c7c8",
+                        "surface-dim": "#12131a",
+                        "outline": "#8e9192",
+                        "secondary-fixed-dim": "#c8c5ca",
+                        "on-secondary": "#303033",
+                        "on-tertiary": "#32302d",
+                        "on-surface": "#e2e1eb",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary": "#c8c5ca",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-bright": "#383940",
+                        "on-background": "#e2e1eb",
+                        "inverse-primary": "#5d5f5f",
+                        "tertiary-container": "#e7e1dd",
+                        "surface": "#12131a",
+                        "primary": "#ffffff",
+                        "surface-container-high": "#282a31",
+                        "tertiary-fixed-dim": "#cbc6c1",
+                        "surface-container-highest": "#33343c",
+                        "surface-container-lowest": "#0c0e14",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "on-secondary-container": "#b6b4b8",
+                        "surface-tint": "#c6c6c7",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "secondary-container": "#47464a",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e2e1eb",
+                        "on-primary-fixed-variant": "#454747",
+                        "background": "#12131a",
+                        "surface-variant": "#33343c",
+                        "outline-variant": "#444748",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e7e1dd",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "2xl": "48px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "3xl": "64px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "margin-desktop": "32px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface min-h-screen pb-24 md:pb-8 flex justify-center w-full">
+    <div
+        class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-lg md:gap-xl pt-lg">
+        <!-- Header -->
+        <header class="flex flex-col gap-sm">
+            <h1 class="font-headline-xl text-headline-xl text-primary">Trade Opportunities</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Compare collections and discover the
+                best possible sticker swaps.</p>
+        </header>
+        <!-- Comparison Selector (Bento Style) -->
+        <section
+            class="bg-surface-container-low border border-surface-container-highest rounded-xl p-lg flex flex-col md:flex-row items-center gap-md justify-between shadow-sm relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-surface-container-high/20 to-transparent pointer-events-none">
+            </div>
+            <!-- Current User (Mike) -->
+            <div class="flex items-center gap-md w-full md:w-auto relative z-10">
+                <div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant shrink-0 bg-surface">
+                    <img alt="Mike Profile" class="w-full h-full object-cover"
+                        data-alt="A detailed close-up portrait of a professional looking individual against a dark, minimalist background. The lighting is soft and high-key on the face, contrasting with the dark SaaS UI aesthetic of the surrounding elements. Deep shadows define the jawline, presenting a premium, focused mood."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuADktxZC4QA5ryweEb1uJZvIBaeZFR248iF8Trtp_PqiAHhQKwk9pWvodhaS_pA11SYI-t7LtJ90YTw6Pwio-9wRsaMTWHiGCaUmssehUXi0-NT8ZwemJIKmBw905QumdvZzzaPucVQBkbHZRMRgBBSvUtWnUffEkLnpt5vFgv2RJcNOnkJUvyWpoubNUQehmvrDQwQ94mZxNdT85LB_RTp2vs5eQmj_eMsOogedQveVpbJmx6mhnczb11mGNSFY6ILSmK0oyBEipE">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current User</span>
+                    <span class="font-headline-md text-headline-md text-primary">Mike</span>
+                </div>
+            </div>
+            <!-- Swap Icon -->
+            <div
+                class="bg-surface border border-outline-variant rounded-full p-2 text-on-surface-variant z-10 hidden md:block">
+                <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 0;">swap_horiz</span>
+            </div>
+            <div class="w-full h-px bg-outline-variant block md:hidden opacity-50"></div>
+            <!-- Selected User (Alex Dropdown) -->
+            <button
+                class="flex items-center justify-between gap-md w-full md:w-auto relative z-10 bg-surface border border-outline-variant hover:border-primary/50 hover:bg-surface-container-highest transition-all rounded-lg p-3 group cursor-pointer text-left">
+                <div class="flex items-center gap-md">
+                    <div
+                        class="w-10 h-10 rounded-full overflow-hidden border border-surface-container-highest shrink-0 bg-surface-container-lowest">
+                        <img alt="Alex Profile" class="w-full h-full object-cover"
+                            data-alt="A portrait of a younger male individual looking confident, set against a stark, high-contrast dark environment typical of modern SaaS platforms. The lighting accentuates the subject while remaining clean and unobtrusive. The mood is collaborative and focused, fitting for a digital marketplace profile."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB02jl6VMFXmFiaBiuK__2ZYXjnb8NoS4TYMx2YKDeSKQUzFgZFIwiUeKxm4lx0h8IkA3xrqDo_pxwM-zJwaNITus4g61M8zbxcJTePVAiEhUExOVrVx34onUjyUfxbsTj0qOKk1naswTsAdvNhevM3OfHWlUni1Jw-btv52PsqIbyuXAdgu93cxJDmYjKQTCNZb23QwCsh2RFx0FXG4q9SQa8c6Z16zuLFWu-NadE7ITXfxUx1mT8d8ex28I892vVk8a3aFe2penE">
+                    </div>
+                    <div class="flex flex-col">
+                        <span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase group-hover:text-primary transition-colors">Compare
+                            With</span>
+                        <span class="font-headline-md text-headline-md text-primary">Alex</span>
+                    </div>
+                </div>
+                <span
+                    class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+            </button>
+        </section>
+        <!-- Trade Summary Stats -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-md">
+            <!-- Receive Stat -->
+            <div
+                class="bg-surface-container-low border border-surface-container-highest rounded-xl p-md flex flex-col gap-sm">
+                <div class="flex justify-between items-start">
+                    <span class="font-label-md text-label-md text-on-surface-variant">You Can Receive</span>
+                    <span class="material-symbols-outlined text-outline">south_west</span>
+                </div>
+                <div class="font-headline-xl text-headline-xl text-primary">18</div>
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Stickers you need</span>
+            </div>
+            <!-- Give Stat -->
+            <div
+                class="bg-surface-container-low border border-surface-container-highest rounded-xl p-md flex flex-col gap-sm">
+                <div class="flex justify-between items-start">
+                    <span class="font-label-md text-label-md text-on-surface-variant">You Can Give</span>
+                    <span class="material-symbols-outlined text-outline">north_east</span>
+                </div>
+                <div class="font-headline-xl text-headline-xl text-primary">12</div>
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Stickers they
+                    need</span>
+            </div>
+            <!-- Mutual Stat -->
+            <div
+                class="bg-surface-container-high border border-primary/20 rounded-xl p-md flex flex-col gap-sm relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none">
+                </div>
+                <div class="flex justify-between items-start relative z-10">
+                    <span class="font-label-md text-label-md text-primary">Mutual Opportunities</span>
+                    <span class="material-symbols-outlined text-primary">handshake</span>
+                </div>
+                <div class="font-headline-xl text-headline-xl text-primary relative z-10">7</div>
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase relative z-10">Two-way
+                    exchanges</span>
+            </div>
+        </section>
+        <!-- Quick Trade Insight -->
+        <section class="bg-surface border border-outline-variant rounded-xl p-md md:p-lg flex items-start gap-md">
+            <span class="material-symbols-outlined text-primary mt-1"
+                style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                You have <strong class="text-primary font-medium">18</strong> stickers available to receive and <strong
+                    class="text-primary font-medium">12</strong> stickers available to give. If you meet this collector,
+                there are <strong class="text-primary font-medium">7</strong> potential mutual trades.
+            </p>
+        </section>
+        <!-- Main Content Area: Sticky Sections -->
+        <div class="flex flex-col gap-2xl">
+            <!-- You Can Receive Section -->
+            <section class="flex flex-col gap-md">
+                <div class="flex flex-col gap-xs">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">You Can Receive</h2>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Stickers duplicated by Alex that Mike
+                        still needs.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-md">
+                    <!-- Sticker Card 1 -->
+                    <div
+                        class="bg-surface-container-low border border-surface-container-highest rounded-lg p-sm relative group hover:border-outline transition-colors cursor-pointer flex flex-col justify-between h-32">
+                        <div class="flex justify-between items-start w-full">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface px-2 py-1 rounded">ESP
+                                5</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">add_circle</span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full relative z-10">
+                            <span class="font-label-md text-label-md text-primary truncate w-full">Lamine Yamal</span>
+                        </div>
+                        <div
+                            class="absolute bottom-sm right-sm bg-surface text-primary font-label-caps text-label-caps px-2 py-1 rounded border border-outline-variant">
+                            ×4</div>
+                        <!-- Background Accent -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-50 rounded-lg pointer-events-none">
+                        </div>
+                    </div>
+                    <!-- Sticker Card 2 -->
+                    <div
+                        class="bg-surface-container-low border border-surface-container-highest rounded-lg p-sm relative group hover:border-outline transition-colors cursor-pointer flex flex-col justify-between h-32">
+                        <div class="flex justify-between items-start w-full">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface px-2 py-1 rounded">ARG
+                                10</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">add_circle</span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full relative z-10">
+                            <span class="font-label-md text-label-md text-primary truncate w-full">Lionel Messi</span>
+                        </div>
+                        <div
+                            class="absolute bottom-sm right-sm bg-surface text-primary font-label-caps text-label-caps px-2 py-1 rounded border border-outline-variant">
+                            ×3</div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-50 rounded-lg pointer-events-none">
+                        </div>
+                    </div>
+                    <!-- Sticker Card 3 -->
+                    <div
+                        class="bg-surface-container-low border border-surface-container-highest rounded-lg p-sm relative group hover:border-outline transition-colors cursor-pointer flex flex-col justify-between h-32">
+                        <div class="flex justify-between items-start w-full">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface px-2 py-1 rounded">FRA
+                                7</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">add_circle</span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full relative z-10">
+                            <span class="font-label-md text-label-md text-primary truncate w-full">Kylian Mbappé</span>
+                        </div>
+                        <div
+                            class="absolute bottom-sm right-sm bg-surface text-primary font-label-caps text-label-caps px-2 py-1 rounded border border-outline-variant">
+                            ×2</div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-50 rounded-lg pointer-events-none">
+                        </div>
+                    </div>
+                    <!-- Sticker Card 4 -->
+                    <div
+                        class="bg-surface-container-low border border-surface-container-highest rounded-lg p-sm relative group hover:border-outline transition-colors cursor-pointer flex flex-col justify-between h-32">
+                        <div class="flex justify-between items-start w-full">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface px-2 py-1 rounded">BRA
+                                9</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">add_circle</span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full relative z-10">
+                            <span class="font-label-md text-label-md text-primary truncate w-full">Vinícius Jr.</span>
+                        </div>
+                        <div
+                            class="absolute bottom-sm right-sm bg-surface text-primary font-label-caps text-label-caps px-2 py-1 rounded border border-outline-variant">
+                            ×1</div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-50 rounded-lg pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- You Can Give Section -->
+            <section class="flex flex-col gap-md">
+                <div class="flex flex-col gap-xs">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">You Can Give</h2>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Stickers duplicated by Mike that Alex
+                        still needs.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-md">
+                    <!-- Sticker Card 1 -->
+                    <div
+                        class="bg-surface-container-low border border-surface-container-highest rounded-lg p-sm relative group hover:border-outline transition-colors cursor-pointer flex flex-col justify-between h-32">
+                        <div class="flex justify-between items-start w-full">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface px-2 py-1 rounded">ENG
+                                10</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">remove_circle_outline</span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full relative z-10">
+                            <span class="font-label-md text-label-md text-primary truncate w-full">Jude
+                                Bellingham</span>
+                        </div>
+                        <div
+                            class="absolute bottom-sm right-sm bg-surface text-primary font-label-caps text-label-caps px-2 py-1 rounded border border-outline-variant">
+                            ×5</div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-50 rounded-lg pointer-events-none">
+                        </div>
+                    </div>
+                    <!-- Sticker Card 2 -->
+                    <div
+                        class="bg-surface-container-low border border-surface-container-highest rounded-lg p-sm relative group hover:border-outline transition-colors cursor-pointer flex flex-col justify-between h-32">
+                        <div class="flex justify-between items-start w-full">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface px-2 py-1 rounded">GER
+                                8</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">remove_circle_outline</span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full relative z-10">
+                            <span class="font-label-md text-label-md text-primary truncate w-full">Toni Kroos</span>
+                        </div>
+                        <div
+                            class="absolute bottom-sm right-sm bg-surface text-primary font-label-caps text-label-caps px-2 py-1 rounded border border-outline-variant">
+                            ×2</div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent opacity-50 rounded-lg pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="fixed bottom-0 left-0 w-full h-16 flex justify-around items-center px-4 bg-surface-container md:hidden z-50 border-t-0 shadow-[0_-4px_24px_rgba(0,0,0,0.5)]">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined">auto_stories</span>
+            <span class="font-label-md text-label-md">Album</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="font-label-md text-label-md">Sections</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-primary font-bold transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
+            <span class="font-label-md text-label-md">Trade</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:opacity-80"
+            href="#">
+            <span class="material-symbols-outlined">leaderboard</span>
+            <span class="font-label-md text-label-md">Stats</span>
+        </a>
+    </nav>
+
+
+</body>
+
+</html>

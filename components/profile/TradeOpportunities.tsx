@@ -43,7 +43,7 @@ export async function TradeOpportunities({ opportunities, targetUsername, locale
       </div>
       <Button
         className="w-full rounded-lg py-3 px-4 text-xs font-bold tracking-wide h-auto"
-        render={<Link href={`/${locale}/swap?with=${targetUsername}`} />}
+        render={<Link href={`/${locale}/swap?user=${targetUsername}`} />}
         nativeButton={false}
       >
         <ArrowLeftRight className="w-3.5 h-3.5" />

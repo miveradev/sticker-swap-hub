@@ -46,10 +46,7 @@ export function UserMenu({ name, email, image, initials, username }: UserMenuPro
             {image && <AvatarImage src={image} alt={name} />}
             <AvatarFallback className="text-[10px] font-semibold">{initials}</AvatarFallback>
           </Avatar>
-          <div className="flex flex-col gap-0.5 min-w-0">
-            <span className="text-sm font-semibold truncate">{name}</span>
-            <span className="text-xs text-muted-foreground truncate">{email}</span>
-          </div>
+          <span className="text-sm font-semibold truncate min-w-0">{username}</span>
         </a>
         <DropdownMenuSeparator />
         <DropdownMenuItem variant="destructive" onClick={handleLogout} className="gap-2 cursor-pointer">

@@ -1,7 +1,7 @@
 "use client"
 
 import { useLocale } from "next-intl"
-import { useRouter, usePathname } from "next/navigation"
+import { useRouter, usePathname, useSearchParams } from "next/navigation"
 import ReactCountryFlag from "react-country-flag"
 import { ChevronDown } from "lucide-react"
 import {
@@ -22,12 +22,14 @@ export function LanguageSwitcher() {
   const currentLocale = useLocale() as LocaleCode
   const router = useRouter()
   const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   function switchLocale(next: LocaleCode) {
     if (next === currentLocale) return
     const segments = pathname.split("/")
     segments[1] = next
-    router.push(segments.join("/"))
+    const qs = searchParams.toString()
+    router.push(segments.join("/") + (qs ? `?${qs}` : ""))
   }
 
   const current = LOCALES.find((l) => l.code === currentLocale) ?? LOCALES[0]

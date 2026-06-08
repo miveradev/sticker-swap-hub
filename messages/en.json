@@ -118,6 +118,14 @@
       "viewAll": "View All Duplicates",
       "empty": "This user has no duplicate stickers."
     },
+    "tradeOpportunities": {
+      "title": "Trade Opportunities",
+      "description": "See how your collection compares with this collector before starting a trade.",
+      "canReceive": "You Can Receive",
+      "canGive": "You Can Give",
+      "mutual": "Mutual Trade Opportunities",
+      "cta": "Compare Collections"
+    },
     "userMenu": {
       "logOut": "Log Out"
     },

@@ -8,6 +8,7 @@ import { ProfileHeader } from "@/components/profile/ProfileHeader"
 import { ProfileStats } from "@/components/profile/ProfileStats"
 import { ShareButton } from "@/components/profile/ShareButton"
 import { TopDuplicates } from "@/components/profile/TopDuplicates"
+import { TradeOpportunities } from "@/components/profile/TradeOpportunities"
 import { ProfileNav } from "@/components/profile/ProfileNav"
 import { ProfileGuestCTA } from "@/components/profile/ProfileGuestCTA"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
@@ -15,6 +16,7 @@ import { UserMenu } from "@/components/profile/UserMenu"
 import { LogOutButton } from "@/components/profile/LogOutButton"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
 import { getProfileData } from "@/lib/profile/getProfileData"
+import { getTradeOpportunities } from "@/lib/profile/getTradeOpportunities"
 import { auth } from "@/lib/auth"
 
 export default async function ProfilePage({
@@ -35,6 +37,15 @@ export default async function ProfilePage({
 
   const { user, stats, topDuplicates } = profileData
   const viewer = session?.user ?? null
+
+  const viewerUsername = viewer
+    ? ((viewer as Record<string, unknown>).username as string | null ?? null)
+    : null
+  const isOwnProfile = viewerUsername === user.username
+  const tradeOpportunities = viewer && !isOwnProfile
+    ? await getTradeOpportunities(viewer.id, user.id)
+    : null
+
   const viewerInitials = viewer?.name
     ? viewer.name
         .split(" ")
@@ -48,9 +59,6 @@ export default async function ProfilePage({
   const viewerEmail = viewer
     ? ((viewer as Record<string, unknown>).email as string ?? "")
     : ""
-  const viewerUsername = viewer
-    ? ((viewer as Record<string, unknown>).username as string | null ?? null)
-    : null
 
   return (
     <div className="min-h-screen flex flex-col pb-24">
@@ -95,7 +103,18 @@ export default async function ProfilePage({
           <>
             <ProfileStats stats={stats} />
             <ShareButton username={user.username} />
-            <TopDuplicates duplicates={topDuplicates} />
+            {tradeOpportunities && (
+              <div className="mt-8">
+                <TradeOpportunities
+                  opportunities={tradeOpportunities}
+                  targetUsername={user.username}
+                  locale={locale}
+                />
+              </div>
+            )}
+            <div className="mt-8">
+              <TopDuplicates duplicates={topDuplicates} />
+            </div>
             <div className="flex flex-col gap-3 pb-8 pt-2">
               <Button
                 variant="outline"

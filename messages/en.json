@@ -95,13 +95,44 @@
       "signIn": "Sign in with Google"
     }
   },
+  "swap": {
+    "title": "Swap Opportunities",
+    "description": "Compare collections and discover the best possible sticker swaps.",
+    "currentUser": "Current User",
+    "compareWith": "Compare With",
+    "summary": {
+      "canReceive": "You Can Receive",
+      "canGive": "You Can Give",
+      "mutual": "Mutual Opportunities",
+      "stickersYouNeed": "Stickers you need",
+      "stickersTheyNeed": "Stickers they need",
+      "twoWayExchanges": "Two-way exchanges"
+    },
+    "insight": "You have <strong>{receive}</strong> stickers available to receive and <strong>{give}</strong> stickers available to give. If you meet this collector, there are <strong>{mutual}</strong> potential mutual trades.",
+    "search": {
+      "title": "Compare with...",
+      "placeholder": "Search by username...",
+      "empty": "Type to search for a collector.",
+      "noResults": "No users found."
+    },
+    "sections": {
+      "receive": {
+        "title": "You Can Receive",
+        "description": "Stickers duplicated by <strong>{username}</strong> that you still need."
+      },
+      "give": {
+        "title": "You Can Give",
+        "description": "Stickers duplicated by you that <strong>{username}</strong> still needs."
+      }
+    }
+  },
   "profile": {
     "brand": "Sticker Swap Hub",
     "activeAlbum": "Active Album",
     "viewFullAlbum": "View Full Album",
     "nav": {
       "album": "Album",
-      "trade": "Trade",
+      "trade": "Swap",
       "social": "Social",
       "profile": "Profile"
     },

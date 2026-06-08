@@ -88,7 +88,7 @@ function normalize(str: string): string {
     .trim()
 }
 
-function resolveCountryCode(name: string, slug: string): string | undefined {
+export function resolveCountryCode(name: string, slug: string): string | undefined {
   const key = name.toLowerCase().trim()
   const normalizedKey = normalize(name)
   const slugKey = slug.toLowerCase().replace(/-/g, " ").trim()

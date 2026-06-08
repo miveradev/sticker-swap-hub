@@ -75,26 +75,29 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
       </div>
 
       <div
-        onClick={handleCardClick}
-        onTouchStart={startLongPress}
-        onTouchEnd={cancelLongPress}
-        onTouchCancel={cancelLongPress}
+        onClick={interactive ? handleCardClick : undefined}
+        onTouchStart={interactive ? startLongPress : undefined}
+        onTouchEnd={interactive ? cancelLongPress : undefined}
+        onTouchCancel={interactive ? cancelLongPress : undefined}
         onContextMenu={(e) => e.preventDefault()}
         className={[
-          "aspect-square bg-card rounded-lg overflow-hidden flex flex-col transition-all duration-200 group-hover:scale-105 active:scale-95 select-none cursor-pointer",
+          "aspect-square bg-card rounded-lg overflow-hidden flex flex-col transition-all duration-200 select-none",
+          interactive ? "group-hover:scale-105 active:scale-95 cursor-pointer" : "cursor-default",
           isDuplicate
             ? "border border-foreground/50 shadow-[0_0_10px_rgba(255,255,255,0.05)]"
             : "border border-zinc-800",
         ].join(" ")}
       >
-        {/* Reset button */}
-        <button
-          onClick={(e) => { e.stopPropagation(); onReset() }}
-          onTouchStart={stopButtonTouch}
-          className="absolute top-1.5 left-1.5 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border border-destructive bg-background/80 text-destructive flex items-center justify-center z-10 hover:bg-destructive/10 transition-colors cursor-pointer"
-        >
-          <Minus className="w-2 h-2 md:w-2.5 md:h-2.5" />
-        </button>
+        {/* Reset button — owner only */}
+        {interactive && (
+          <button
+            onClick={(e) => { e.stopPropagation(); onReset() }}
+            onTouchStart={stopButtonTouch}
+            className="absolute top-1.5 left-1.5 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border border-destructive bg-background/80 text-destructive flex items-center justify-center z-10 hover:bg-destructive/10 transition-colors cursor-pointer"
+          >
+            <Minus className="w-2 h-2 md:w-2.5 md:h-2.5" />
+          </button>
+        )}
 
         {/* Sticker info */}
         <div className="flex-1 p-0.5 flex flex-col items-center justify-center">
@@ -104,41 +107,43 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
           </span>
         </div>
 
-        {/* Quantity controls */}
-        <div
-          className={[
-            "flex items-center justify-between px-1 py-0.5 md:py-1",
-            isDuplicate
-              ? "bg-foreground text-background"
-              : "bg-muted border-t border-border/20",
-          ].join(" ")}
-        >
-          <button
-            onClick={(e) => { e.stopPropagation(); onRemove() }}
-            onTouchStart={stopButtonTouch}
+        {/* Quantity controls — owner only */}
+        {interactive ? (
+          <div
             className={[
-              "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full transition-colors cursor-pointer",
+              "flex items-center justify-between px-1 py-0.5 md:py-1",
               isDuplicate
-                ? "text-background hover:bg-black/20"
-                : "text-muted-foreground hover:text-foreground hover:bg-foreground/10",
+                ? "bg-foreground text-background"
+                : "bg-muted border-t border-border/20",
             ].join(" ")}
           >
-            <Minus className="w-2.5 h-2.5 md:w-3 md:h-3" />
-          </button>
-          <span className="text-[9px] md:text-[12px] font-bold">{quantity}</span>
-          <button
-            onClick={(e) => { e.stopPropagation(); onAdd() }}
-            onTouchStart={stopButtonTouch}
-            className={[
-              "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full transition-colors cursor-pointer",
-              isDuplicate
-                ? "text-background hover:bg-black/20"
-                : "text-muted-foreground hover:text-foreground hover:bg-foreground/10",
-            ].join(" ")}
-          >
-            <Plus className="w-2.5 h-2.5 md:w-3 md:h-3" />
-          </button>
-        </div>
+            <button
+              onClick={(e) => { e.stopPropagation(); onRemove() }}
+              onTouchStart={stopButtonTouch}
+              className={[
+                "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full transition-colors cursor-pointer",
+                isDuplicate
+                  ? "text-background hover:bg-black/20"
+                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/10",
+              ].join(" ")}
+            >
+              <Minus className="w-2.5 h-2.5 md:w-3 md:h-3" />
+            </button>
+            <span className="text-[9px] md:text-[12px] font-bold">{quantity}</span>
+            <button
+              onClick={(e) => { e.stopPropagation(); onAdd() }}
+              onTouchStart={stopButtonTouch}
+              className={[
+                "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full transition-colors cursor-pointer",
+                isDuplicate
+                  ? "text-background hover:bg-black/20"
+                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/10",
+              ].join(" ")}
+            >
+              <Plus className="w-2.5 h-2.5 md:w-3 md:h-3" />
+            </button>
+          </div>
+        ) : null}
       </div>
     </div>
   )

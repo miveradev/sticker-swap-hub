@@ -14,9 +14,10 @@ interface AlbumSectionProps {
   quantities: Record<string, number>
   onQuantityChange: (code: string, qty: number) => void
   isGuest?: boolean
+  readOnly?: boolean
 }
 
-export function AlbumSection({ section, quantities, onQuantityChange, isGuest = false }: AlbumSectionProps) {
+export function AlbumSection({ section, quantities, onQuantityChange, isGuest = false, readOnly = false }: AlbumSectionProps) {
   const t = useTranslations("album")
   const [bulking, setBulking] = useState(false)
 
@@ -100,7 +101,7 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
           {section.name}
         </h2>
         <div className="flex items-center gap-2">
-          {!isGuest && (
+          {!isGuest && !readOnly && (
             <button
               type="button"
               onClick={allOwned ? handleBulkReset : handleBulkAdd}
@@ -130,11 +131,11 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
             key={sticker.code}
             code={sticker.code}
             name={sticker.name}
-            quantity={isGuest ? 0 : quantities[sticker.code] ?? 0}
+            quantity={isGuest && !readOnly ? 0 : quantities[sticker.code] ?? 0}
             onAdd={() => handleAdd(sticker.id, sticker.code)}
             onRemove={() => handleRemove(sticker.id, sticker.code)}
             onReset={() => handleReset(sticker.id, sticker.code)}
-            interactive={!isGuest}
+            interactive={!isGuest && !readOnly}
           />
         ))}
       </div>

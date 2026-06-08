@@ -10,9 +10,10 @@ interface AlbumContentProps {
   sections: SectionData[]
   totalStickers: number
   isGuest: boolean
+  readOnly?: boolean
 }
 
-export function AlbumContent({ sections, totalStickers, isGuest }: AlbumContentProps) {
+export function AlbumContent({ sections, totalStickers, isGuest, readOnly = false }: AlbumContentProps) {
   // Single source of truth for all sticker quantities across every section
   const [quantities, setQuantities] = useState<Record<string, number>>(
     () => Object.fromEntries(
@@ -29,7 +30,7 @@ export function AlbumContent({ sections, totalStickers, isGuest }: AlbumContentP
   return (
     <>
       <section className="mb-16">
-        {isGuest ? (
+        {isGuest && !readOnly ? (
           <AlbumGuestCTA />
         ) : (
           <AlbumProgressCard owned={ownedCount} total={totalStickers} />
@@ -47,6 +48,7 @@ export function AlbumContent({ sections, totalStickers, isGuest }: AlbumContentP
             quantities={sectionQuantities}
             onQuantityChange={handleQuantityChange}
             isGuest={isGuest}
+            readOnly={readOnly}
           />
         )
       })}

@@ -119,7 +119,7 @@ export default async function ProfilePage({
               <Button
                 variant="outline"
                 className="w-full rounded-lg py-3 px-4 text-xs font-medium tracking-wide h-auto"
-                render={<Link href={`/${locale}/album`} />}
+                render={<Link href={isOwnProfile ? `/${locale}/album` : `/${locale}/album?user=${user.username}`} />}
                 nativeButton={false}
               >
                 {t("viewFullAlbum")}

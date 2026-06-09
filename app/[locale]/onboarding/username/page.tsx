@@ -30,6 +30,7 @@ export default async function OnboardingUsernamePage({
   }
 
   const tApp = await getTranslations("app")
+  const t = await getTranslations("onboarding.username")
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
@@ -42,9 +43,9 @@ export default async function OnboardingUsernamePage({
             </span>
           </div>
           <div className="space-y-2 text-center">
-            <h1 className="font-display text-2xl font-extrabold tracking-tight">Choose your username</h1>
+            <h1 className="font-display text-2xl font-extrabold tracking-tight">{t("title")}</h1>
             <p className="text-sm text-muted-foreground">
-              This will be your public identity in the app.
+              {t("description")}
             </p>
           </div>
         </div>

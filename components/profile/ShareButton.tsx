@@ -24,7 +24,7 @@ export function ShareButton({ username }: ShareButtonProps) {
   return (
     <Button
       onClick={handleShare}
-      className="w-full rounded-lg py-3 px-4 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-200 h-auto cursor-pointer"
+      className="w-full rounded py-3 px-4 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-200 h-auto cursor-pointer"
     >
       {copied ? (
         <Check className="w-4 h-4 shrink-0" />

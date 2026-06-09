@@ -284,12 +284,64 @@
       "cta": "Compare Collections"
     },
     "userMenu": {
+      "logIn": "Log In",
       "logOut": "Log Out"
     },
     "guest": {
       "title": "Compare your collection with {username}",
       "description": "Sign in to see their album, check duplicates and discover potential sticker swaps.",
       "signIn": "Sign in with Google"
+    },
+    "header": {
+      "setYourCountry": "Set your country",
+      "noCountry": "No country"
+    },
+    "editCountry": {
+      "title": "Select country",
+      "searchPlaceholder": "Search…",
+      "noResults": "No results"
+    },
+    "editUsername": {
+      "title": "Edit username",
+      "placeholder": "yourname",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "hint": {
+        "available": "Available",
+        "taken": "Already taken",
+        "tooShort": "At least {min} characters",
+        "invalidChars": "Letters a–z, digits, and _ only",
+        "format": "{min}–{max} characters · a–z · 0–9 · _"
+      },
+      "error": {
+        "generic": "Something went wrong",
+        "retry": "Something went wrong. Please try again."
+      }
     }
+  },
+  "onboarding": {
+    "username": {
+      "title": "Choose your username",
+      "description": "This will be your public identity in the app.",
+      "placeholder": "yourname",
+      "continue": "Continue",
+      "saving": "Saving…",
+      "hint": {
+        "available": "Available",
+        "taken": "Already taken",
+        "tooShort": "At least {min} characters",
+        "invalidChars": "Letters a–z, digits, and _ only",
+        "format": "{min}–{max} characters · a–z · 0–9 · _"
+      },
+      "error": {
+        "generic": "Something went wrong",
+        "retry": "Something went wrong. Please try again."
+      }
+    }
+  },
+  "shared": {
+    "languageSwitcher": "Switch language",
+    "scrollToTop": "Scroll to top"
   }
 }

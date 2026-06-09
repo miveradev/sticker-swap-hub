@@ -284,12 +284,64 @@
       "cta": "Comparar colecciones"
     },
     "userMenu": {
+      "logIn": "Iniciar sesión",
       "logOut": "Cerrar sesión"
     },
     "guest": {
       "title": "Compara tu colección con {username}",
       "description": "Inicia sesión para ver su álbum, revisar repetidas y descubrir posibles intercambios de figuritas.",
       "signIn": "Iniciar sesión con Google"
+    },
+    "header": {
+      "setYourCountry": "Establece tu país",
+      "noCountry": "Sin país"
+    },
+    "editCountry": {
+      "title": "Seleccionar país",
+      "searchPlaceholder": "Buscar…",
+      "noResults": "Sin resultados"
+    },
+    "editUsername": {
+      "title": "Editar nombre de usuario",
+      "placeholder": "tunombre",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "saving": "Guardando…",
+      "hint": {
+        "available": "Disponible",
+        "taken": "Ya está en uso",
+        "tooShort": "Al menos {min} caracteres",
+        "invalidChars": "Solo letras a–z, dígitos y _",
+        "format": "{min}–{max} caracteres · a–z · 0–9 · _"
+      },
+      "error": {
+        "generic": "Algo salió mal",
+        "retry": "Algo salió mal. Por favor, inténtalo de nuevo."
+      }
     }
+  },
+  "onboarding": {
+    "username": {
+      "title": "Elige tu nombre de usuario",
+      "description": "Esta será tu identidad pública en la app.",
+      "placeholder": "tunombre",
+      "continue": "Continuar",
+      "saving": "Guardando…",
+      "hint": {
+        "available": "Disponible",
+        "taken": "Ya está en uso",
+        "tooShort": "Al menos {min} caracteres",
+        "invalidChars": "Solo letras a–z, dígitos y _",
+        "format": "{min}–{max} caracteres · a–z · 0–9 · _"
+      },
+      "error": {
+        "generic": "Algo salió mal",
+        "retry": "Algo salió mal. Por favor, inténtalo de nuevo."
+      }
+    }
+  },
+  "shared": {
+    "languageSwitcher": "Cambiar idioma",
+    "scrollToTop": "Volver arriba"
   }
 }

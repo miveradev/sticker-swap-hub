@@ -101,7 +101,7 @@ export function SwapUserSearch({ compareWithUser, compareWithLabel, locale }: Sw
       {/* Compare-with trigger button */}
       <button
         onClick={handleOpen}
-        className="flex items-center justify-between gap-4 w-full md:w-auto bg-background border border-border hover:border-foreground/30 hover:bg-card transition-all rounded-lg p-3 text-left cursor-pointer"
+        className="flex items-center justify-between gap-4 w-full md:w-auto bg-background border border-border hover:border-foreground/30 hover:bg-card transition-all rounded p-3 text-left cursor-pointer"
       >
         <div className="flex items-center gap-4">
           <Avatar className="w-10 h-10 border-2 border-primary shrink-0">

@@ -37,7 +37,7 @@ export default async function RootLayout({
       lang={locale}
       className={`${anybody.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased dark scroll-smooth scroll-pt-24`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <RouteProgressBar />
         {children}
         <Toaster position="bottom-center" theme="dark" richColors />

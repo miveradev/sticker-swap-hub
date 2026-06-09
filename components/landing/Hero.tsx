@@ -97,7 +97,7 @@ export function Hero() {
           <div className="flex justify-between items-center border-b border-border pb-2">
             <h3 className="font-display text-sm font-bold text-foreground flex items-center gap-2">
               <ReactCountryFlag countryCode="ES" svg style={{ width: "1.3em", height: "1.3em" }} />
-              Spain
+              {t("mockTeam")}
             </h3>
             <span className={`font-mono text-xs bg-card px-2.5 py-0.5 rounded tabular-nums select-none border text-muted-foreground border-border`}>
               {ownedCount} / {HERO_STICKERS.length}

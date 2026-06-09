@@ -82,8 +82,8 @@ export function SocialSearch() {
   return (
     <div className="flex flex-col gap-2">
       {/* Search input */}
-      <div className="flex items-center gap-3 bg-card border border-border rounded-xl px-4 py-3 focus-within:border-foreground/30 transition-colors">
-        <Search className="w-5 h-5 text-muted-foreground shrink-0" />
+      <div className="flex items-center gap-3 bg-card border border-border rounded px-4 py-3 focus-within:border-primary/50 focus-within:shadow-[0_0_0_3px_rgba(163,230,53,0.1)] transition-all">
+        <Search className="w-5 h-5 text-primary shrink-0" />
         <input
           autoFocus
           value={query}

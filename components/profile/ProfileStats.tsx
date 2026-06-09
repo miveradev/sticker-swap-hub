@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server"
-import { Card } from "@/components/ui/card"
 import type { ProfileStats as ProfileStatsData } from "@/lib/profile/getProfileData"
 
 interface ProfileStatsProps {
@@ -18,17 +17,19 @@ export async function ProfileStats({ stats }: ProfileStatsProps) {
   return (
     <section className="grid grid-cols-3 gap-3">
       {items.map((stat) => (
-        <Card
+        <div
           key={stat.label}
-          className="py-0 gap-0 ring-0 border border-border rounded-xl items-center justify-center text-center p-4"
+          className="bg-card border border-border rounded overflow-hidden flex flex-col items-center text-center relative"
         >
-          <span className="text-xl font-semibold tracking-tight text-foreground">
-            {stat.value}
-          </span>
-          <span className="text-xs font-medium tracking-wide text-muted-foreground">
-            {stat.label}
-          </span>
-        </Card>
+          <div className="p-4 flex flex-col gap-1 items-center">
+            <span className="font-display text-3xl font-black italic text-primary leading-none">
+              {stat.value}
+            </span>
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-muted-foreground uppercase">
+              {stat.label}
+            </span>
+          </div>
+        </div>
       ))}
     </section>
   )

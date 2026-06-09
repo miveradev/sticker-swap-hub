@@ -51,14 +51,14 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
       <div
         onClick={interactive ? onAdd : undefined}
         className={[
-          "aspect-square bg-background border border-border/30 rounded-lg flex flex-col items-center justify-center opacity-40 py-1 transition-all duration-200 hover:opacity-70 hover:border-border hover:scale-105 select-none",
+          "aspect-square bg-muted/30 border border-border/30 rounded flex flex-col items-center justify-center opacity-40 py-1 transition-all duration-200 hover:opacity-70 hover:border-border select-none",
           interactive ? "cursor-pointer" : "cursor-default",
         ].join(" ")}
       >
-        <span className="max-[430px]:text-[9px] text-[11px] sm:text-[14px] md:text-[13px] font-bold text-muted-foreground tracking-widest uppercase leading-none">
+        <span className="font-mono max-[430px]:text-[9px] text-[11px] sm:text-[13px] font-bold text-muted-foreground tracking-widest uppercase leading-none">
           {code}
         </span>
-        <span className="max-[430px]:text-[7px] text-[8px] sm:text-[12px] md:text-[12px] text-muted-foreground mt-0.5 text-center px-1 break-words w-full leading-tight">
+        <span className="max-[430px]:text-[7px] text-[8px] sm:text-[11px] text-muted-foreground/60 mt-0.5 text-center px-1 break-words w-full leading-tight">
           {name}
         </span>
       </div>
@@ -69,8 +69,8 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
 
   return (
     <div className="relative group">
-      {/* Quantity badge — outside the card so overflow-hidden doesn't clip it */}
-      <div className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-foreground text-background text-[8px] md:text-[10px] w-4 h-4 md:w-5 md:h-5 rounded-full z-10 font-bold flex items-center justify-center transition-transform duration-200 group-hover:scale-125 select-none">
+      {/* Quantity badge */}
+      <div className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground font-mono text-[8px] md:text-[10px] w-4 h-4 md:w-5 md:h-5 rounded-full z-10 font-bold flex items-center justify-center transition-transform duration-200 group-hover:scale-125 select-none shadow-[0_0_8px_rgba(163,230,53,0.4)]">
         {quantity}
       </div>
 
@@ -81,19 +81,20 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
         onTouchCancel={interactive ? cancelLongPress : undefined}
         onContextMenu={(e) => e.preventDefault()}
         className={[
-          "aspect-square bg-card rounded-lg overflow-hidden flex flex-col transition-all duration-200 select-none",
+          "aspect-square bg-card rounded overflow-hidden flex flex-col transition-all duration-200 select-none",
           interactive ? "group-hover:scale-105 active:scale-95 cursor-pointer" : "cursor-default",
           isDuplicate
-            ? "border border-foreground/50 shadow-[0_0_10px_rgba(255,255,255,0.05)]"
-            : "border border-zinc-800",
+            ? "border border-primary/50"
+            : "border border-border",
         ].join(" ")}
+        style={isDuplicate ? { boxShadow: "0 0 10px rgba(163, 230, 53, 0.15)" } : undefined}
       >
-        {/* Reset button — owner only */}
+        {/* Reset button */}
         {interactive && (
           <button
             onClick={(e) => { e.stopPropagation(); onReset() }}
             onTouchStart={stopButtonTouch}
-            className="absolute top-1.5 left-1.5 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full border border-destructive bg-background/80 text-destructive flex items-center justify-center z-10 hover:bg-destructive/10 transition-colors cursor-pointer"
+            className="absolute top-1.5 left-1.5 w-3.5 h-3.5 md:w-4 md:h-4 rounded border border-destructive/50 bg-card/80 text-destructive flex items-center justify-center z-10 hover:bg-destructive/15 transition-colors cursor-pointer"
           >
             <Minus className="w-2 h-2 md:w-2.5 md:h-2.5" />
           </button>
@@ -101,43 +102,43 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
 
         {/* Sticker info */}
         <div className="flex-1 p-0.5 flex flex-col items-center justify-center">
-          <span className="max-[430px]:text-[9px] text-[14px] sm:text-[16px] md:text-[17px] text-foreground font-bold leading-none">{code}</span>
-          <span className="max-[430px]:text-[5px] text-[8px] sm:text-[12px] md:text-[12px] text-muted-foreground mt-0.5 text-center px-1 break-words w-full leading-tight">
+          <span className="font-mono max-[430px]:text-[9px] text-[13px] sm:text-[15px] md:text-[16px] text-foreground font-bold leading-none">{code}</span>
+          <span className="max-[430px]:text-[5px] text-[8px] sm:text-[11px] md:text-[11px] text-muted-foreground mt-0.5 text-center px-1 break-words w-full leading-tight">
             {name}
           </span>
         </div>
 
-        {/* Quantity controls — owner only */}
+        {/* Quantity controls */}
         {interactive ? (
           <div
             className={[
               "flex items-center justify-between px-1 py-0.5 md:py-1",
               isDuplicate
-                ? "bg-foreground text-background"
-                : "bg-muted border-t border-border/20",
+                ? "bg-primary/10 border-t border-primary/20"
+                : "bg-muted/40 border-t border-border/30",
             ].join(" ")}
           >
             <button
               onClick={(e) => { e.stopPropagation(); onRemove() }}
               onTouchStart={stopButtonTouch}
               className={[
-                "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full transition-colors cursor-pointer",
+                "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded transition-colors cursor-pointer",
                 isDuplicate
-                  ? "text-background hover:bg-black/20"
-                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/10",
+                  ? "text-primary hover:bg-primary/20"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted",
               ].join(" ")}
             >
               <Minus className="w-2.5 h-2.5 md:w-3 md:h-3" />
             </button>
-            <span className="text-[9px] md:text-[12px] font-bold">{quantity}</span>
+            <span className="font-mono text-[9px] md:text-[11px] font-bold text-foreground">{quantity}</span>
             <button
               onClick={(e) => { e.stopPropagation(); onAdd() }}
               onTouchStart={stopButtonTouch}
               className={[
-                "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full transition-colors cursor-pointer",
+                "flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded transition-colors cursor-pointer",
                 isDuplicate
-                  ? "text-background hover:bg-black/20"
-                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/10",
+                  ? "text-primary hover:bg-primary/20"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted",
               ].join(" ")}
             >
               <Plus className="w-2.5 h-2.5 md:w-3 md:h-3" />

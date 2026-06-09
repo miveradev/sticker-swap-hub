@@ -53,7 +53,7 @@ export function LanguageSwitcher() {
           <DropdownMenuItem
             key={l.code}
             onClick={() => switchLocale(l.code)}
-            className={l.code === currentLocale ? "bg-accent text-accent-foreground" : undefined}
+            className={`py-2 cursor-pointer ${l.code === currentLocale ? "bg-accent text-accent-foreground" : ""}`}
           >
             <ReactCountryFlag
               countryCode={l.countryCode}

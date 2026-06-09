@@ -1,18 +1,20 @@
-import { LayoutGrid } from "lucide-react"
+import { getTranslations } from "next-intl/server"
+import { ArrowLeftRight } from "lucide-react"
 
 function Pulse({ className }: { className: string }) {
   return <div className={`bg-muted animate-pulse rounded-md ${className}`} />
 }
 
-export default function ProfileLoading() {
+export default async function ProfileLoading() {
+  const tApp = await getTranslations("app")
   return (
     <div className="min-h-screen flex flex-col pb-24">
       {/* Top bar */}
       <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
         <div className="h-full flex justify-between items-center px-4 max-w-2xl mx-auto">
-          <div className="flex items-center gap-2">
-            <LayoutGrid className="w-6 h-6 text-foreground" />
-            <span className="text-lg font-bold tracking-tighter text-foreground">Sticker Swap Hub</span>
+          <div className="flex items-center gap-1.5 transition-all hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(163,230,53,0.6)]">
+            <ArrowLeftRight className="w-7 h-7 text-primary shrink-0 -rotate-12" strokeWidth={2.5} />
+            <span className="font-display text-sm sm:text-lg font-black text-primary italic leading-none">{tApp("name")}</span>
           </div>
           <div className="w-8 h-8 rounded-full bg-muted animate-pulse" />
         </div>

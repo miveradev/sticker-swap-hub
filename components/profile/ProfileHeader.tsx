@@ -32,28 +32,28 @@ export async function ProfileHeader({ username, name, image, country, showAlbum 
   return (
     <>
       {/* Profile Identity */}
-      <section className="flex flex-col items-center gap-2">
-        <Avatar className="w-24 h-24 border-2 border-zinc-800 shadow-lg">
+      <section className="flex flex-col items-center gap-3">
+        <Avatar className="w-24 h-24 border-2 border-primary shadow-[0_0_24px_rgba(163,230,53,0.2)]">
           {image && <AvatarImage src={image} alt={username} />}
-          <AvatarFallback className="text-2xl font-semibold">{initials}</AvatarFallback>
+          <AvatarFallback className="text-2xl font-bold bg-card text-primary">{initials}</AvatarFallback>
         </Avatar>
         <div className="flex items-center gap-2">
-          <h1 className="text-[32px] leading-10 font-semibold tracking-tight text-foreground">
+          <h1 className="font-display text-3xl font-extrabold tracking-tight text-foreground">
             {username}
           </h1>
           {isOwner && <EditUsernameButton currentUsername={username} locale={locale} />}
         </div>
         <div className="flex items-center gap-1.5">
-          <div className="bg-card border border-border rounded-full px-3 py-1 flex items-center gap-1.5">
+          <div className="bg-card border border-border rounded px-3 py-1 flex items-center gap-1.5">
             {country && countryName ? (
               <>
                 <ReactCountryFlag countryCode={country} svg style={{ width: "1.1em", height: "1.1em" }} />
-                <span className="text-xs font-medium tracking-wide text-muted-foreground">
+                <span className="font-mono text-xs font-semibold tracking-wide text-foreground">
                   {countryName}
                 </span>
               </>
             ) : (
-              <span className="text-xs font-medium tracking-wide text-muted-foreground">
+              <span className="font-mono text-xs font-semibold tracking-wide text-muted-foreground">
                 {isOwner ? "Set your country" : "No country"}
               </span>
             )}
@@ -64,7 +64,7 @@ export async function ProfileHeader({ username, name, image, country, showAlbum 
 
       {/* Active Album */}
       {showAlbum && <section className="mb-4">
-        <label className="text-[10px] font-semibold tracking-widest uppercase text-muted-foreground mb-2 block">
+        <label className="font-mono text-[10px] font-semibold tracking-[0.12em] uppercase text-muted-foreground mb-2 block">
           {t("activeAlbum")}
         </label>
         <AlbumSelector />

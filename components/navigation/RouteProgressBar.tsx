@@ -96,7 +96,7 @@ function ProgressBar() {
       style={{
         width: "0%",
         opacity: 0,
-        boxShadow: "0 0 8px oklch(0.985 0 0 / 0.35)",
+        boxShadow: "0 0 10px rgba(163, 230, 53, 0.6)",
         transition: "width 150ms ease-out, opacity 250ms ease-out",
       }}
     />

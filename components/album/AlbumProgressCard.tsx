@@ -13,30 +13,34 @@ export function AlbumProgressCard({ owned, total }: AlbumProgressCardProps) {
   const remaining = total - owned
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+    <div className="bg-card border border-border rounded p-6">
       <div className="flex justify-between items-end mb-4">
-        <span className="text-md font-semibold text-muted-foreground uppercase tracking-widest">
+        <span className="font-mono text-[10px] font-semibold tracking-[0.15em] text-muted-foreground uppercase">
           {t("label")}
         </span>
-        <span className="text-xl font-bold uppercase tracking-widest text-foreground tabular-nums">
+        <span className="font-display text-3xl font-black italic text-primary leading-none tabular-nums">
           {percentage}%
         </span>
       </div>
 
-      <div className="w-full bg-muted h-2 rounded-full overflow-hidden mb-6">
+      <div className="w-full bg-muted/60 h-1.5 rounded-full overflow-hidden mb-6">
         <div
-          className="bg-foreground h-full rounded-full transition-all duration-700 ease-out"
-          style={{ width: `${percentage}%` }}
+          className="h-full rounded-full transition-all duration-700 ease-out"
+          style={{
+            width: `${percentage}%`,
+            background: "#A3E635",
+            boxShadow: "0 0 8px rgba(163, 230, 53, 0.5)",
+          }}
         />
       </div>
 
       <p className="text-sm text-muted-foreground leading-relaxed">
-        <span className="font-bold text-foreground">{owned}</span>
+        <span className="font-semibold text-foreground">{owned}</span>
         {" "}{t("of")}{" "}
-        <span className="font-bold text-foreground">{total}</span>
+        <span className="font-semibold text-foreground">{total}</span>
         {" "}{t("stickersCollected")}{" "}
         {t("youNeed")}{" "}
-        <span className="font-medium text-foreground">{remaining}</span>
+        <span className="font-semibold text-primary">{remaining}</span>
         {" "}{t("moreToComplete")}
       </p>
     </div>

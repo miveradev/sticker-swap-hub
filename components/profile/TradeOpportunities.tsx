@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 import Link from "next/link"
-import { ArrowLeftRight } from "lucide-react"
+import { ArrowLeftRight, ArrowUp, ArrowDown, Handshake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { TradeOpportunities as TradeOpportunitiesData } from "@/lib/profile/getTradeOpportunities"
 
@@ -13,12 +13,6 @@ interface TradeOpportunitiesProps {
 export async function TradeOpportunities({ opportunities, targetUsername, locale }: TradeOpportunitiesProps) {
   const t = await getTranslations("profile.tradeOpportunities")
 
-  const items = [
-    { value: String(opportunities.canReceiveCount), label: t("canReceive") },
-    { value: String(opportunities.canGiveCount), label: t("canGive") },
-    { value: String(opportunities.mutualCount), label: t("mutual") },
-  ]
-
   return (
     <section className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
@@ -26,22 +20,35 @@ export async function TradeOpportunities({ opportunities, targetUsername, locale
         <p className="text-sm text-muted-foreground">{t("description")}</p>
       </div>
       <div className="grid grid-cols-3 gap-3">
-        {items.map((item) => (
-          <div
-            key={item.label}
-            className="bg-card border border-border rounded overflow-hidden flex flex-col items-center text-center relative"
-          >
-            <div className="h-[2px] w-full bg-primary" />
-            <div className="p-4 flex flex-col gap-1 items-center">
-              <span className="font-display text-2xl font-black italic text-primary leading-none">
-                {item.value}
-              </span>
-              <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-muted-foreground uppercase">
-                {item.label}
-              </span>
+        <div className="bg-card border border-border rounded overflow-hidden flex flex-col transition-transform duration-200 hover:scale-[1.02] cursor-default">
+          <div className="p-4 flex flex-col gap-3">
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-muted-foreground uppercase text-center">{t("canReceive")}</span>
+            <div className="flex items-center justify-center gap-3">
+              <span className="font-display text-4xl font-black italic text-primary leading-none">{opportunities.canReceiveCount}</span>
+              <ArrowUp className="w-5 h-5 text-primary shrink-0" />
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="bg-card border border-border rounded overflow-hidden flex flex-col transition-transform duration-200 hover:scale-[1.02] cursor-default">
+          <div className="p-4 flex flex-col gap-3">
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-muted-foreground uppercase text-center">{t("canGive")}</span>
+            <div className="flex items-center justify-center gap-3">
+              <span className="font-display text-4xl font-black italic text-foreground leading-none">{opportunities.canGiveCount}</span>
+              <ArrowDown className="w-5 h-5 text-foreground shrink-0" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-primary border border-primary rounded overflow-hidden flex flex-col transition-transform duration-200 hover:scale-[1.02] cursor-default">
+          <div className="p-4 flex flex-col gap-3">
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-[#0B141C] uppercase text-center">{t("mutual")}</span>
+            <div className="flex items-center justify-center gap-3">
+              <span className="font-display text-4xl font-black italic text-[#0B141C] leading-none">{opportunities.mutualCount}</span>
+              <Handshake className="w-5 h-5 text-[#0B141C] shrink-0" />
+            </div>
+          </div>
+        </div>
       </div>
       <Button
         className="w-full h-auto py-3 text-xs tracking-wide"

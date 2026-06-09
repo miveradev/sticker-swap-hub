@@ -21,7 +21,8 @@
       "title": "Deja de comparar listas de figuritas manualmente.",
       "subtitle": "Lleva el control de las figuritas que tienes, marca las que te faltan y compara al instante tu colección con amigos para encontrar posibles intercambios.",
       "ctaPrimary": "Empezar a Registrar",
-      "ctaSecondary": "Ver Álbum"
+      "ctaSecondary": "Ver Álbum",
+      "mockTeam": "España"
     },
     "comparison": {
       "missing": "Faltantes",
@@ -35,15 +36,15 @@
       "title": "Todo lo que necesitas en un solo lugar.",
       "track": {
         "title": "Registra tu colección",
-        "description": "Registra fácilmente tus figuritas, marca las repetidas y consulta tu progreso de un vistazo."
+        "description": "Registra fácilmente tus figuritas, marca las repetidas y consulta tu progreso a golpe de vista."
       },
       "share": {
         "title": "Comparte tu álbum",
-        "description": "Genera un enlace público único para compartir tus faltantes y repetidas con cualquier persona."
+        "description": "Genera un enlace público único para compartir tus figuritas restantes y repetidas con cualquier persona."
       },
       "compare": {
         "title": "Compara al instante",
-        "description": "Nuestro motor resalta automáticamente los intercambios mutuos entre tú y tus amigos."
+        "description": "Cuando alguien abre tu enlace, nuestro motor de coincidencias muestra al instante los cromos que podéis intercambiar."
       }
     },
     "stats": {
@@ -55,21 +56,27 @@
     },
     "comparisonShowcase": {
       "title": "Encuentra oportunidades de intercambio en segundos.",
-      "subtitle": "Nuestro motor de comparación hace el trabajo duro. Comparte tu enlace y te mostraremos exactamente qué figuritas puedes intercambiar para completar vuestros álbumes."
+      "subtitle": "Nuestro motor de comparación hace el trabajo duro. Comparte tu enlace y te mostraremos exactamente qué figuritas puedes intercambiar para que tanto tú como el otro usario podáis completar vuestros álbumes más rápido.",
+      "countries": {
+        "esp": "España",
+        "bra": "Brasil",
+        "ger": "Alemania",
+        "fra": "Francia"
+      }
     },
     "painPoints": {
       "title": "Intercambiar figuritas no debería ser tan difícil.",
       "whatsapp": {
         "title": "Ahogado entre mensajes",
-        "description": "Los intercambios se pierden entre interminables conversaciones de WhatsApp y resulta difícil recordar quién necesita qué."
+        "description": "Los intercambios se pierden entre interminables conversaciones de chat y resulta difícil recordar quién necesita qué."
       },
       "photos": {
         "title": "Comparando cromos manualmente",
-        "description": "Alternar entre las páginas del álbum y fotos borrosas hace perder tiempo y provoca errores."
+        "description": "Comparar colecciones manualmente dificulta descubrir intercambios que podrían completarte el álbum más rápido."
       },
       "memory": {
         "title": "Perdiendo oportunidades de intercambio",
-        "description": "Posibles intercambios quedan olvidados y acuerdos valiosos terminan pasando desapercibidos."
+        "description": "Muchos intercambios potenciales nunca llegan a realizarse porque es difícil saber quién tiene los cromos que necesitas."
       }
     },
     "howItWorks": {

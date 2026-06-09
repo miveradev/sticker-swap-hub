@@ -158,9 +158,10 @@ export function ComparisonShowcase() {
                 {tSwap("sections.receive.title")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Stickers duplicated by{" "}
-                <strong className="text-foreground font-semibold">{MOCK_COMPARE.username}</strong>{" "}
-                that you still need.
+                {tSwap.rich("sections.receive.description", {
+                  username: MOCK_COMPARE.username,
+                  strong: (chunks) => <strong className="text-foreground font-semibold">{chunks}</strong>,
+                })}
               </p>
             </div>
 
@@ -174,7 +175,7 @@ export function ComparisonShowcase() {
                         svg
                         style={{ width: "1.3em", height: "1.3em" }}
                       />
-                      {section.name}
+                      {t(`countries.${section.id}`)}
                     </h4>
                   </div>
                   <div className="grid grid-cols-4 md:grid-cols-5 gap-3">
@@ -206,9 +207,10 @@ export function ComparisonShowcase() {
                 {tSwap("sections.give.title")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Stickers duplicated by you that{" "}
-                <strong className="text-foreground font-semibold">{MOCK_COMPARE.username}</strong>{" "}
-                still needs.
+                {tSwap.rich("sections.give.description", {
+                  username: MOCK_COMPARE.username,
+                  strong: (chunks) => <strong className="text-foreground font-semibold">{chunks}</strong>,
+                })}
               </p>
             </div>
 
@@ -222,7 +224,7 @@ export function ComparisonShowcase() {
                         svg
                         style={{ width: "1.3em", height: "1.3em" }}
                       />
-                      {section.name}
+                      {t(`countries.${section.id}`)}
                     </h4>
                   </div>
                   <div className="grid grid-cols-4 md:grid-cols-5 gap-3">

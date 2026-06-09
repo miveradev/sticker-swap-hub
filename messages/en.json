@@ -21,7 +21,8 @@
       "title": "Stop comparing sticker lists manually.",
       "subtitle": "Track the stickers you have, mark the ones you need, and instantly compare your collection with friends to see possible trades.",
       "ctaPrimary": "Start Tracking",
-      "ctaSecondary": "View Album"
+      "ctaSecondary": "View Album",
+      "mockTeam": "Spain"
     },
     "comparison": {
       "missing": "Missing",
@@ -55,21 +56,27 @@
     },
     "comparisonShowcase": {
       "title": "Find trading opportunities in seconds.",
-      "subtitle": "Our comparison engine does the heavy lifting. Just share your link, and we'll show you exactly which stickers you can swap to help both of you complete your albums."
+      "subtitle": "Our comparison engine does the heavy lifting. Just share your link, and we'll show you exactly which stickers you can swap to help both of you complete your albums.",
+      "countries": {
+        "esp": "Spain",
+        "bra": "Brazil",
+        "ger": "Germany",
+        "fra": "France"
+      }
     },
     "painPoints": {
       "title": "Trading stickers shouldn't be this hard.",
       "whatsapp": {
         "title": "Drowning in chat messages",
-        "description": "Trades get buried in endless WhatsApp conversations, making it hard to remember who needs what."
+        "description": "Trades get buried in endless chat conversations, making it hard to remember who needs what."
       },
       "photos": {
-        "title": "Matching stickers by hand",
-        "description": "Switching between album pages and blurry photos wastes time and leads to mistakes."
+        "title": "Matching stickers manually",
+        "description": "Manually comparing collections makes it harder to discover trades that could help you complete your album faster."
       },
       "memory": {
         "title": "Missing trade opportunities",
-        "description": "Potential swaps are forgotten, and valuable exchanges slip through the cracks."
+        "description": "Many potential trades never happen because it's difficult to know who has the stickers you need."
       }
     },
     "howItWorks": {

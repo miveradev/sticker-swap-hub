@@ -46,12 +46,25 @@ export async function generateMetadata({
     title: m.title,
     description: m.description,
     openGraph: {
+      type: "website",
+      siteName: "Sticker Swap Hub",
       title: m.ogTitle,
       description: m.ogDescription,
       url: `/${locale}`,
+      images: [
+        {
+          url: "/sticker_swap_hub_OG.webp",
+          width: 1200,
+          height: 630,
+          alt: "Sticker Swap Hub — Find sticker trades for FIFA World Cup 2026",
+        },
+      ],
     },
     twitter: {
+      card: "summary_large_image",
+      title: m.ogTitle,
       description: m.twitterDescription,
+      images: ["/sticker_swap_hub_OG.webp"],
     },
     alternates: {
       canonical: `/${locale}`,

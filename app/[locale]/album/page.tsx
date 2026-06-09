@@ -106,7 +106,7 @@ export default async function AlbumPage({
           {albumOwner && (
             <div className="flex items-center justify-between w-full sm:w-auto sm:justify-end sm:gap-6 shrink-0">
               <div className="flex items-center gap-2">
-                <Avatar className="w-6 h-6">
+                <Avatar className="w-6 h-6 border-2 border-primary">
                   {albumOwner.image && <AvatarImage src={albumOwner.image} alt={albumOwner.username ?? albumOwner.name} />}
                   <AvatarFallback className="text-xs font-semibold">
                     {albumOwner.name.split(" ").slice(0, 2).map((n) => n[0]?.toUpperCase() ?? "").join("")}

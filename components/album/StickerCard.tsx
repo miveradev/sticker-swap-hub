@@ -82,7 +82,7 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
         onContextMenu={(e) => e.preventDefault()}
         className={[
           "aspect-square bg-card rounded overflow-hidden flex flex-col transition-all duration-200 select-none",
-          interactive ? "group-hover:scale-105 active:scale-95 cursor-pointer" : "cursor-default",
+          interactive ? "group-hover:scale-105 active:scale-95 cursor-pointer" : "group-hover:scale-105 cursor-pointer",
           isDuplicate
             ? "border border-primary/50"
             : "border border-border",
@@ -114,7 +114,7 @@ export function StickerCard({ code, name, quantity, onAdd, onRemove, onReset, in
             className={[
               "flex items-center justify-between px-1 py-0.5 md:py-1",
               isDuplicate
-                ? "bg-primary/10 border-t border-primary/20"
+                ? "bg-primary/25 border-t border-primary/60 shadow-[0_-2px_8px_rgba(163,230,53,0.2)]"
                 : "bg-muted/40 border-t border-border/30",
             ].join(" ")}
           >

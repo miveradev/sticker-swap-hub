@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-const BASE = process.env.NEXT_PUBLIC_APP_URL ?? "https://stickersawphub.com"
+const BASE = process.env.NEXT_PUBLIC_APP_URL ?? "https://sticker-swap-hub.vercel.app"
 
 const LOCALES = ["en", "es"] as const
 

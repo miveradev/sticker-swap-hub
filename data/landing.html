@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sticker Swap Hub - FIFA World Cup 2026</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;0,700;0,800;0,900;1,900&amp;family=Hanken+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#0b141c",
+                        "tertiary-fixed": "#d0e9d6",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#131d24",
+                        "on-primary-container": "#416400",
+                        "secondary": "#bdc7dc",
+                        "on-tertiary-fixed": "#0a2014",
+                        "inverse-surface": "#dae4ef",
+                        "tertiary-fixed-dim": "#b4ccbb",
+                        "surface-container": "#172129",
+                        "surface-bright": "#313a43",
+                        "inverse-primary": "#446900",
+                        "primary": "#ccff80",
+                        "on-tertiary-fixed-variant": "#364c3e",
+                        "on-secondary": "#273141",
+                        "surface-tint": "#98da27",
+                        "surface-dim": "#0b141c",
+                        "surface-container-lowest": "#060f17",
+                        "outline": "#8c947c",
+                        "on-primary-fixed-variant": "#334f00",
+                        "surface-container-high": "#212b33",
+                        "on-tertiary": "#203529",
+                        "on-secondary-container": "#abb5cb",
+                        "primary-fixed": "#b2f746",
+                        "on-error": "#690005",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#3d4759",
+                        "background": "#0b141c",
+                        "on-primary": "#213600",
+                        "surface-variant": "#2c363e",
+                        "inverse-on-surface": "#28313a",
+                        "on-primary-fixed": "#121f00",
+                        "secondary-fixed-dim": "#bdc7dc",
+                        "primary-fixed-dim": "#98da27",
+                        "outline-variant": "#424936",
+                        "on-secondary-fixed": "#121c2c",
+                        "tertiary-container": "#bfd8c6",
+                        "primary-container": "#a3e635",
+                        "surface-container-highest": "#2c363e",
+                        "on-surface": "#dae4ef",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#d9e3f9",
+                        "tertiary": "#dbf5e2",
+                        "on-secondary-fixed-variant": "#3d4759",
+                        "on-background": "#dae4ef",
+                        "on-tertiary-container": "#495f51",
+                        "on-surface-variant": "#c2cab0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "stats-xl": [
+                            "Anybody"
+                        ],
+                        "headline-md": [
+                            "Anybody"
+                        ],
+                        "display-lg": [
+                            "Anybody"
+                        ],
+                        "body-md": [
+                            "Hanken Grotesk"
+                        ],
+                        "label-caps": [
+                            "JetBrains Mono"
+                        ],
+                        "display-lg-mobile": [
+                            "Anybody"
+                        ],
+                        "body-lg": [
+                            "Hanken Grotesk"
+                        ]
+                    },
+                    "fontSize": {
+                        "stats-xl": [
+                            "40px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "900"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "display-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 300,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .material-symbols-outlined.fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-background text-on-surface font-body-md flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <header
+        class="bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-outline-variant/30 fixed w-full top-0 z-50">
+        <div class="flex justify-between items-center px-lg py-sm max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md font-black text-primary italic dark:text-primary-fixed flex items-center gap-2"
+                href="#">
+                <span class="material-symbols-outlined fill-icon text-primary">swap_horizontal_circle</span>
+                Sticker Swap Hub
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary transition-all duration-300"
+                    href="#features">Features</a>
+                <a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary transition-all duration-300"
+                    href="#album">Album</a>
+                <a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary transition-all duration-300"
+                    href="#compare">Compare</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider px-6 py-2 rounded-xl font-medium hover:bg-primary-container active:scale-95 transition-transform hidden md:block">
+                    Sign In
+                </button>
+                <button class="md:hidden text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow pt-[88px]">
+        <!-- Hero Section -->
+        <section
+            class="px-gutter md:px-lg max-w-container-max mx-auto pt-16 pb-16 md:pt-24 md:pb-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+            <div class="flex-1 flex flex-col items-start text-left w-full">
+                <!-- Live Stats Bar -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container border border-outline-variant mb-6 shadow-sm">
+                    <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">FIFA
+                        WORLD CUP 2026</span>
+                </div>
+                <h1
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg max-w-2xl mb-md text-on-surface">
+                    Stop comparing sticker lists manually
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-lg">
+                    Stop comparing WhatsApp photos and spreadsheets. Track your stickers, manage duplicates, and
+                    instantly see what you can exchange with other collectors.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <button
+                        class="bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider px-8 py-3 rounded-xl font-bold hover:bg-primary-container transition-colors text-center">
+                        Start Tracking
+                    </button>
+                    <button
+                        class="bg-surface-container border border-outline text-primary font-label-caps text-label-caps uppercase tracking-wider px-8 py-3 rounded-xl font-bold hover:bg-surface-container-high transition-colors text-center">
+                        View Demo
+                    </button>
+                </div>
+            </div>
+            <!-- Stacked Cards Right Column -->
+            <div
+                class="flex-1 w-full relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] flex items-center justify-center mt-8 lg:mt-0">
+                <!-- Back Card -->
+                <div
+                    class="absolute w-[85%] aspect-video bg-surface-container-highest rounded-xl border border-outline-variant/30 shadow-2xl rotate-6 translate-x-4 translate-y-6 sm:translate-x-8 sm:translate-y-8 opacity-40">
+                </div>
+                <!-- Middle Card -->
+                <div
+                    class="absolute w-[90%] aspect-video bg-surface-container-high rounded-xl border border-outline-variant/50 shadow-2xl rotate-3 translate-x-2 translate-y-3 sm:translate-x-4 sm:translate-y-4 opacity-70">
+                </div>
+                <!-- Main Card -->
+                <div
+                    class="relative w-[95%] aspect-video bg-surface-container rounded-xl border border-outline-variant overflow-hidden shadow-2xl z-10 flex flex-col">
+                    <div
+                        class="h-8 md:h-10 border-b border-outline-variant flex items-center px-4 gap-2 bg-surface shrink-0">
+                        <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-outline-variant"></div>
+                        <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-outline-variant"></div>
+                        <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-outline-variant"></div>
+                    </div>
+                    <div class="relative w-full h-full bg-surface-container-low flex-1 overflow-hidden">
+                        <img alt="Sticker Swap Interface" class="absolute inset-0 w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida/AP1WRLuaQF40PGRgfHrXVnbkU0iYKwrImiaIooTeTtJXpSqsvsndp-jw1-xPutvi16EMQDcGWvqOpPH1CMVUzREUpedp0W2W3-ezQkPYKOnUnFZa5l75bySIvY7Nz9yHwbEjuY4zTF_vx4YJbxBVvbvyp15u1DjYahsIgTfKuXpgLEMGHqPP2KQz-QOCjy8LflaUOWGe67j-8RUHyY07p-GZuguiPXNhDKXz6GQr41sPKqObQMAsJP3I_h3M">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Problem Section -->
+        <section class="py-24 bg-surface-container-low" id="features">
+            <div class="px-gutter md:px-lg max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">
+                        Trading stickers shouldn't be this difficult.
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Pain Point 1 -->
+                    <div
+                        class="bg-surface rounded-xl p-8 border border-outline-variant flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-[32px]">chat</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-on-surface">Endless WhatsApp messages
+                        </h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Scrolling through blurry photos
+                            trying to figure out what you actually need.</p>
+                    </div>
+                    <!-- Pain Point 2 -->
+                    <div
+                        class="bg-surface rounded-xl p-8 border border-outline-variant flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-[32px]">imagesmode</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-on-surface">Comparing photos manually
+                        </h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Cross-referencing poorly lit
+                            pictures against your physical album pages.</p>
+                    </div>
+                    <!-- Pain Point 3 -->
+                    <div
+                        class="bg-surface rounded-xl p-8 border border-outline-variant flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-[32px]">psychology_alt</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-on-surface">Forgetting who has what</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Losing track of promises and
+                            potential trades across different friend groups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Solution Section -->
+        <section class="py-24 bg-background">
+            <div class="px-gutter md:px-lg max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">
+                        Everything you need in one place.
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-surface-container border border-outline-variant rounded-xl p-8 hover:border-primary transition-colors duration-300">
+                        <div class="mb-md text-primary">
+                            <span class="material-symbols-outlined text-[40px] fill-icon">library_books</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-on-surface">Track Your Collection</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Easily log your stickers, mark
+                            duplicates, and see your overall progress at a glance.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-surface-container border border-outline-variant rounded-xl p-8 hover:border-primary transition-colors duration-300">
+                        <div class="mb-md text-primary">
+                            <span class="material-symbols-outlined text-[40px] fill-icon">share</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-on-surface">Share Your Album</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Generate a unique public link to
+                            share your needed and duplicate lists with anyone.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-surface-container border border-outline-variant rounded-xl p-8 hover:border-primary transition-colors duration-300">
+                        <div class="mb-md text-primary">
+                            <span class="material-symbols-outlined text-[40px] fill-icon">compare_arrows</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-on-surface">Compare Instantly</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Our engine automatically highlights
+                            mutual trades between you and your friends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Comparison Showcase (The Core Feature) -->
+        <section class="py-24 bg-surface-container-low overflow-hidden border-t border-b border-outline-variant"
+            id="compare">
+            <div class="px-gutter md:px-lg max-w-container-max mx-auto flex flex-col items-center">
+                <div class="text-center mb-16 max-w-3xl">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">
+                        Find trading opportunities in seconds.
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Our comparison engine does the heavy lifting. Just share your link, and we'll show you exactly
+                        which stickers you can swap to help both of you complete your albums.
+                    </p>
+                </div>
+                <!-- Showcase Image Container -->
+                <div
+                    class="w-full max-w-6xl relative rounded-xl border border-outline-variant bg-surface overflow-hidden p-8 flex flex-col items-center">
+                    <!-- Metrics Overlay (Stylized) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mb-12 z-10">
+                        <div class="bg-surface-container rounded-xl p-6 border border-outline-variant text-center">
+                            <div
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-2">
+                                You Can Receive</div>
+                            <div
+                                class="font-stats-xl text-stats-xl text-primary leading-none flex items-center justify-center gap-2">
+                                18 <span class="material-symbols-outlined text-2xl">arrow_upward</span>
+                            </div>
+                        </div>
+                        <div class="bg-surface-container rounded-xl p-6 border border-outline-variant text-center">
+                            <div
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-2">
+                                You Can Give</div>
+                            <div
+                                class="font-stats-xl text-stats-xl text-secondary leading-none flex items-center justify-center gap-2">
+                                12 <span class="material-symbols-outlined text-2xl">arrow_downward</span>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-primary rounded-xl p-6 border border-primary text-center text-on-primary shadow-[0_0_30px_rgba(204,255,128,0.2)]">
+                            <div class="font-label-caps text-label-caps uppercase tracking-wider mb-2 opacity-90">Mutual
+                                Trades</div>
+                            <div
+                                class="font-stats-xl text-stats-xl leading-none flex items-center justify-center gap-2">
+                                7 <span class="material-symbols-outlined text-2xl fill-icon">handshake</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full rounded-xl overflow-hidden border border-outline-variant">
+                        <img alt="" class="w-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeOkfHUBO5NLX9UEC3wlHkhydW2hZ39CDum7nxZa4KuSfvQWxWdlBC7bAHzApiA4rjlUCDN_RL3X7jOKD4GowFwuZIYR5zTQJCn-HKzQZSbUsTG3akwKgEuaWiy2Q7hXhWxHP9Pl7zDF3UC1wPjwEkWsDkWEOtH-P9Cx7MRI0vng-rbxdsscHauGDlqIfaOeGlXV6oR4AOwCDhgY5T0w6t4nt-JJjcnn7AOmReBabfVbdWt7aPyBoMU2KOmf4D63XoQC0gwwsS">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Timeline -->
+        <section class="py-24 bg-background">
+            <div class="px-gutter md:px-lg max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">
+                        How it works
+                    </h2>
+                </div>
+                <div class="max-w-4xl mx-auto relative">
+                    <!-- Vertical Line connecting steps -->
+                    <div class="hidden sm:block absolute left-8 top-8 bottom-8 w-px bg-outline-variant z-0"></div>
+                    <div class="flex flex-col gap-12 relative z-10">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col sm:flex-row gap-6 sm:items-start">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container border-2 border-primary flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg">
+                                <span class="font-headline-md text-headline-md text-primary">1</span>
+                            </div>
+                            <div class="bg-surface border border-outline-variant p-6 rounded-xl flex-grow">
+                                <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Create your account
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Sign up in seconds using
+                                    Google or your email. It's completely free.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex flex-col sm:flex-row gap-6 sm:items-start">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container border-2 border-primary flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg">
+                                <span class="font-headline-md text-headline-md text-primary">2</span>
+                            </div>
+                            <div class="bg-surface border border-outline-variant p-6 rounded-xl flex-grow">
+                                <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Mark your stickers
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Quickly tap through the
+                                    digital album to mark which stickers you own and your duplicates.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex flex-col sm:flex-row gap-6 sm:items-start">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container border-2 border-primary flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg">
+                                <span class="font-headline-md text-headline-md text-primary">3</span>
+                            </div>
+                            <div class="bg-surface border border-outline-variant p-6 rounded-xl flex-grow">
+                                <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Share your link</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Send your unique profile
+                                    link to friends, family, or local trading groups.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="flex flex-col sm:flex-row gap-6 sm:items-start">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container border-2 border-primary flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg">
+                                <span class="font-headline-md text-headline-md text-primary">4</span>
+                            </div>
+                            <div class="bg-surface border border-outline-variant p-6 rounded-xl flex-grow">
+                                <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Compare and find
+                                    matches</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">When someone opens your
+                                    link, the engine instantly shows them what you can trade.</p>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="flex flex-col sm:flex-row gap-6 sm:items-start">
+                            <div
+                                class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-primary/20">
+                                <span class="material-symbols-outlined">swap_horiz</span>
+                            </div>
+                            <div class="bg-surface border border-outline-variant p-6 rounded-xl flex-grow">
+                                <h3 class="font-headline-md text-headline-md mb-2 text-on-surface">Trade!</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Meet up or mail your
+                                    stickers with confidence, knowing exactly what to exchange.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-24 bg-surface-container-low border-t border-outline-variant">
+            <div class="px-gutter md:px-lg max-w-4xl mx-auto text-center">
+                <h2
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">
+                    Ready to complete your album faster?
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                    Join thousands of collectors who have ditched the spreadsheets and chaotic group chats.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                        class="bg-surface border border-outline-variant text-on-surface font-label-caps text-label-caps uppercase tracking-wider px-8 py-4 rounded-xl font-bold hover:bg-surface-container transition-colors flex items-center justify-center gap-3">
+                        <img alt="Google" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUDyJu-RUpYCQ8FBsIyu3uIcl2cV7H7BsIQCJVvI6y7zie6VlHdk4Il2ky_trnmZ2RTGqazydKw-BoA0xW60nlYSHuC9SKckh_mGLk3zqneQIWRplT9_nDs4z3bziyHlDr-om9XeiPI9p156QsxvA7h-KoBkxAmK8Att0iL3o_0crDLTQJeWho4MhtnEFjamr02ac7319bFRd02JgPhUOXIiGXJ8Egi3iStndLU6-jJmOnhhHh0j5D2KDlzooOkWk6HZThgpMN">
+                        Sign In with Google
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 w-full py-xl">
+        <div class="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-md">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div
+                    class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed flex items-center gap-2">
+                    <span class="material-symbols-outlined fill-icon">swap_horizontal_circle</span>
+                    Sticker Swap Hub
+                </div>
+                <p
+                    class="text-on-surface dark:text-on-surface font-label-caps text-label-caps text-center md:text-left opacity-80">
+                    © 2024 Sticker Swap Hub. FIFA World Cup 2026 Collector Edition.
+                </p>
+            </div>
+            <nav class="flex gap-6">
+                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-container transition-colors opacity-80 hover:opacity-100"
+                    href="#">Terms</a>
+                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-container transition-colors opacity-80 hover:opacity-100"
+                    href="#">Privacy</a>
+                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-container transition-colors opacity-80 hover:opacity-100"
+                    href="#">Help</a>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

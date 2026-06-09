@@ -2,8 +2,10 @@ import { headers } from "next/headers"
 import { setRequestLocale } from "next-intl/server"
 import { Header } from "@/components/landing/Header"
 import { Hero } from "@/components/landing/Hero"
+import { PainPoints } from "@/components/landing/PainPoints"
 import { Features } from "@/components/landing/Features"
-import { Stats } from "@/components/landing/Stats"
+import { ComparisonShowcase } from "@/components/landing/ComparisonShowcase"
+import { HowItWorks } from "@/components/landing/HowItWorks"
 import { Cta } from "@/components/landing/Cta"
 import { Footer } from "@/components/landing/Footer"
 import { auth } from "@/lib/auth"
@@ -31,11 +33,30 @@ export default async function HomePage({
   return (
     <>
       <Header initialViewer={viewer} />
-      <main className="pt-[120px] pb-16 flex flex-col gap-[120px]">
-        <Hero />
-        <Features />
-        <Stats />
-        <Cta />
+      <main className="pt-16 flex flex-col">
+        {/* Hero */}
+        <section className="py-20 md:py-28">
+          <Hero />
+        </section>
+
+        {/* Pain points */}
+        <PainPoints />
+
+        {/* Features / solution */}
+        <section className="py-20 md:py-24">
+          <Features />
+        </section>
+
+        {/* Comparison showcase */}
+        <ComparisonShowcase />
+
+        {/* How it works */}
+        <HowItWorks />
+
+        {/* CTA */}
+        <section className="py-20 md:py-24">
+          <Cta />
+        </section>
       </main>
       <Footer />
     </>

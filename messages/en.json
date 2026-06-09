@@ -18,7 +18,7 @@
       "cta": "Log In"
     },
     "hero": {
-      "title": "Compare your FIFA World Cup 2026 collections in seconds.",
+      "title": "Stop comparing sticker lists manually.",
       "subtitle": "Track the stickers you have, mark the ones you need, and instantly compare your collection with friends to see possible trades.",
       "ctaPrimary": "Start Tracking",
       "ctaSecondary": "View Album"
@@ -32,19 +32,18 @@
       "gets": "{name} gets"
     },
     "features": {
-      "title": "Stop comparing lists manually.",
-      "subtitle": "Ditch the WhatsApp photos and scribbled notes. Sticker Swap Hub provides a clean, precise interface to manage your inventory and find exact matches instantly.",
+      "title": "Everything you need in one place.",
       "track": {
-        "title": "Track your collection",
-        "description": "Quickly mark stickers as owned, needed, or duplicate with keyboard shortcuts and bulk actions."
+        "title": "Track Your Collection",
+        "description": "Easily log your stickers, mark duplicates, and see your overall progress at a glance."
       },
       "share": {
-        "title": "Share your progress",
-        "description": "Generate a unique public link to show friends exactly what you need without them needing an account."
+        "title": "Share Your Album",
+        "description": "Generate a unique public link to share your needed and duplicate lists with anyone."
       },
       "compare": {
-        "title": "Compare instantly",
-        "description": "Paste a friend's link and see exactly which stickers you can swap in a clean, visual format."
+        "title": "Compare Instantly",
+        "description": "Our engine automatically highlights mutual trades between you and your friends."
       }
     },
     "stats": {
@@ -54,10 +53,52 @@
       "teams": "National Teams",
       "sections": "Special Sections"
     },
+    "comparisonShowcase": {
+      "title": "Find trading opportunities in seconds.",
+      "subtitle": "Our comparison engine does the heavy lifting. Just share your link, and we'll show you exactly which stickers you can swap to help both of you complete your albums."
+    },
+    "painPoints": {
+      "title": "Trading stickers shouldn't be this hard.",
+      "whatsapp": {
+        "title": "Drowning in chat messages",
+        "description": "Trades get buried in endless WhatsApp conversations, making it hard to remember who needs what."
+      },
+      "photos": {
+        "title": "Matching stickers by hand",
+        "description": "Switching between album pages and blurry photos wastes time and leads to mistakes."
+      },
+      "memory": {
+        "title": "Missing trade opportunities",
+        "description": "Potential swaps are forgotten, and valuable exchanges slip through the cracks."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "step1": {
+        "title": "Create your account",
+        "description": "Sign up in seconds using Google. It's completely free."
+      },
+      "step2": {
+        "title": "Mark your stickers",
+        "description": "Quickly tap through the digital album to mark which stickers you own and your duplicates."
+      },
+      "step3": {
+        "title": "Share your link",
+        "description": "Send your unique profile link to friends, family, or local trading groups."
+      },
+      "step4": {
+        "title": "Compare and find matches",
+        "description": "When someone opens your link, our engine instantly shows them what you can trade."
+      },
+      "step5": {
+        "title": "Trade!",
+        "description": "Meet up or mail your stickers with confidence, knowing exactly what to exchange."
+      }
+    },
     "cta": {
-      "title": "Designed for collectors.",
-      "subtitle": "Sticker Swap Hub focuses on one thing: making collection management and trading preparation as simple as possible.",
-      "button": "Start Tracking Your Collection"
+      "title": "Ready to complete your album faster?",
+      "subtitle": "Join thousands of collectors who have ditched the spreadsheets and chaotic group chats.",
+      "button": "Sign in with Google"
     },
     "footer": {
       "brand": "Sticker Swap Hub",
@@ -70,6 +111,76 @@
       },
       "copyright": "© 2026 Sticker Swap Hub.",
       "tagline": "Track. Compare. Trade."
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 9, 2026",
+    "intro": "Sticker Swap Hub (\"we\", \"us\", or \"our\") is committed to protecting your privacy. This policy explains what data we collect, how we use it, and your rights.",
+    "sections": {
+      "dataCollected": {
+        "title": "Data We Collect",
+        "body": "When you sign in with Google, we receive your name, email address, and profile picture from your Google account. We also store the sticker collection data you enter (which stickers you own and how many duplicates you have)."
+      },
+      "howWeUse": {
+        "title": "How We Use Your Data",
+        "body": "Your data is used solely to provide the service: storing your sticker collection, generating your public profile link, and enabling collection comparisons with other users. We do not sell your data to third parties."
+      },
+      "publicProfile": {
+        "title": "Public Profile",
+        "body": "Your collection is accessible via a public link using your chosen username. Anyone with the link can view your stickers to compare collections. Your email address is never publicly visible."
+      },
+      "cookies": {
+        "title": "Cookies & Sessions",
+        "body": "We use session cookies to keep you signed in. No third-party advertising cookies are used."
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "body": "You may delete your account at any time. Upon deletion, all your personal data and collection information is permanently removed from our systems."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "For any privacy-related questions, please contact us at privacy@stickersawphub.com."
+      }
+    }
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 9, 2026",
+    "intro": "By using Sticker Swap Hub you agree to these Terms of Service. Please read them carefully.",
+    "sections": {
+      "service": {
+        "title": "The Service",
+        "body": "Sticker Swap Hub provides a digital tool to track sticker collections for the FIFA World Cup 2026 Panini album and to facilitate sticker trades between users. The service is provided free of charge."
+      },
+      "account": {
+        "title": "Your Account",
+        "body": "You must sign in with a valid Google account. You are responsible for all activity under your account. Your chosen username must not impersonate others or contain offensive language."
+      },
+      "userContent": {
+        "title": "User Content",
+        "body": "Collection data you enter belongs to you. By making your profile public, you grant other users read access to your sticker list for comparison purposes."
+      },
+      "conduct": {
+        "title": "Acceptable Use",
+        "body": "You agree not to abuse, disrupt, or attempt to gain unauthorized access to the service. Automated scraping or bulk data extraction is prohibited."
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "body": "Sticker Swap Hub is an independent fan project and is not affiliated with FIFA, Panini, or any official World Cup partner. All team names, player names, and tournament trademarks belong to their respective owners."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "body": "The service is provided \"as is\" without warranty of any kind. We are not liable for any loss of data, missed trades, or indirect damages arising from use of the service."
+      },
+      "changes": {
+        "title": "Changes to These Terms",
+        "body": "We may update these terms from time to time. Continued use of the service after changes constitutes acceptance of the new terms."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "For questions about these terms, contact us at legal@stickersawphub.com."
+      }
     }
   },
   "album": {

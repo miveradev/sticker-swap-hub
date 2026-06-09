@@ -6,7 +6,7 @@ import { ProfileNav } from "@/components/profile/ProfileNav"
 import { UserMenu } from "@/components/profile/UserMenu"
 import { HeaderLoginButton } from "@/components/profile/HeaderLoginButton"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { LayoutGrid } from "lucide-react"
+import { ArrowLeftRight } from "lucide-react"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
 import { ScrollToTopButton } from "@/components/shared/ScrollToTopButton"
 import { getAlbum } from "@/lib/albums/getAlbum"
@@ -18,9 +18,10 @@ export default async function AlbumPage({
 }: {
   searchParams: Promise<{ user?: string }>
 }) {
-  const [{ user: targetUsername }, t, h, locale] = await Promise.all([
+  const [{ user: targetUsername }, t, tApp, h, locale] = await Promise.all([
     searchParams,
     getTranslations("album"),
+    getTranslations("app"),
     headers(),
     getLocale(),
   ])
@@ -70,12 +71,12 @@ export default async function AlbumPage({
   return (
     <div className="min-h-screen flex flex-col pb-24">
       {/* Top bar */}
-      <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
+      <header className="bg-background/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-border h-16">
         <div className="h-full flex justify-between items-center px-4 max-w-2xl mx-auto">
-          <a href={`/${locale}`} className="flex items-center gap-2">
-            <LayoutGrid className="w-6 h-6 text-foreground" />
-            <span className="text-lg font-bold tracking-tighter text-foreground">
-              Sticker Swap Hub
+          <a href={`/${locale}`} className="flex items-center gap-1.5 transition-all hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(163,230,53,0.6)]">
+            <ArrowLeftRight className="w-7 h-7 text-primary shrink-0 -rotate-12" strokeWidth={2.5} />
+            <span className="font-display text-sm sm:text-lg font-black text-primary italic leading-none">
+              {tApp("name")}
             </span>
           </a>
           <div className="flex items-center gap-2">
@@ -98,8 +99,8 @@ export default async function AlbumPage({
       {/* Main content */}
       <main className="flex-grow pt-24 pb-8 px-4 max-w-2xl mx-auto w-full flex flex-col">
         <section className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <h1 className="text-xl sm:text-3xl font-semibold tracking-tight text-foreground flex items-center gap-3">
-            <img src="/wc2026_white.svg" alt="" aria-hidden="true" width={28} height={28} className="shrink-0 w-8 h-8 sm:w-9 sm:h-9" />
+          <h1 className="font-display text-xl sm:text-3xl font-extrabold tracking-tight text-foreground flex items-center gap-3">
+            <img src="/wc2026_white.svg" alt="" aria-hidden="true" width={28} height={28} className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 opacity-80" />
             {album.name}
           </h1>
           {albumOwner && (

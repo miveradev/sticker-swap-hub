@@ -23,12 +23,18 @@ export function Cta() {
   }
 
   return (
-    <section className="max-w-3xl mx-auto px-8 flex flex-col items-center text-center gap-6">
-      <h2 className="text-2xl font-semibold tracking-tight text-foreground">{t("title")}</h2>
-      <p className="text-base text-muted-foreground">{t("subtitle")}</p>
-      <Button size="lg" className="mt-4" onClick={handleStartTracking}>
-        {t("button")}
-      </Button>
+    <section className="max-w-7xl mx-auto px-8 w-full">
+      <div className="bg-card border border-primary/20 rounded p-12 flex flex-col items-center text-center gap-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="relative flex flex-col gap-4 max-w-xl">
+          <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">{t("title")}</h2>
+          <p className="text-base text-muted-foreground leading-relaxed">{t("subtitle")}</p>
+        </div>
+        <Button size="lg" className="relative" onClick={handleStartTracking}>
+          {t("button")}
+        </Button>
+      </div>
     </section>
   )
 }

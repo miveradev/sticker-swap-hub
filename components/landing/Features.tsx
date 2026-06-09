@@ -14,10 +14,14 @@ function FeatureCard({
   description: string
 }) {
   return (
-    <div className="bg-card border border-border p-8 rounded-lg flex flex-col gap-4 hover:bg-muted transition-colors cursor-pointer">
-      <Icon className="w-8 h-8 text-foreground" />
-      <h3 className="text-lg font-medium tracking-tight text-foreground">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
+    <div className="bg-card border border-border p-8 rounded flex flex-col gap-5 hover:border-primary/40 hover:bg-accent transition-all duration-200 cursor-default group">
+      <div className="w-10 h-10 rounded bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+        <Icon className="w-5 h-5 text-primary" />
+      </div>
+      <div className="flex flex-col gap-2">
+        <h3 className="font-display text-lg font-bold tracking-tight text-foreground">{title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+      </div>
     </div>
   )
 }
@@ -26,12 +30,13 @@ export function Features() {
   const t = useTranslations("landing.features")
 
   return (
-    <section id="features" className="max-w-7xl mx-auto px-8 flex flex-col gap-8 w-full">
-      <div className="flex flex-col gap-2 max-w-2xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground">{t("title")}</h2>
-        <p className="text-base text-muted-foreground">{t("subtitle")}</p>
+    <section id="features" className="max-w-7xl mx-auto px-8 flex flex-col gap-10 w-full">
+      <div className="flex flex-col gap-3 max-w-2xl">
+        <span className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-primary">{t("title")}</span>
+        <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">{t("title")}</h2>
+        <p className="text-base text-muted-foreground leading-relaxed">{t("subtitle")}</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <FeatureCard
           icon={ListChecks}
           title={t("track.title")}

@@ -1,6 +1,6 @@
 import { headers } from "next/headers"
 import { getTranslations, getLocale } from "next-intl/server"
-import { LayoutGrid, Lightbulb } from "lucide-react"
+import { ArrowLeftRight, Lightbulb } from "lucide-react"
 import { auth } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import { getCollectionComparison } from "@/lib/profile/getCollectionComparison"
@@ -18,9 +18,10 @@ export default async function SwapPage({
 }: {
   searchParams: Promise<{ user?: string }>
 }) {
-  const [{ user: targetUsername }, t, h, locale] = await Promise.all([
+  const [{ user: targetUsername }, t, tApp, h, locale] = await Promise.all([
     searchParams,
     getTranslations("swap"),
+    getTranslations("app"),
     headers(),
     getLocale(),
   ])
@@ -75,11 +76,11 @@ export default async function SwapPage({
   return (
     <div className="min-h-screen flex flex-col pb-24">
       {/* Top bar */}
-      <header className="bg-background fixed top-0 w-full z-50 border-b border-border h-16">
+      <header className="bg-background/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-border h-16">
         <div className="h-full flex justify-between items-center px-4 max-w-2xl mx-auto">
-          <a href={`/${locale}`} className="flex items-center gap-2">
-            <LayoutGrid className="w-6 h-6 text-foreground" />
-            <span className="text-lg font-bold tracking-tighter text-foreground">Sticker Swap Hub</span>
+          <a href={`/${locale}`} className="flex items-center gap-1.5 transition-all hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(163,230,53,0.6)]">
+            <ArrowLeftRight className="w-7 h-7 text-primary shrink-0 -rotate-12" strokeWidth={2.5} />
+            <span className="font-display text-sm sm:text-lg font-black text-primary italic leading-none">{tApp("name")}</span>
           </a>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
@@ -102,7 +103,7 @@ export default async function SwapPage({
       <main className="flex-grow pt-24 pb-8 px-4 max-w-2xl mx-auto w-full flex flex-col gap-8">
         {/* Page header */}
         <div className="flex flex-col gap-1">
-          <h1 className="text-3xl font-semibold tracking-tight text-foreground">{t("title")}</h1>
+          <h1 className="font-display text-3xl font-extrabold tracking-tight text-foreground">{t("title")}</h1>
           <p className="text-sm text-muted-foreground">{t("description")}</p>
         </div>
 
@@ -119,8 +120,8 @@ export default async function SwapPage({
             />
 
             {/* Trade insight */}
-            <div className="bg-card border border-border rounded-xl p-4 md:p-5 flex items-start gap-3">
-              <Lightbulb className="w-5 h-5 text-foreground mt-0.5 shrink-0" />
+            <div className="bg-primary/5 border border-primary/15 rounded p-4 md:p-5 flex items-start gap-3">
+              <Lightbulb className="w-5 h-5 text-primary mt-0.5 shrink-0" />
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {t.rich("insight", {
                   receive: summary.canReceive,

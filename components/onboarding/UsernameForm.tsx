@@ -85,7 +85,7 @@ export function UsernameForm({ locale }: { locale: string }) {
 
   const hint = (() => {
     if (apiError) return { text: apiError, color: "text-destructive" }
-    if (status === "available") return { text: "Available", color: "text-green-500" }
+    if (status === "available") return { text: "Available", color: "text-primary" }
     if (status === "taken") return { text: "Already taken", color: "text-destructive" }
     if (status === "invalid" && username.length > 0)
       return {
@@ -120,7 +120,7 @@ export function UsernameForm({ locale }: { locale: string }) {
             {status === "checking" && (
               <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
             )}
-            {status === "available" && <CheckCircle className="w-4 h-4 text-green-500" />}
+            {status === "available" && <CheckCircle className="w-4 h-4 text-primary" />}
             {(status === "taken" || status === "invalid") && (
               <XCircle className="w-4 h-4 text-destructive" />
             )}

@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server"
 import { ArrowDownLeft, ArrowUpRight, Handshake } from "lucide-react"
-import { Card } from "@/components/ui/card"
 
 interface SwapTradeSummaryProps {
   canReceive: number
@@ -13,38 +12,47 @@ export async function SwapTradeSummary({ canReceive, canGive, mutual }: SwapTrad
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-3 gap-3">
-      <Card className="py-0 gap-0 ring-0 border border-border rounded-xl p-4 flex flex-col gap-2 transition-transform duration-200 hover:scale-105 cursor-pointer">
-        <div className="flex justify-between items-start">
-          <span className="text-xs font-medium text-muted-foreground">{t("canReceive")}</span>
-          <ArrowDownLeft className="w-4 h-4 text-muted-foreground" />
+      <div className="bg-card border border-border rounded overflow-hidden flex flex-col transition-transform duration-200 hover:scale-[1.02] cursor-default">
+        <div className="h-[2px] w-full bg-primary" />
+        <div className="p-4 flex flex-col gap-2">
+          <div className="flex justify-between items-start">
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-muted-foreground uppercase">{t("canReceive")}</span>
+            <ArrowDownLeft className="w-4 h-4 text-primary" />
+          </div>
+          <span className="font-display text-4xl font-black italic text-primary leading-none">{canReceive}</span>
+          <span className="font-mono text-[9px] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
+            {t("stickersYouNeed")}
+          </span>
         </div>
-        <span className="text-3xl font-semibold tracking-tight text-foreground">{canReceive}</span>
-        <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-          {t("stickersYouNeed")}
-        </span>
-      </Card>
+      </div>
 
-      <Card className="py-0 gap-0 ring-0 border border-border rounded-xl p-4 flex flex-col gap-2 transition-transform duration-200 hover:scale-105 cursor-pointer">
-        <div className="flex justify-between items-start">
-          <span className="text-xs font-medium text-muted-foreground">{t("canGive")}</span>
-          <ArrowUpRight className="w-4 h-4 text-muted-foreground" />
+      <div className="bg-card border border-border rounded overflow-hidden flex flex-col transition-transform duration-200 hover:scale-[1.02] cursor-default">
+        <div className="h-[2px] w-full bg-primary" />
+        <div className="p-4 flex flex-col gap-2">
+          <div className="flex justify-between items-start">
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-muted-foreground uppercase">{t("canGive")}</span>
+            <ArrowUpRight className="w-4 h-4 text-primary" />
+          </div>
+          <span className="font-display text-4xl font-black italic text-primary leading-none">{canGive}</span>
+          <span className="font-mono text-[9px] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
+            {t("stickersTheyNeed")}
+          </span>
         </div>
-        <span className="text-3xl font-semibold tracking-tight text-foreground">{canGive}</span>
-        <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-          {t("stickersTheyNeed")}
-        </span>
-      </Card>
+      </div>
 
-      <Card className="py-0 gap-0 ring-0 border border-foreground/20 rounded-xl p-4 flex flex-col gap-2 bg-muted transition-transform duration-200 hover:scale-105 cursor-pointer">
-        <div className="flex justify-between items-start">
-          <span className="text-xs font-medium text-foreground">{t("mutual")}</span>
-          <Handshake className="w-4 h-4 text-foreground" />
+      <div className="bg-primary/10 border border-primary/30 rounded overflow-hidden flex flex-col transition-transform duration-200 hover:scale-[1.02] cursor-default">
+        <div className="h-[2px] w-full bg-primary" />
+        <div className="p-4 flex flex-col gap-2">
+          <div className="flex justify-between items-start">
+            <span className="font-mono text-[10px] font-semibold tracking-[0.1em] text-primary/80 uppercase">{t("mutual")}</span>
+            <Handshake className="w-4 h-4 text-primary" />
+          </div>
+          <span className="font-display text-4xl font-black italic text-primary leading-none">{mutual}</span>
+          <span className="font-mono text-[9px] font-semibold tracking-[0.12em] text-primary/60 uppercase">
+            {t("twoWayExchanges")}
+          </span>
         </div>
-        <span className="text-3xl font-semibold tracking-tight text-foreground">{mutual}</span>
-        <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-          {t("twoWayExchanges")}
-        </span>
-      </Card>
+      </div>
     </section>
   )
 }

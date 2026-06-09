@@ -19,21 +19,21 @@ export async function ProfileNav({
   ]
 
   return (
-    <nav className="bg-card border-t border-border fixed bottom-0 w-full z-50 pb-[env(safe-area-inset-bottom)] shadow-xl">
+    <nav className="bg-card/95 backdrop-blur-sm border-t border-border fixed bottom-0 w-full z-50 pb-[env(safe-area-inset-bottom)]">
       <div className="lg:max-w-md lg:mx-auto flex justify-around items-center h-20 px-2">
         {navItems.map(({ icon: Icon, labelKey, href }) => (
           <a
             key={labelKey}
             href={href}
             className={[
-              "flex flex-col items-center justify-center gap-1 transition-all active:scale-90 duration-200 w-16",
+              "flex flex-col items-center justify-center gap-1 transition-all active:scale-90 duration-200 w-16 rounded py-2",
               activePage === labelKey
-                ? "bg-muted text-foreground rounded-xl px-4 py-1"
+                ? "bg-primary/10 text-primary"
                 : "text-muted-foreground hover:text-foreground",
             ].join(" ")}
           >
             <Icon className="w-5 h-5" />
-            <span className="text-[10px] font-semibold tracking-widest">{t(labelKey)}</span>
+            <span className="font-mono text-[9px] font-semibold tracking-[0.08em] uppercase">{t(labelKey)}</span>
           </a>
         ))}
       </div>

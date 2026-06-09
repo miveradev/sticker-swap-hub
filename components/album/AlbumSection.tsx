@@ -23,13 +23,10 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
 
   async function persist(stickerId: string, code: string, newQty: number) {
     const prevQty = quantities[code] ?? 0
-
-    onQuantityChange(code, newQty) // optimistic — instant UI update
-
+    onQuantityChange(code, newQty)
     const result = await updateStickerQuantity(stickerId, newQty)
-
     if ("error" in result) {
-      onQuantityChange(code, prevQty) // rollback
+      onQuantityChange(code, prevQty)
       toast.error(t("errorUpdate"))
     }
   }
@@ -50,12 +47,9 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
     if (bulking) return
     const missing = section.stickers.filter((s) => (quantities[s.code] ?? 0) === 0)
     if (missing.length === 0) return
-
     setBulking(true)
     missing.forEach((s) => onQuantityChange(s.code, 1))
-
     const result = await bulkAddSectionStickers(missing.map((s) => s.id))
-
     if ("error" in result) {
       missing.forEach((s) => onQuantityChange(s.code, 0))
       toast.error(t("errorUpdate"))
@@ -67,13 +61,10 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
     if (bulking) return
     const owned = section.stickers.filter((s) => (quantities[s.code] ?? 0) > 0)
     if (owned.length === 0) return
-
     setBulking(true)
     const prev = Object.fromEntries(owned.map((s) => [s.code, quantities[s.code]]))
     owned.forEach((s) => onQuantityChange(s.code, 0))
-
     const result = await bulkResetSectionStickers(owned.map((s) => s.id))
-
     if ("error" in result) {
       owned.forEach((s) => onQuantityChange(s.code, prev[s.code] ?? 0))
       toast.error(t("errorUpdate"))
@@ -87,16 +78,16 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
 
   return (
     <section className="mb-16">
-      <div className="flex justify-between items-center mb-4 border-b border-border pb-1">
-        <h2 className="text-lg font-semibold text-foreground flex items-center gap-2">
+      <div className="flex justify-between items-center mb-4 border-b border-border pb-2">
+        <h2 className="font-display text-base font-bold text-foreground flex items-center gap-2">
           {section.countryCode ? (
             <ReactCountryFlag
               countryCode={section.countryCode}
               svg
-              style={{ width: "1.4em", height: "1.4em" }}
+              style={{ width: "1.3em", height: "1.3em" }}
             />
           ) : (
-            <img src="/wc2026_white.svg" alt="" aria-hidden="true" style={{ width: "1.4em", height: "1.4em" }} className="shrink-0" />
+            <img src="/wc2026_white.svg" alt="" aria-hidden="true" style={{ width: "1.3em", height: "1.3em" }} className="shrink-0 opacity-75" />
           )}
           {section.name}
         </h2>
@@ -106,10 +97,10 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
               type="button"
               onClick={allOwned ? handleBulkReset : handleBulkAdd}
               disabled={bulking}
-              className={`flex items-center justify-center w-6 h-6 rounded-full border bg-card transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer ${
+              className={`flex items-center justify-center w-6 h-6 rounded border transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer ${
                 allOwned
                   ? "border-destructive/50 text-destructive hover:bg-destructive/10"
-                  : "border-border text-muted-foreground hover:text-foreground hover:bg-muted"
+                  : "border-border text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/5"
               }`}
             >
               {bulking
@@ -120,7 +111,11 @@ export function AlbumSection({ section, quantities, onQuantityChange, isGuest = 
               }
             </button>
           )}
-          <span className={`text-xs bg-card px-3 py-1 rounded-full tabular-nums select-none border ${allOwned ? "text-green-600 border-green-600/50" : "text-muted-foreground border-border"}`}>
+          <span className={`font-mono text-xs bg-card px-2.5 py-0.5 rounded tabular-nums select-none border ${
+            allOwned
+              ? "text-primary border-primary/40 bg-primary/10"
+              : "text-muted-foreground border-border"
+          }`}>
             {ownedCount} / {total}
           </span>
         </div>

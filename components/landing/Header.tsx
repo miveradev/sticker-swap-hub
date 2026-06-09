@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useTranslations, useLocale } from "next-intl"
-import { LayoutGrid } from "lucide-react"
+import { ArrowLeftRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher"
 import { UserMenu } from "@/components/profile/UserMenu"
@@ -40,29 +40,20 @@ export function Header({ initialViewer = null }: HeaderProps) {
   }
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background border-b border-border h-16 flex items-center">
+    <header className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border h-16 flex items-center">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-8 w-full">
-        <a href={`/${locale}`} className="flex items-center gap-2">
-          <LayoutGrid className="w-6 h-6 text-foreground" />
-          <span className="text-lg font-bold tracking-tight text-foreground">{t("brand")}</span>
+        <a href={`/${locale}`} className="flex items-center gap-1.5 transition-all hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(163,230,53,0.6)]">
+          <ArrowLeftRight className="w-7 h-7 text-primary shrink-0 -rotate-12" strokeWidth={2.5} />
+          <span className="font-display text-sm sm:text-lg font-black text-primary italic leading-none">{t("brand")}</span>
         </a>
         <nav className="hidden md:flex gap-6 items-center">
-          <a
-            href={`/${locale}/album`}
-            className="text-sm text-muted-foreground font-medium hover:text-foreground transition-colors duration-200"
-          >
+          <a href={`/${locale}/album`} className="font-mono text-xs tracking-[0.08em] font-semibold text-muted-foreground hover:text-foreground transition-colors duration-200 uppercase">
             {t("nav.album")}
           </a>
-          <a
-            href="#features"
-            className="text-sm text-muted-foreground font-medium hover:text-foreground transition-colors duration-200"
-          >
+          <a href="#features" className="font-mono text-xs tracking-[0.08em] font-semibold text-muted-foreground hover:text-foreground transition-colors duration-200 uppercase">
             {t("nav.features")}
           </a>
-          <a
-            href="#comparison"
-            className="text-sm text-muted-foreground font-medium hover:text-foreground transition-colors duration-200"
-          >
+          <a href="#comparison" className="font-mono text-xs tracking-[0.08em] font-semibold text-muted-foreground hover:text-foreground transition-colors duration-200 uppercase">
             {t("nav.compare")}
           </a>
         </nav>

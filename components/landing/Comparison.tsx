@@ -12,13 +12,13 @@ function StickerChip({
 }) {
   if (variant === "duplicate") {
     return (
-      <span className="bg-muted text-foreground text-xs font-medium tracking-wide px-2 py-1 rounded border border-border">
+      <span className="bg-primary/15 text-primary font-mono text-xs font-semibold tracking-wide px-2 py-0.5 rounded border border-primary/30">
         {code}
       </span>
     )
   }
   return (
-    <span className="bg-muted text-muted-foreground text-xs font-medium tracking-wide px-2 py-1 rounded">
+    <span className="bg-muted text-muted-foreground font-mono text-xs font-semibold tracking-wide px-2 py-0.5 rounded border border-border/50">
       {code}
     </span>
   )
@@ -41,28 +41,28 @@ function CollectorColumn({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-2 border-b border-muted pb-2">
-        <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-xs font-medium text-foreground">
+      <div className="flex items-center gap-3 border-b border-border pb-3">
+        <div className="w-8 h-8 rounded bg-card border border-primary/30 flex items-center justify-center font-mono text-xs font-bold text-primary">
           {initial}
         </div>
-        <span className="text-lg font-medium tracking-tight text-foreground">{name}</span>
+        <span className="font-display text-base font-bold tracking-tight text-foreground">{name}</span>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-2">
-          <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
+          <span className="font-mono text-[10px] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
             {missingLabel}
           </span>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1.5">
             {missing.map((code) => (
               <StickerChip key={code} code={code} variant="missing" />
             ))}
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
+          <span className="font-mono text-[10px] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
             {duplicatesLabel}
           </span>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1.5">
             {duplicates.map((code) => (
               <StickerChip key={code} code={code} variant="duplicate" />
             ))}
@@ -85,13 +85,13 @@ function TradeRow({
   rightCode: string
 }) {
   return (
-    <div className="bg-background border border-muted rounded p-4 flex items-center justify-between gap-4">
+    <div className="bg-primary/5 border border-primary/15 rounded p-4 flex items-center justify-between gap-4">
       <span className="text-sm text-muted-foreground">
-        {leftLabel} <span className="text-foreground font-medium">{leftCode}</span>
+        {leftLabel} <span className="font-mono font-semibold text-foreground">{leftCode}</span>
       </span>
-      <ArrowLeftRight className="w-4 h-4 text-muted-foreground shrink-0" />
+      <ArrowLeftRight className="w-4 h-4 text-primary shrink-0" />
       <span className="text-sm text-muted-foreground">
-        {rightLabel} <span className="text-foreground font-medium">{rightCode}</span>
+        {rightLabel} <span className="font-mono font-semibold text-foreground">{rightCode}</span>
       </span>
     </div>
   )
@@ -101,7 +101,7 @@ export function Comparison() {
   const t = useTranslations("landing.comparison")
 
   return (
-    <div id="comparison" className="w-full max-w-5xl mt-12 bg-card border border-border rounded-lg p-8 flex flex-col gap-8">
+    <div id="comparison" className="w-full max-w-5xl bg-card border border-border rounded p-8 flex flex-col gap-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <CollectorColumn
           initial="M"
@@ -120,11 +120,11 @@ export function Comparison() {
           duplicatesLabel={t("duplicates")}
         />
       </div>
-      <div className="border-t border-muted pt-8 flex flex-col gap-4">
-        <span className="text-lg font-medium tracking-tight text-foreground">
+      <div className="border-t border-border pt-8 flex flex-col gap-4">
+        <span className="font-display text-lg font-bold tracking-tight text-foreground">
           {t("possibleTrades", { count: 4 })}
         </span>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <TradeRow
             leftLabel={t("gives", { name: "Mike" })}
             leftCode="GER 12"

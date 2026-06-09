@@ -18,7 +18,7 @@
       "cta": "Iniciar sesión"
     },
     "hero": {
-      "title": "Compara tus colecciones del Mundial FIFA 2026 en segundos.",
+      "title": "Deja de comparar listas de figuritas manualmente.",
       "subtitle": "Lleva el control de las figuritas que tienes, marca las que te faltan y compara al instante tu colección con amigos para encontrar posibles intercambios.",
       "ctaPrimary": "Empezar a Registrar",
       "ctaSecondary": "Ver Álbum"
@@ -32,19 +32,18 @@
       "gets": "{name} recibe"
     },
     "features": {
-      "title": "Deja de comparar listas manualmente.",
-      "subtitle": "Olvídate de las fotos de WhatsApp y los papelitos. Sticker Swap Hub ofrece una interfaz limpia y precisa para gestionar tu inventario y encontrar coincidencias exactas al instante.",
+      "title": "Todo lo que necesitas en un solo lugar.",
       "track": {
         "title": "Registra tu colección",
-        "description": "Marca tus figuritas como obtenidas, faltantes o repetidas con atajos de teclado y acciones en bloque."
+        "description": "Registra fácilmente tus figuritas, marca las repetidas y consulta tu progreso de un vistazo."
       },
       "share": {
-        "title": "Comparte tu progreso",
-        "description": "Genera un enlace público único para mostrarle a tus amigos exactamente lo que necesitas, sin que ellos necesiten una cuenta."
+        "title": "Comparte tu álbum",
+        "description": "Genera un enlace público único para compartir tus faltantes y repetidas con cualquier persona."
       },
       "compare": {
         "title": "Compara al instante",
-        "description": "Pega el enlace de un amigo y ve exactamente qué figuritas pueden intercambiarse en un formato visual y ordenado."
+        "description": "Nuestro motor resalta automáticamente los intercambios mutuos entre tú y tus amigos."
       }
     },
     "stats": {
@@ -54,10 +53,52 @@
       "teams": "Selecciones",
       "sections": "Secciones Especiales"
     },
+    "comparisonShowcase": {
+      "title": "Encuentra oportunidades de intercambio en segundos.",
+      "subtitle": "Nuestro motor de comparación hace el trabajo duro. Comparte tu enlace y te mostraremos exactamente qué figuritas puedes intercambiar para completar vuestros álbumes."
+    },
+    "painPoints": {
+      "title": "Intercambiar figuritas no debería ser tan difícil.",
+      "whatsapp": {
+        "title": "Ahogado entre mensajes",
+        "description": "Los intercambios se pierden entre interminables conversaciones de WhatsApp y resulta difícil recordar quién necesita qué."
+      },
+      "photos": {
+        "title": "Comparando cromos manualmente",
+        "description": "Alternar entre las páginas del álbum y fotos borrosas hace perder tiempo y provoca errores."
+      },
+      "memory": {
+        "title": "Perdiendo oportunidades de intercambio",
+        "description": "Posibles intercambios quedan olvidados y acuerdos valiosos terminan pasando desapercibidos."
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "step1": {
+        "title": "Crea tu cuenta",
+        "description": "Regístrate en segundos con Google. Es completamente gratis."
+      },
+      "step2": {
+        "title": "Marca tus figuritas",
+        "description": "Navega rápidamente por el álbum digital para marcar las que tienes y tus repetidas."
+      },
+      "step3": {
+        "title": "Comparte tu enlace",
+        "description": "Envía tu enlace de perfil único a amigos, familia o grupos de intercambio."
+      },
+      "step4": {
+        "title": "Compara y encuentra coincidencias",
+        "description": "Cuando alguien abra tu enlace, el motor muestra al instante lo que pueden intercambiar."
+      },
+      "step5": {
+        "title": "¡Intercambia!",
+        "description": "Queda o envía tus figuritas con total seguridad, sabiendo exactamente qué cambiar."
+      }
+    },
     "cta": {
-      "title": "Diseñado para coleccionistas.",
-      "subtitle": "Sticker Swap Hub se enfoca en una sola cosa: hacer que la gestión de la colección y la preparación de intercambios sea lo más simple posible.",
-      "button": "Empezar a Registrar mi Colección"
+      "title": "¿Listo para completar tu álbum más rápido?",
+      "subtitle": "Únete a miles de coleccionistas que han dejado atrás las hojas de cálculo y los grupos de chat caóticos.",
+      "button": "Iniciar sesión con Google"
     },
     "footer": {
       "brand": "Sticker Swap Hub",
@@ -70,6 +111,76 @@
       },
       "copyright": "© 2026 Sticker Swap Hub.",
       "tagline": "Registra. Compara. Intercambia."
+    }
+  },
+  "privacyPage": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 9 de junio de 2026",
+    "intro": "Sticker Swap Hub (\"nosotros\" o \"nuestro\") está comprometido con la protección de tu privacidad. Esta política explica qué datos recopilamos, cómo los usamos y cuáles son tus derechos.",
+    "sections": {
+      "dataCollected": {
+        "title": "Datos que recopilamos",
+        "body": "Cuando inicias sesión con Google, recibimos tu nombre, dirección de correo electrónico y foto de perfil de tu cuenta de Google. También almacenamos los datos de tu colección de cromos (qué cromos tienes y cuántos repetidos)."
+      },
+      "howWeUse": {
+        "title": "Cómo usamos tus datos",
+        "body": "Tus datos se usan exclusivamente para prestar el servicio: almacenar tu colección, generar tu enlace de perfil público y permitir la comparación de colecciones con otros usuarios. No vendemos tus datos a terceros."
+      },
+      "publicProfile": {
+        "title": "Perfil público",
+        "body": "Tu colección es accesible mediante un enlace público con tu nombre de usuario. Cualquier persona con el enlace puede ver tus cromos para comparar colecciones. Tu dirección de correo electrónico nunca es visible públicamente."
+      },
+      "cookies": {
+        "title": "Cookies y sesiones",
+        "body": "Usamos cookies de sesión para mantenerte conectado. No se utilizan cookies de publicidad de terceros."
+      },
+      "dataRetention": {
+        "title": "Retención de datos",
+        "body": "Puedes eliminar tu cuenta en cualquier momento. Al hacerlo, todos tus datos personales e información de colección se eliminan permanentemente de nuestros sistemas."
+      },
+      "contact": {
+        "title": "Contacto",
+        "body": "Para cualquier consulta relacionada con la privacidad, escríbenos a privacy@stickersawphub.com."
+      }
+    }
+  },
+  "termsPage": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: 9 de junio de 2026",
+    "intro": "Al usar Sticker Swap Hub, aceptas estos Términos de Servicio. Por favor, léelos con atención.",
+    "sections": {
+      "service": {
+        "title": "El servicio",
+        "body": "Sticker Swap Hub ofrece una herramienta digital para registrar colecciones de cromos del álbum Panini FIFA World Cup 2026 y facilitar intercambios entre usuarios. El servicio se presta de forma gratuita."
+      },
+      "account": {
+        "title": "Tu cuenta",
+        "body": "Debes iniciar sesión con una cuenta de Google válida. Eres responsable de toda la actividad bajo tu cuenta. El nombre de usuario que elijas no debe suplantar la identidad de otras personas ni contener lenguaje ofensivo."
+      },
+      "userContent": {
+        "title": "Contenido del usuario",
+        "body": "Los datos de colección que introduces son tuyos. Al hacer tu perfil público, concedes a otros usuarios acceso de lectura a tu lista de cromos con fines de comparación."
+      },
+      "conduct": {
+        "title": "Uso aceptable",
+        "body": "Aceptas no abusar, interrumpir ni intentar acceder sin autorización al servicio. Se prohíbe el scraping automatizado o la extracción masiva de datos."
+      },
+      "disclaimer": {
+        "title": "Aviso legal",
+        "body": "Sticker Swap Hub es un proyecto independiente de fans y no está afiliado con la FIFA, Panini ni ningún socio oficial del Mundial. Todos los nombres de equipos, jugadores y marcas del torneo pertenecen a sus respectivos propietarios."
+      },
+      "liability": {
+        "title": "Limitación de responsabilidad",
+        "body": "El servicio se presta \"tal cual\" sin garantía de ningún tipo. No somos responsables de pérdida de datos, intercambios fallidos ni daños indirectos derivados del uso del servicio."
+      },
+      "changes": {
+        "title": "Cambios en estos términos",
+        "body": "Podemos actualizar estos términos de vez en cuando. El uso continuado del servicio tras los cambios implica la aceptación de los nuevos términos."
+      },
+      "contact": {
+        "title": "Contacto",
+        "body": "Para preguntas sobre estos términos, escríbenos a legal@stickersawphub.com."
+      }
     }
   },
   "album": {

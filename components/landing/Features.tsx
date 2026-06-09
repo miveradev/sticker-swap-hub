@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { ListChecks, Share2, ArrowLeftRight } from "lucide-react"
+import { BookMarked, Share2, Handshake } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
 function FeatureCard({
@@ -31,14 +31,12 @@ export function Features() {
 
   return (
     <section id="features" className="max-w-7xl mx-auto px-8 flex flex-col gap-10 w-full">
-      <div className="flex flex-col gap-3 max-w-2xl">
-        <span className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-primary">{t("title")}</span>
-        <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground">{t("title")}</h2>
-        <p className="text-base text-muted-foreground leading-relaxed">{t("subtitle")}</p>
+      <div className="text-center max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">{t("title")}</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <FeatureCard
-          icon={ListChecks}
+          icon={BookMarked}
           title={t("track.title")}
           description={t("track.description")}
         />
@@ -48,7 +46,7 @@ export function Features() {
           description={t("share.description")}
         />
         <FeatureCard
-          icon={ArrowLeftRight}
+          icon={Handshake}
           title={t("compare.title")}
           description={t("compare.description")}
         />

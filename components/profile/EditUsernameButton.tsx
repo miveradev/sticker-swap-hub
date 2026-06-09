@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
+import { useTranslations } from "next-intl"
 import { Pencil, CheckCircle, XCircle, Loader2, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,6 +18,7 @@ interface EditUsernameButtonProps {
 }
 
 export function EditUsernameButton({ currentUsername, locale }: EditUsernameButtonProps) {
+  const t = useTranslations("profile.editUsername")
   const [open, setOpen] = useState(false)
   const [username, setUsername] = useState(currentUsername)
   const [status, setStatus] = useState<Status>("idle")
@@ -86,9 +88,9 @@ export function EditUsernameButton({ currentUsername, locale }: EditUsernameButt
       }
       const data = (await res.json()) as { error?: string }
       if (res.status === 409) setStatus("taken")
-      else setApiError(data.error ?? "Something went wrong")
+      else setApiError(data.error ?? t("error.generic"))
     } catch {
-      setApiError("Something went wrong. Please try again.")
+      setApiError(t("error.retry"))
     } finally {
       setSubmitting(false)
     }
@@ -96,14 +98,14 @@ export function EditUsernameButton({ currentUsername, locale }: EditUsernameButt
 
   const hint = (() => {
     if (apiError) return { text: apiError, color: "text-destructive" }
-    if (status === "available") return { text: "Available", color: "text-green-500" }
-    if (status === "taken") return { text: "Already taken", color: "text-destructive" }
+    if (status === "available") return { text: t("hint.available"), color: "text-green-500" }
+    if (status === "taken") return { text: t("hint.taken"), color: "text-destructive" }
     if (status === "invalid" && username.length > 0)
       return {
-        text: username.length < USERNAME_MIN ? `At least ${USERNAME_MIN} characters` : "Letters a–z, digits, and _ only",
+        text: username.length < USERNAME_MIN ? t("hint.tooShort", { min: USERNAME_MIN }) : t("hint.invalidChars"),
         color: "text-muted-foreground",
       }
-    return { text: `${USERNAME_MIN}–${USERNAME_MAX} characters · a–z · 0–9 · _`, color: "text-muted-foreground" }
+    return { text: t("hint.format", { min: USERNAME_MIN, max: USERNAME_MAX }), color: "text-muted-foreground" }
   })()
 
   return (
@@ -123,7 +125,7 @@ export function EditUsernameButton({ currentUsername, locale }: EditUsernameButt
         >
           <div className="bg-background border border-border rounded-xl shadow-xl w-full max-w-sm p-6 flex flex-col gap-5">
             <div className="flex items-center justify-between">
-              <h2 className="text-base font-semibold text-foreground">Edit username</h2>
+              <h2 className="text-base font-semibold text-foreground">{t("title")}</h2>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -140,7 +142,7 @@ export function EditUsernameButton({ currentUsername, locale }: EditUsernameButt
                     ref={inputRef}
                     value={username}
                     onChange={handleChange}
-                    placeholder="yourname"
+                    placeholder={t("placeholder")}
                     maxLength={USERNAME_MAX}
                     autoComplete="off"
                     className="pr-9"
@@ -165,7 +167,7 @@ export function EditUsernameButton({ currentUsername, locale }: EditUsernameButt
                   className="flex-1"
                   onClick={() => setOpen(false)}
                 >
-                  Cancel
+                  {t("cancel")}
                 </Button>
                 <Button
                   type="submit"
@@ -175,10 +177,10 @@ export function EditUsernameButton({ currentUsername, locale }: EditUsernameButt
                   {submitting ? (
                     <span className="flex items-center gap-2">
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      Saving…
+                      {t("saving")}
                     </span>
                   ) : (
-                    "Save"
+                    t("save")
                   )}
                 </Button>
               </div>

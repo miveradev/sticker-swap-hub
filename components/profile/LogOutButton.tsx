@@ -18,7 +18,7 @@ export function LogOutButton() {
     <Button
       variant="ghost"
       onClick={handleLogout}
-      className="w-full rounded-lg py-3 px-4 flex items-center justify-center gap-2 h-auto text-destructive hover:text-destructive hover:bg-destructive/10"
+      className="w-full rounded py-3 px-4 flex items-center justify-center gap-2 h-auto text-destructive hover:text-destructive hover:bg-destructive/10"
     >
       <LogOut className="w-4 h-4 shrink-0" />
       <span className="text-xs font-medium tracking-wide">{t("logOut")}</span>

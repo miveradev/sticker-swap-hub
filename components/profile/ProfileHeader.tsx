@@ -54,7 +54,7 @@ export async function ProfileHeader({ username, name, image, country, showAlbum 
               </>
             ) : (
               <span className="font-mono text-xs font-semibold tracking-wide text-muted-foreground">
-                {isOwner ? "Set your country" : "No country"}
+                {isOwner ? t("header.setYourCountry") : t("header.noCountry")}
               </span>
             )}
           </div>

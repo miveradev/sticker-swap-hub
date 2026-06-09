@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from "react"
 import { useRouter } from "next/navigation"
+import { useTranslations } from "next-intl"
 import { Pencil, X, Search, Check, Loader2 } from "lucide-react"
 import ReactCountryFlag from "react-country-flag"
 import { getLocalizedCountries } from "@/lib/countries"
@@ -12,6 +13,7 @@ interface EditCountryButtonProps {
 }
 
 export function EditCountryButton({ currentCountry, locale }: EditCountryButtonProps) {
+  const t = useTranslations("profile.editCountry")
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState("")
   const [saving, setSaving] = useState(false)
@@ -80,7 +82,7 @@ export function EditCountryButton({ currentCountry, locale }: EditCountryButtonP
           <div className="bg-background border border-border rounded-xl shadow-xl w-full max-w-sm flex flex-col max-h-[70vh]">
             {/* Header */}
             <div className="flex items-center justify-between px-4 pt-4 pb-3 shrink-0">
-              <h2 className="text-base font-semibold text-foreground">Select country</h2>
+              <h2 className="text-base font-semibold text-foreground">{t("title")}</h2>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -98,7 +100,7 @@ export function EditCountryButton({ currentCountry, locale }: EditCountryButtonP
                   ref={searchRef}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search…"
+                  placeholder={t("searchPlaceholder")}
                   className="w-full pl-9 pr-3 py-2 text-sm bg-muted border border-border rounded-lg outline-none focus:ring-2 focus:ring-ring placeholder:text-muted-foreground"
                 />
               </div>
@@ -107,7 +109,7 @@ export function EditCountryButton({ currentCountry, locale }: EditCountryButtonP
             {/* List */}
             <ul className="overflow-y-auto flex-1 px-2 pb-2">
               {filtered.length === 0 ? (
-                <li className="text-sm text-muted-foreground text-center py-6">No results</li>
+                <li className="text-sm text-muted-foreground text-center py-6">{t("noResults")}</li>
               ) : (
                 filtered.map((country) => {
                   const isSelected = country.code === currentCountry

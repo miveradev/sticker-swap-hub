@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { useTranslations } from "next-intl"
 import { CheckCircle, XCircle, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,6 +13,7 @@ type Status = "idle" | "checking" | "available" | "taken" | "invalid"
 const VALID_CHAR_RE = /^[a-z0-9_]*$/
 
 export function UsernameForm({ locale }: { locale: string }) {
+  const t = useTranslations("onboarding.username")
   const [username, setUsername] = useState("")
   const [status, setStatus] = useState<Status>("idle")
   const [apiError, setApiError] = useState<string | null>(null)
@@ -74,10 +76,10 @@ export function UsernameForm({ locale }: { locale: string }) {
       if (res.status === 409) {
         setStatus("taken")
       } else {
-        setApiError(data.error ?? "Something went wrong")
+        setApiError(data.error ?? t("error.generic"))
       }
     } catch {
-      setApiError("Something went wrong. Please try again.")
+      setApiError(t("error.retry"))
     } finally {
       setSubmitting(false)
     }
@@ -85,18 +87,18 @@ export function UsernameForm({ locale }: { locale: string }) {
 
   const hint = (() => {
     if (apiError) return { text: apiError, color: "text-destructive" }
-    if (status === "available") return { text: "Available", color: "text-primary" }
-    if (status === "taken") return { text: "Already taken", color: "text-destructive" }
+    if (status === "available") return { text: t("hint.available"), color: "text-primary" }
+    if (status === "taken") return { text: t("hint.taken"), color: "text-destructive" }
     if (status === "invalid" && username.length > 0)
       return {
         text:
           username.length < USERNAME_MIN
-            ? `At least ${USERNAME_MIN} characters`
-            : "Letters a–z, digits, and _ only",
+            ? t("hint.tooShort", { min: USERNAME_MIN })
+            : t("hint.invalidChars"),
         color: "text-muted-foreground",
       }
     return {
-      text: `${USERNAME_MIN}–${USERNAME_MAX} characters · a–z · 0–9 · _`,
+      text: t("hint.format", { min: USERNAME_MIN, max: USERNAME_MAX }),
       color: "text-muted-foreground",
     }
   })()
@@ -108,7 +110,7 @@ export function UsernameForm({ locale }: { locale: string }) {
           <Input
             value={username}
             onChange={handleChange}
-            placeholder="yourname"
+            placeholder={t("placeholder")}
             maxLength={USERNAME_MAX}
             autoComplete="off"
             autoFocus
@@ -136,10 +138,10 @@ export function UsernameForm({ locale }: { locale: string }) {
         {submitting ? (
           <span className="flex items-center gap-2">
             <Loader2 className="w-4 h-4 animate-spin" />
-            Saving…
+            {t("saving")}
           </span>
         ) : (
-          "Continue"
+          t("continue")
         )}
       </Button>
     </form>

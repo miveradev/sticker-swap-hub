@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { headers } from "next/headers"
 import { setRequestLocale } from "next-intl/server"
 import { Header } from "@/components/landing/Header"
@@ -9,6 +10,58 @@ import { HowItWorks } from "@/components/landing/HowItWorks"
 import { Cta } from "@/components/landing/Cta"
 import { Footer } from "@/components/landing/Footer"
 import { auth } from "@/lib/auth"
+
+const META: Record<string, { title: string; description: string; ogTitle: string; ogDescription: string; twitterDescription: string }> = {
+  en: {
+    title: "Trade stickers instantly | Find & complete your album faster",
+    description:
+      "Stop losing time in chats and photos. Instantly find who has the stickers you need and discover the best trades to complete your album faster.",
+    ogTitle: "Trade stickers instantly | Complete your album faster",
+    ogDescription:
+      "Stop wasting time in chats and photos. Instantly find the stickers you need and discover the best trades.",
+    twitterDescription:
+      "Find who has the stickers you need in seconds and unlock better trades instantly.",
+  },
+  es: {
+    title: "Intercambia figuritas al instante | Completa tu álbum más rápido",
+    description:
+      "Deja de perder tiempo en chats y fotos. Encuentra al instante quién tiene las figuritas que necesitas y descubre los mejores intercambios para completar tu álbum.",
+    ogTitle: "Intercambia figuritas al instante | Completa tu álbum más rápido",
+    ogDescription:
+      "Deja de perder tiempo en chats y fotos. Encuentra las figuritas que necesitas y descubre los mejores intercambios.",
+    twitterDescription:
+      "Descubre en segundos quién tiene las figuritas que necesitas y desbloquea mejores intercambios al instante.",
+  },
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const m = META[locale] ?? META.en
+
+  return {
+    title: m.title,
+    description: m.description,
+    openGraph: {
+      title: m.ogTitle,
+      description: m.ogDescription,
+      url: `/${locale}`,
+    },
+    twitter: {
+      description: m.twitterDescription,
+    },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        es: "/es",
+      },
+    },
+  }
+}
 
 export default async function HomePage({
   params,

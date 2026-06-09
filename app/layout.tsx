@@ -20,9 +20,48 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 })
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://stickersawphub.com"
+
+const OG_IMAGE = {
+  url: "/sticker_swap_hub_OG.webp",
+  width: 1200,
+  height: 630,
+  alt: "Sticker Swap Hub — Trade FIFA World Cup 2026 stickers instantly",
+}
+
 export const metadata: Metadata = {
-  title: "Sticker Swap Hub",
-  description: "Trade and collect FIFA World Cup 2026 stickers",
+  metadataBase: new URL(APP_URL),
+  title: {
+    default: "Trade stickers instantly | Find & complete your album faster",
+    template: "%s | Sticker Swap Hub",
+  },
+  description:
+    "Stop losing time in chats and photos. Instantly find who has the stickers you need and discover the best trades to complete your album faster.",
+  openGraph: {
+    type: "website",
+    siteName: "Sticker Swap Hub",
+    title: "Trade stickers instantly | Complete your album faster",
+    description:
+      "Stop wasting time in chats and photos. Instantly find the stickers you need and discover the best trades.",
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trade stickers instantly | Complete your album faster",
+    description:
+      "Find who has the stickers you need in seconds and unlock better trades instantly.",
+    images: [OG_IMAGE.url],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default async function RootLayout({

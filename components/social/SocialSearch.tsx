@@ -116,7 +116,7 @@ export function SocialSearch() {
                   highlighted === i ? "bg-muted" : "hover:bg-muted",
                 ].join(" ")}
               >
-                <Avatar className="w-9 h-9 border border-border shrink-0">
+                <Avatar className="w-9 h-9 border-2 border-primary shrink-0">
                   {user.image && <AvatarImage src={user.image} alt={user.username ?? user.name} />}
                   <AvatarFallback className="text-xs font-semibold">{initials(user.name)}</AvatarFallback>
                 </Avatar>

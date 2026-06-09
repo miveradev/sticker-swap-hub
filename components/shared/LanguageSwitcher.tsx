@@ -38,7 +38,7 @@ export function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label="Switch language"
-        className="inline-flex items-center gap-1.5 rounded-md px-2.5 h-8 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+        className="inline-flex items-center gap-1.5 rounded-md px-2.5 h-8 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring cursor-pointer"
       >
         <ReactCountryFlag
           countryCode={current.countryCode}

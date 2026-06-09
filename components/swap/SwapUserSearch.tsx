@@ -104,7 +104,7 @@ export function SwapUserSearch({ compareWithUser, compareWithLabel, locale }: Sw
         className="flex items-center justify-between gap-4 w-full md:w-auto bg-background border border-border hover:border-foreground/30 hover:bg-card transition-all rounded-lg p-3 text-left cursor-pointer"
       >
         <div className="flex items-center gap-4">
-          <Avatar className="w-10 h-10 border border-border shrink-0">
+          <Avatar className="w-10 h-10 border-2 border-primary shrink-0">
             {compareWithUser?.image && (
               <AvatarImage src={compareWithUser.image} alt={compareWithUser.username ?? compareWithUser.name} />
             )}
@@ -176,7 +176,7 @@ export function SwapUserSearch({ compareWithUser, compareWithLabel, locale }: Sw
                       highlighted === i ? "bg-muted" : "hover:bg-muted",
                     ].join(" ")}
                   >
-                    <Avatar className="w-8 h-8 border border-border shrink-0">
+                    <Avatar className="w-8 h-8 border-2 border-primary shrink-0">
                       {user.image && <AvatarImage src={user.image} alt={user.username ?? user.name} />}
                       <AvatarFallback className="text-xs font-semibold">{initials(user.name)}</AvatarFallback>
                     </Avatar>

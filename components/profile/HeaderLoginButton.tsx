@@ -12,7 +12,7 @@ export function HeaderLoginButton() {
   }
 
   return (
-    <Button size="sm" className="bg-white hover:bg-white/80 border-0" onClick={handleSignIn}>
+    <Button size="sm" onClick={handleSignIn}>
       Log In
     </Button>
   )

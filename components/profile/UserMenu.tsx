@@ -32,7 +32,7 @@ export function UserMenu({ name, email, image, initials, username }: UserMenuPro
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="rounded-full cursor-pointer transition-opacity hover:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
-        <Avatar className="w-8 h-8 border border-border">
+        <Avatar className="w-8 h-8 border-2 border-primary">
           {image && <AvatarImage src={image} alt={name} />}
           <AvatarFallback className="text-[10px] font-semibold">{initials}</AvatarFallback>
         </Avatar>
@@ -42,7 +42,7 @@ export function UserMenu({ name, email, image, initials, username }: UserMenuPro
           href={username ? `/${locale}/u/${username}` : undefined}
           className="flex items-center gap-3 px-2 py-2 w-full rounded-md text-left transition-colors hover:bg-accent cursor-pointer"
         >
-          <Avatar className="w-8 h-8 shrink-0 border border-border">
+          <Avatar className="w-8 h-8 shrink-0 border-2 border-primary">
             {image && <AvatarImage src={image} alt={name} />}
             <AvatarFallback className="text-[10px] font-semibold">{initials}</AvatarFallback>
           </Avatar>

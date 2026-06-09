@@ -46,7 +46,7 @@ export function Header({ initialViewer = null }: HeaderProps) {
           <ArrowLeftRight className="w-7 h-7 text-primary shrink-0 -rotate-12" strokeWidth={2.5} />
           <span className="font-display text-sm sm:text-lg font-black text-primary italic leading-none">{t("brand")}</span>
         </a>
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex gap-10 items-center">
           <a href={`/${locale}/album`} className="font-mono text-xs tracking-[0.08em] font-semibold text-muted-foreground hover:text-foreground transition-colors duration-200 uppercase">
             {t("nav.album")}
           </a>

@@ -13,24 +13,24 @@ import { auth } from "@/lib/auth"
 
 const META: Record<string, { title: string; description: string; ogTitle: string; ogDescription: string; twitterDescription: string }> = {
   en: {
-    title: "Trade stickers instantly | Find & complete your album faster",
+    title: "Sticker Swap Hub | Find sticker trades to complete your album faster",
     description:
       "Stop losing time in chats and photos. Instantly find who has the stickers you need and discover the best trades to complete your album faster.",
-    ogTitle: "Trade stickers instantly | Complete your album faster",
+    ogTitle: "Sticker Swap Hub | Find sticker trades faster",
     ogDescription:
-      "Stop wasting time in chats and photos. Instantly find the stickers you need and discover the best trades.",
+      "Stop wasting time in chats and photos. Instantly find the stickers you need and discover the best trade opportunities.",
     twitterDescription:
-      "Find who has the stickers you need in seconds and unlock better trades instantly.",
+      "Find who has the stickers you need in seconds and discover better trades instantly.",
   },
   es: {
-    title: "Intercambia figuritas al instante | Completa tu álbum más rápido",
+    title: "Sticker Swap Hub | Encuentra intercambios de cromos más rápido",
     description:
-      "Deja de perder tiempo en chats y fotos. Encuentra al instante quién tiene las figuritas que necesitas y descubre los mejores intercambios para completar tu álbum.",
-    ogTitle: "Intercambia figuritas al instante | Completa tu álbum más rápido",
+      "Deja de perder tiempo en chats y fotos. Encuentra al instante quién tiene los cromos que necesitas y descubre los mejores intercambios para completar tu álbum.",
+    ogTitle: "Sticker Swap Hub | Encuentra intercambios de cromos",
     ogDescription:
-      "Deja de perder tiempo en chats y fotos. Encuentra las figuritas que necesitas y descubre los mejores intercambios.",
+      "Deja de perder tiempo en chats y fotos. Encuentra los cromos que necesitas y descubre los mejores intercambios.",
     twitterDescription:
-      "Descubre en segundos quién tiene las figuritas que necesitas y desbloquea mejores intercambios al instante.",
+      "Descubre en segundos quién tiene los cromos que necesitas y encuentra mejores intercambios al instante.",
   },
 }
 

@@ -26,30 +26,30 @@ const OG_IMAGE = {
   url: "/sticker_swap_hub_OG.webp",
   width: 1200,
   height: 630,
-  alt: "Sticker Swap Hub — Trade FIFA World Cup 2026 stickers instantly",
+  alt: "Sticker Swap Hub — Find sticker trades for FIFA World Cup 2026",
 }
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
   title: {
-    default: "Trade stickers instantly | Find & complete your album faster",
-    template: "%s | Sticker Swap Hub",
+    default: "Sticker Swap Hub | Find sticker trades to complete your album faster",
+    template: "Sticker Swap Hub | %s",
   },
   description:
     "Stop losing time in chats and photos. Instantly find who has the stickers you need and discover the best trades to complete your album faster.",
   openGraph: {
     type: "website",
     siteName: "Sticker Swap Hub",
-    title: "Trade stickers instantly | Complete your album faster",
+    title: "Sticker Swap Hub | Find sticker trades faster",
     description:
-      "Stop wasting time in chats and photos. Instantly find the stickers you need and discover the best trades.",
+      "Stop wasting time in chats and photos. Instantly find the stickers you need and discover the best trade opportunities.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trade stickers instantly | Complete your album faster",
+    title: "Sticker Swap Hub | Find sticker trades faster",
     description:
-      "Find who has the stickers you need in seconds and unlock better trades instantly.",
+      "Find who has the stickers you need in seconds and discover better trades instantly.",
     images: [OG_IMAGE.url],
   },
   robots: {

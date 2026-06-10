@@ -4,7 +4,7 @@ import { authClient } from "@/lib/auth-client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { LogIn } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 
 interface ProfileGuestCTAProps {
   username: string
@@ -12,11 +12,12 @@ interface ProfileGuestCTAProps {
 
 export function ProfileGuestCTA({ username }: ProfileGuestCTAProps) {
   const t = useTranslations("profile.guest")
+  const locale = useLocale()
 
   async function handleSignIn() {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: `/onboarding/username`,
+      callbackURL: `/${locale}/onboarding/username`,
     })
   }
 

@@ -4,15 +4,16 @@ import { authClient } from "@/lib/auth-client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { LogIn } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 
 export function AlbumGuestCTA() {
   const t = useTranslations("album.guest")
+  const locale = useLocale()
 
   async function handleSignIn() {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: `/onboarding/username`,
+      callbackURL: `/${locale}/onboarding/username`,
     })
   }
 
